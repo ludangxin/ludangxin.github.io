@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    断剑重铸之日，骑士归来之时。
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="鲁档信">
+<meta name="description" content="Hello World !">
+<meta name="keywords" content="鲁档信,ludangxin">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="http://blog.ludangxin.club/styles/main.css" />
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+        
+            <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/Card/prism.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/css/Card/prism.min.css" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+            <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+            
+                <!--点击特效-->
+                <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/love.min.js"></script>
+                
+                        <!--CDN样式-->
+                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+                        <script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+                        
+                            <script>
+                                (function() {
+                                    var bp = document.createElement('script');
+                                    var curProtocol = window.location.protocol.split(':')[0];
+                                    if (curProtocol === 'https') {
+                                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                                    } else {
+                                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                                    }
+                                    var s = document.getElementsByTagName("script")[0];
+                                    s.parentNode.insertBefore(bp, s);
+                                })();
+                            </script>
+                            
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="http://blog.ludangxin.club">
+                    断剑重铸之日，骑士归来之时。
+                </a>
+            </div>
+            <div id="tp-weather-widget"></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        🏠首页
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        📚归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        🏷️标签
+                    </a>
+                    
+                    <a class="menu-item" href="/posts">
+                        ✍️博客
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about/">
+                        👦关于
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1597935637693" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="http://blog.ludangxin.club">
+                            断剑重铸之日，骑士归来之时。
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1597935637693" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            🏠首页
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            📚归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            🏷️标签
+                        </a>
+                        
+                        <a class="menu-item" href="/posts">
+                            ✍️博客
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about/">
+                            👦关于
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+
+
+
+    <script>
+        (function(a, h, g, f, e, d, c, b) {
+            b = function() {
+                d = h.createElement(g);
+                c = h.getElementsByTagName(g)[0];
+                d.src = e;
+                d.charset = "utf-8";
+                d.async = 1;
+                c.parentNode.insertBefore(d, c)
+            };
+            a["SeniverseWeatherWidgetObject"] = f;
+            a[f] || (a[f] = function() {
+                (a[f].q = a[f].q || []).push(arguments)
+            });
+            a[f].l = +new Date();
+            if (a.attachEvent) {
+                a.attachEvent("onload", b)
+            } else {
+                a.addEventListener("load", b, false)
+            }
+        }(window, document, "script", "SeniverseWeatherWidget", "//cdn.sencdn.com/widget2/static/js/bundle.js?t=" + parseInt((new Date().getTime() / 100000000).toString(), 10)));
+        window.SeniverseWeatherWidget('show', {
+            flavor: "slim",
+            location: "WWEFQFPJZ7T8",
+            geolocation: true,
+            language: "auto",
+            unit: "c",
+            theme: "auto",
+            token: "61bcc333-3305-4728-9465-6785274bb0a3",
+            hover: "enabled",
+            container: "tp-weather-widget"
+        })
+    </script>
+    
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                SpringBoot 集成 数据源
+                            </h1>
+                            
+                                <!--en-->
+                                <div class="post-meta en">
+                                    Author:
+                                    <a itemprop="author" rel="author" href="/">
+                                        断剑重铸之日，骑士归来之时。
+                                    </a>
+                                    <span class="post-time">
+                                Date: <a href="#">2020-05-16</a>
+                            </span>
+                                    <span class="post-readtime">Reading Time:<a
+                                    href="#">7.5
+                                    mins</a></span>
+                                    <span class="post-words">words:<a href="#">1580</a></span>
+                                    
+                                        <span class="post-category">
+                                Category:
+                                
+                                <a href="http://blog.ludangxin.club/tag/LSBz4Ej4I/">springboot</a>
+                                
+                            </span>
+                                        
+                                            Views:
+                                            <span data-hk-page="current"> - </span>
+                                            
+                                </div>
+                                
+                        </header>
+                        
+                            <img class="post-feature-image" src="http://blog.ludangxin.club/post-images/springboot-ji-cheng-shu-ju-yuan.jpg" alt="">
+                          
+                        <div class="post-content">
+                            <h1 id="druid">druid</h1>
+<h2 id="简介">简介</h2>
+<ol>
+<li>什么是Druid？<br>
+Druid是一个高效的数据查询系统，主要解决的是对于大量的基于时序的数据进行聚合查询。数据可以实时摄入，进入到Druid后立即可查，同时数据是几乎是不可变。通常是基于时序的事实事件，事实发生后进入Druid，外部系统就可以对该事实进行查询。</li>
+<li>Druid采用的架构:<br>
+shared-nothing架构与lambda架构</li>
+<li>Druid设计三个原则:
+<ol>
+<li>快速查询（Fast Query） : 部分数据聚合（Partial Aggregate） + 内存华（In-Memory） + 索引（Index）</li>
+<li>水平拓展能力（Horizontal Scalability）:分布式数据（Distributed data）+并行化查询（Parallelizable Query）</li>
+<li>实时分析（Realtime Analytics）：Immutable Past , Append-Only Future</li>
+</ol>
+</li>
+</ol>
+<h2 id="添加所需依赖">添加所需依赖</h2>
+<pre><code class="language-xml">&lt;!-- druid 依赖--&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;com.alibaba&lt;/groupId&gt;
+    &lt;artifactId&gt;druid-spring-boot-starter&lt;/artifactId&gt;
+    &lt;version&gt;1.1.22&lt;/version&gt;
+&lt;/dependency&gt;
+&lt;!-- mysql依赖 --&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;mysql&lt;/groupId&gt;
+    &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;
+&lt;/dependency&gt;
+&lt;!-- lombok --&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;
+    &lt;artifactId&gt;lombok&lt;/artifactId&gt;
+    &lt;optional&gt;true&lt;/optional&gt;
+&lt;/dependency&gt;
+</code></pre>
+<h2 id="配置-applicationyml">配置 application.yml</h2>
+<pre><code class="language-yml">spring:
+  datasource:
+    name: druidDataSource
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      #  5.7之前版本使用 com.mysql.jdbc.Driver 
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/test?useUnicode=true&amp;zeroDateTimeBehavior=convertToNull&amp;autoReconnect=true&amp;characterEncoding=utf-8
+      username: root
+      password: root
+      filters: stat,wall,log4j,config
+      max-active: 100
+      initial-size: 1
+      max-wait: 60000
+      min-idle: 1
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      validation-query: SELECT 1
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: true
+      max-open-prepared-statements: 50
+      max-pool-prepared-statement-per-connection-size: 20
+</code></pre>
+<pre><code class="language-java">import java.sql.SQLException;
+import javax.servlet.Filter;
+import javax.servlet.Servlet;
+import javax.sql.DataSource;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.boot.web.servlet.FilterRegistrationBean;
+import org.springframework.boot.web.servlet.ServletRegistrationBean;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import com.alibaba.druid.pool.DruidDataSource;
+import com.alibaba.druid.support.http.StatViewServlet;
+import com.alibaba.druid.support.http.WebStatFilter;
+
+@Configuration
+@EnableConfigurationProperties({DruidDataSourceProperties.class})
+public class DruidConfig {
+    @Autowired
+    private DruidDataSourceProperties properties;
+
+    @Bean
+    @ConditionalOnMissingBean
+    public DataSource druidDataSource() {
+        DruidDataSource druidDataSource = new DruidDataSource();
+        druidDataSource.setDriverClassName(properties.getDriverClassName());
+        druidDataSource.setUrl(properties.getUrl());
+        druidDataSource.setUsername(properties.getUsername());
+        druidDataSource.setPassword(properties.getPassword());
+        druidDataSource.setInitialSize(properties.getInitialSize());
+        druidDataSource.setMinIdle(properties.getMinIdle());
+        druidDataSource.setMaxActive(properties.getMaxActive());
+        druidDataSource.setMaxWait(properties.getMaxWait());
+        druidDataSource.setTimeBetweenEvictionRunsMillis(properties.getTimeBetweenEvictionRunsMillis());
+        druidDataSource.setMinEvictableIdleTimeMillis(properties.getMinEvictableIdleTimeMillis());
+        druidDataSource.setValidationQuery(properties.getValidationQuery());
+        druidDataSource.setTestWhileIdle(properties.isTestWhileIdle());
+        druidDataSource.setTestOnBorrow(properties.isTestOnBorrow());
+        druidDataSource.setTestOnReturn(properties.isTestOnReturn());
+        druidDataSource.setPoolPreparedStatements(properties.isPoolPreparedStatements());
+        druidDataSource.setMaxPoolPreparedStatementPerConnectionSize(properties.getMaxPoolPreparedStatementPerConnectionSize());
+        try {
+            druidDataSource.setFilters(properties.getFilters());
+            druidDataSource.init();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return druidDataSource;
+    }
+
+    /**
+     * 注册Servlet信息， 配置监控视图
+     * @return
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public ServletRegistrationBean&lt;Servlet&gt; druidServlet() {
+        ServletRegistrationBean&lt;Servlet&gt; servletRegistrationBean = new ServletRegistrationBean&lt;Servlet&gt;(new StatViewServlet(), &quot;/druid/*&quot;);
+        //白名单：如果是限定指定的子网里的所有ip都可以访问，那就是ip/子网掩码数。例如 192.168.1.120/24 就相当于192.168.1.*
+        servletRegistrationBean.addInitParameter(&quot;allow&quot;,&quot;192.168.1.195&quot;);
+        //IP黑名单 (存在共同时，deny优先于allow) : 如果满足deny的话提示:Sorry, you are not permitted to view this page.
+        servletRegistrationBean.addInitParameter(&quot;deny&quot;,&quot;192.168.1.119&quot;);
+        //登录查看信息的账号密码, 用于登录Druid监控后台
+        servletRegistrationBean.addInitParameter(&quot;loginUsername&quot;, &quot;admin&quot;);
+        servletRegistrationBean.addInitParameter(&quot;loginPassword&quot;, &quot;admin&quot;);
+        //是否能够重置数据.
+        servletRegistrationBean.addInitParameter(&quot;resetEnable&quot;, &quot;true&quot;);
+        return servletRegistrationBean;
+    }
+
+    /**
+     * 注册Filter信息, 监控拦截器
+     * @return
+     */
+    @Bean
+    @ConditionalOnMissingBean
+    public FilterRegistrationBean&lt;Filter&gt; filterRegistrationBean() {
+        FilterRegistrationBean&lt;Filter&gt; filterRegistrationBean = new FilterRegistrationBean&lt;Filter&gt;();
+        filterRegistrationBean.setFilter(new WebStatFilter());
+        filterRegistrationBean.addUrlPatterns(&quot;/*&quot;);
+        filterRegistrationBean.addInitParameter(&quot;exclusions&quot;, &quot;*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*&quot;);
+        return filterRegistrationBean;
+    }
+}
+</code></pre>
+<pre><code class="language-java">import org.springframework.boot.context.properties.ConfigurationProperties;
+
+@ConfigurationProperties(prefix = &quot;spring.datasource.druid&quot;)
+@Data
+public class DruidDataSourceProperties {
+    // jdbc
+    private String driverClassName;
+    private String url;
+    private String username;
+    private String password;
+    // jdbc connection pool
+    private int initialSize;
+    private int minIdle;
+    private int maxActive = 100;
+    private long maxWait;
+    private long timeBetweenEvictionRunsMillis;
+    private long minEvictableIdleTimeMillis;
+    private String validationQuery;
+    private boolean testWhileIdle;
+    private boolean testOnBorrow;
+    private boolean testOnReturn;
+    private boolean poolPreparedStatements;
+    private int maxPoolPreparedStatementPerConnectionSize;
+    // filter
+    private String filters;
+</code></pre>
+<h1 id="hikaricp">hikaricp</h1>
+<h2 id="简介-2">简介</h2>
+<p><a href="https://github.com/brettwooldridge/HikariCP">官方GitHub地址</a></p>
+<ol>
+<li>什么是hikaricp?<br>
+HikariCP是由日本程序员开源的一个数据库连接池组件，代码非常轻量，并且速度非常的快。根据官方提供的数据，在i7,开启32个线程32个连接的情况下，进行随机数据库读写操作，HikariCP的速度是现在常用的C3P0数据库连接池的数百倍。在SpringBoot2.0中，官方也是推荐使用HikariCP。<br>
+优化</li>
+<li>为什么hikaricp这么块?
+<ol>
+<li>字节码精简 ： 优化代码，直到编译后的字节码最少，这样，CPU 缓存可以加载更多的程序代码</li>
+<li>优化代理和拦截器 ： 减少代码，例如 HikariCP 的 Statement proxy 只有 100 行代码，只有 BoneCP 的十分之一</li>
+<li>自定义数组类型（FastStatementList）代替 ArrayList ： 避免每次 get() 调用都要进行 range check，避免调用 remove() 时的从头到尾的扫描</li>
+<li>自定义集合类型（ConcurrentBag）： 提高并发读写的效率</li>
+<li>其他针对 BoneCP 缺陷的优化： 比如对于耗时超过一个 CPU 时间片的方法调用的研究（但没说具体怎么优化）</li>
+</ol>
+</li>
+<li>与druid对比<br>
+在github上有网友贴出了阿里巴巴Druid与hikari的对比，认为hikari在性能上是完全秒杀阿里巴巴的Druid连接池的。对此，阿里的工程师也做了一定的回应，说Druid的性能稍微差点是锁机制的不同，并且Druid提供了更丰富的功能，两者的侧重点不一样。<br>
+<img src="http://blog.ludangxin.club/post-images/1589461042598.jpg" alt="" loading="lazy"></li>
+</ol>
+<h2 id="添加所需依赖-2">添加所需依赖</h2>
+<p><code>如果我们使用的是Spring Boot 2.0或者之后的版本，我们不需要去单独在pom.xml文件中引入HikariCP依赖。因为默认情况下spring-boot-starter-jdbc 或者 mybatis-spring-boot-starter 会依赖进来。</code></p>
+<pre><code class="language-xml">&lt;!-- mysql依赖 --&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;mysql&lt;/groupId&gt;
+    &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;
+&lt;/dependency&gt;
+</code></pre>
+<h2 id="配置-applicationyml-2">配置 application.yml</h2>
+<pre><code class="language-yaml">spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&amp;zeroDateTimeBehavior=convertToNull&amp;autoReconnect=true&amp;characterEncoding=utf-8
+    username: root
+    password: root
+    hikari:
+      minimum-idle: 5
+      idle-timeout: 600000
+      maximum-pool-size: 10
+      auto-commit: true
+      pool-name: MyHikariCP
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: SELECT 1
+</code></pre>
+<h1 id="如何选择">如何选择</h1>
+<p>选择哪一款就见仁见智了，不过两款都是开源产品，阿里的Druid有中文的开源社区，交流起来更加方便，并且经过阿里多个系统的实验，想必也是非常的稳定，而Hikari是SpringBoot2.0默认的连接池，全世界使用范围也非常广，对于大部分业务来说，使用哪一款都是差不多的，毕竟性能瓶颈一般都不在连接池。大家可根据自己的喜好自由选择。</p>
+
+                        </div>
+                        
+                            <div class="post-toc">
+                                <ul class="markdownIt-TOC">
+<li><a href="#druid">druid</a>
+<ul>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介</a></li>
+<li><a href="#%E6%B7%BB%E5%8A%A0%E6%89%80%E9%9C%80%E4%BE%9D%E8%B5%96">添加所需依赖</a></li>
+<li><a href="#%E9%85%8D%E7%BD%AE-applicationyml">配置 application.yml</a></li>
+</ul>
+</li>
+<li><a href="#hikaricp">hikaricp</a>
+<ul>
+<li><a href="#%E7%AE%80%E4%BB%8B-2">简介</a></li>
+<li><a href="#%E6%B7%BB%E5%8A%A0%E6%89%80%E9%9C%80%E4%BE%9D%E8%B5%96-2">添加所需依赖</a></li>
+<li><a href="#%E9%85%8D%E7%BD%AE-applicationyml-2">配置 application.yml</a></li>
+</ul>
+</li>
+<li><a href="#%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9">如何选择</a></li>
+</ul>
+
+                            </div>
+                            
+                                
+                                    
+                                        <!--en-->
+                                        <section class="post-copyright en">
+                                            <p class="copyright-item">
+                                                <span>Author:</span>
+                                                <span>断剑重铸之日，骑士归来之时。</span>
+                                            </p>
+
+                                            <p class="copyright-item">
+                                                <span>Permalink:</span>
+                                                <span><a href="http://blog.ludangxin.club/post/springboot-ji-cheng-shu-ju-yuan/">http://blog.ludangxin.club/post/springboot-ji-cheng-shu-ju-yuan/</a></span>
+                                            </p>
+
+                                            <p class="copyright-item">
+                                                <span>License:</span>
+                                                <span>MIT License</span>
+                                            </p>
+                                        </section>
+                                        
+                                                
+                                                    
+                                                        <!-- Share-->
+                                                        <span style="margin-right:15px">
+                                                    <i class="post-share"></i>
+                                                    <span>Share:</span>
+                                                        <a title="QR Code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://blog.ludangxin.club/post/springboot-ji-cheng-shu-ju-yuan/"><i class="fa fa-qrcode"></i></a>
+                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.ludangxin.club/post/springboot-ji-cheng-shu-ju-yuan/&sharesource=qzone&title=SpringBoot 集成 数据源&pics=http://blog.ludangxin.club/images/avatar.png?v=1597935637693&summary="><i class="fa fa-qq"></i></a>
+                                                        <a title="Weibo" target="_blank" href="https://service.weibo.com/share/share.php?url=http://blog.ludangxin.club/post/springboot-ji-cheng-shu-ju-yuan/&sharesource=weibo&title=SpringBoot 集成 数据源 + " - " + &pic="http://blog.ludangxin.club/images/avatar.png?v=1597935637693 "><i class="fa fa-weibo "></i></a>
+                                                        
+                                                                </span>
+                                                                <!--en-->
+                                                                <section class="post-tags en ">
+                                                                    <div>
+                                                                        <span>Tag(s):</span>
+                                                                        <span class="tag ">
+                        
+                        
+                        <a href="http://blog.ludangxin.club/tag/LSBz4Ej4I/">#
+                                                springboot
+                                                    </a>
+                                                    
+                                                        
+                                                            </span>
+                                                                    </div>
+                                                                    <div>
+                                                                        <a href="javascript:window.history.back();">back</a>
+                                                                        <span>&dot;</span>
+                                                                        <a href="#">home</a>
+                                                                    </div>
+                                                                </section>
+                                                                
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                        <a class="prev" rel="prev" href="http://blog.ludangxin.club/post/java8-xin-te-xing/">
+                                                                                            Java8新特性
+                                                                                        </a>
+                                                                                        
+                                                                                            
+                                                                                                <a class="next" rel="next" href="http://blog.ludangxin.club/post/springboot-ji-cheng-tkmybatis-pagehelper/">
+                                                                                                    SpringBoot 集成 tkMybatis pageHelper
+                                                                                                </a>
+                                                                                                
+                                                                                </section>
+                    </article>
+                </div>
+                
+                                            
+                                                <script type="application/javascript" src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+<div id="vlaine-comment"></div>
+<script type="application/javascript">
+    new Valine({
+        el: '#vlaine-comment',
+        appId: '6v8KE1xPEnnI3VycbaTHPQvD-gzGzoHsz',
+        appKey: 'tCAPkuAx3JWn7YrPKlEpyaMH',
+        pageSize: 10,
+        avatar: 'mp',
+        placeholder: '来都来了，不妨评论一下',
+        visitor: true,
+        highlight: false,
+        recordIP: true,
+    })
+</script>
+                                                    
+            </div>
+    </div>
+    </div>
+    </div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                    <div class="Like">
+                        <div class="tip" data-tooltip="Do you like it?">
+                            <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                        </div>
+                    </div>
+                    
+                        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+                            
+                                <b id="hitokoto"></b><br>
+                                
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        断剑重铸之日，骑士归来之时。 &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+                                            | Powered by
+                                            <a href="https://coding.net" target="_blank">
+                                                Coding.net
+                                            </a>
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.4
+                </div>
+                
+                    <script>
+                        var port = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + port + '</div>')
+                    </script>
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+                    
+                    loadlive2d();
+                    
+                    
+                    hitokoto();
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1597935637693);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

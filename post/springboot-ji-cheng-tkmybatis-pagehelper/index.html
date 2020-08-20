@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    断剑重铸之日，骑士归来之时。
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="鲁档信">
+<meta name="description" content="Hello World !">
+<meta name="keywords" content="鲁档信,ludangxin">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="http://blog.ludangxin.club/styles/main.css" />
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+        
+            <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/Card/prism.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/css/Card/prism.min.css" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+            <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+            
+                <!--点击特效-->
+                <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/love.min.js"></script>
+                
+                        <!--CDN样式-->
+                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+                        <script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+                        
+                            <script>
+                                (function() {
+                                    var bp = document.createElement('script');
+                                    var curProtocol = window.location.protocol.split(':')[0];
+                                    if (curProtocol === 'https') {
+                                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                                    } else {
+                                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                                    }
+                                    var s = document.getElementsByTagName("script")[0];
+                                    s.parentNode.insertBefore(bp, s);
+                                })();
+                            </script>
+                            
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="http://blog.ludangxin.club">
+                    断剑重铸之日，骑士归来之时。
+                </a>
+            </div>
+            <div id="tp-weather-widget"></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        🏠首页
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        📚归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        🏷️标签
+                    </a>
+                    
+                    <a class="menu-item" href="/posts">
+                        ✍️博客
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about/">
+                        👦关于
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1597935637693" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="http://blog.ludangxin.club">
+                            断剑重铸之日，骑士归来之时。
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1597935637693" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            🏠首页
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            📚归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            🏷️标签
+                        </a>
+                        
+                        <a class="menu-item" href="/posts">
+                            ✍️博客
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about/">
+                            👦关于
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+
+
+
+    <script>
+        (function(a, h, g, f, e, d, c, b) {
+            b = function() {
+                d = h.createElement(g);
+                c = h.getElementsByTagName(g)[0];
+                d.src = e;
+                d.charset = "utf-8";
+                d.async = 1;
+                c.parentNode.insertBefore(d, c)
+            };
+            a["SeniverseWeatherWidgetObject"] = f;
+            a[f] || (a[f] = function() {
+                (a[f].q = a[f].q || []).push(arguments)
+            });
+            a[f].l = +new Date();
+            if (a.attachEvent) {
+                a.attachEvent("onload", b)
+            } else {
+                a.addEventListener("load", b, false)
+            }
+        }(window, document, "script", "SeniverseWeatherWidget", "//cdn.sencdn.com/widget2/static/js/bundle.js?t=" + parseInt((new Date().getTime() / 100000000).toString(), 10)));
+        window.SeniverseWeatherWidget('show', {
+            flavor: "slim",
+            location: "WWEFQFPJZ7T8",
+            geolocation: true,
+            language: "auto",
+            unit: "c",
+            theme: "auto",
+            token: "61bcc333-3305-4728-9465-6785274bb0a3",
+            hover: "enabled",
+            container: "tp-weather-widget"
+        })
+    </script>
+    
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                SpringBoot 集成 tkMybatis pageHelper
+                            </h1>
+                            
+                                <!--en-->
+                                <div class="post-meta en">
+                                    Author:
+                                    <a itemprop="author" rel="author" href="/">
+                                        断剑重铸之日，骑士归来之时。
+                                    </a>
+                                    <span class="post-time">
+                                Date: <a href="#">2020-05-16</a>
+                            </span>
+                                    <span class="post-readtime">Reading Time:<a
+                                    href="#">5.4
+                                    mins</a></span>
+                                    <span class="post-words">words:<a href="#">1043</a></span>
+                                    
+                                        <span class="post-category">
+                                Category:
+                                
+                                <a href="http://blog.ludangxin.club/tag/LSBz4Ej4I/">springboot</a>
+                                
+                            </span>
+                                        
+                                            Views:
+                                            <span data-hk-page="current"> - </span>
+                                            
+                                </div>
+                                
+                        </header>
+                        
+                            <img class="post-feature-image" src="http://blog.ludangxin.club/post-images/springboot-ji-cheng-tkmybatis-pagehelper.jpg" alt="">
+                          
+                        <div class="post-content">
+                            <h1 id="项目结构图示">项目结构图示</h1>
+<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2020/05/13/tOWz1Pbnd57GyuN.png" alt="1589379931_1_.jpg" loading="lazy"></figure>
+<h1 id="引入所需依赖">引入所需依赖</h1>
+<pre><code class="language-xml">        &lt;!--数据库--&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;mysql&lt;/groupId&gt;
+            &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;!--结合tk-mybatis  mybatis的升级插件--&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;tk.mybatis&lt;/groupId&gt;
+            &lt;artifactId&gt;mapper-spring-boot-starter&lt;/artifactId&gt;
+            &lt;version&gt;2.1.5&lt;/version&gt;
+        &lt;/dependency&gt;
+        &lt;!--分页插件--&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;com.github.pagehelper&lt;/groupId&gt;
+            &lt;artifactId&gt;pagehelper-spring-boot-starter&lt;/artifactId&gt;
+            &lt;version&gt;1.2.13&lt;/version&gt;
+        &lt;/dependency&gt;
+        &lt;!-- lombok --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;
+            &lt;artifactId&gt;lombok&lt;/artifactId&gt;
+            &lt;optional&gt;true&lt;/optional&gt;
+        &lt;/dependency&gt;
+</code></pre>
+<h1 id="配置-applicationyml">配置  application.yml</h1>
+<pre><code class="language-yml">spring:
+  datasource:
+    # Oracle: oracle.jdbc.OracleDriver
+    driver-class-name: com.mysql.jdbc.Driver 
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&amp;characterEncoding=utf8&amp;zeroDateTimeBehavior=convertToNull&amp;useSSL=true&amp;serverTimezone=GMT%2B8
+    username: root
+    password: root
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 5
+      auto-commit: true
+      idle-timeout: 30000
+      pool-name: DatebookHikariCP
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: SELECT 1  # Oracle: SELECT 1 FROM DUAL
+
+# 配置mybatis
+mybatis:
+  # 搜索指定包别名
+  typeAliasesPackage: com.ldx.project.model
+  # 配置mapper的扫描，找到所有的mapper.xml映射文件
+  mapperLocations: classpath*:/mapper/*Mapper.xml
+  # 打印sql打开configuration log-impl
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+# PageHelper分页插件
+pagehelper:
+  # 方言
+  helperDialect: mysql
+  # 分页合理化 即:页码&lt;=0 查询第一页，页码&gt;=总页数查询最后一页
+  reasonable: true
+  # 支持参数过滤
+  supportMethodsArguments: true
+  params: count=countSql
+
+# tk mybatis
+mapper:
+    # 指定基类
+    mappers:
+        - com.ldx.project.util.BaseMapper
+    # &lt;selectKey&gt;中的order属性，可选值为BEFORE和AFTER;类似Oracle序列或者通用的 UUID 时为 true
+    before: false
+    # insertSelective 和 updateByPrimaryKeySelective 中，是否判断字符串类型 !=''
+    not-empty: false
+    # 取回主键的方式 MySQL :SELECT LAST_INSERT_ID()
+    identity: MYSQL
+    # 驼峰转下划线小写形式   camelhumpAndLowercase:驼峰转下划线大写形式
+    style: camelhumpAndUppercase
+</code></pre>
+<h1 id="创建实体类">创建实体类</h1>
+<pre><code class="language-java">import lombok.Data;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+/**
+ * @Author: ludangxin
+ * @Date: 2020/5/13 15:25
+ */
+@Data
+@Table(name=&quot;sys_user&quot;)
+public class SysUser {
+    // @Id表示该字段对应数据库表的主键id
+    // @GeneratedValue中strategy表示使用数据库自带的主键生成策略.
+    // @GeneratedValue中generator配置为&quot;JDBC&quot;,在数据插入完毕之后,会自动将主键id填充到实体类中.类似普通mapper.xml中配置的selectKey标签
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY,generator = &quot;JDBC&quot;)
+    private Long id;
+
+    private String username;
+
+    private String password;
+}
+</code></pre>
+<h1 id="创建tkmybatis基类">创建tkMybatis基类</h1>
+<pre><code class="language-Java">import tk.mybatis.mapper.common.Mapper;
+import tk.mybatis.mapper.common.MySqlMapper;
+
+/**
+ * mapper 基类
+ * 特别注意，该接口不能被扫描到，否则会出错
+ */
+public interface BaseMapper&lt;T&gt; extends Mapper&lt;T&gt;, MySqlMapper&lt;T&gt; {
+}
+</code></pre>
+<h1 id="创建mapper继承basemapper">创建mapper继承BaseMapper</h1>
+<pre><code class="language-java">import com.ldx.project.model.SysUser;
+import com.ldx.project.util.BaseMapper;
+
+/**
+ * @Author: ludangxin
+ * @Date: 2020/5/13 17:27
+ */
+public interface SysUserMapper extends BaseMapper&lt;SysUser&gt; {
+}
+</code></pre>
+<h1 id="修改启动类">修改启动类</h1>
+<pre><code class="language-java">import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import tk.mybatis.spring.annotation.MapperScan;
+
+@MapperScan(basePackages = &quot;com.ldx.project.mapper&quot;)
+@SpringBootApplication
+public class SpringbootTkMybatisPageHelper {
+
+    public static void main(String[] args) {
+        SpringApplication.run(SpringbootTkMybatisPageHelper.class, args);
+    }
+
+}
+</code></pre>
+<h1 id="创建测试类">创建测试类</h1>
+<pre><code class="language-java">
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
+import com.ldx.project.mapper.SysUserMapper;
+import com.ldx.project.model.SysUser;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.Rollback;
+import org.springframework.transaction.annotation.Transactional;
+import tk.mybatis.mapper.entity.Example;
+import java.util.List;
+
+@SpringBootTest(classes = SpringbootTkMybatisPageHelper.class)
+@Transactional
+@Rollback
+public class MybatisTest {
+
+    /**
+     * 注入数据查询接口
+     */
+    @Autowired
+    private SysUserMapper tbUserMapper;
+
+    /**
+     * 测试插入数据
+     */
+    @Test
+    public void testInsert() {
+        // 构造一条测试数据
+        SysUser sysUser = new SysUser();
+        sysUser.setUsername(&quot;ludangxin&quot;);
+        sysUser.setPassword(&quot;123456&quot;);
+
+        // 插入数据
+        tbUserMapper.insert(sysUser);
+    }
+
+    /**
+     * 测试删除数据
+     */
+    @Test
+    public void testDelete() {
+        // 构造条件，等同于 DELETE from tb_user WHERE username = 'ludangxin'
+        Example example = new Example(SysUser.class);
+        example.createCriteria().andEqualTo(&quot;username&quot;, &quot;ludangxin&quot;);
+
+        // 删除数据
+        tbUserMapper.deleteByExample(example);
+    }
+
+    /**
+     * 测试修改数据
+     */
+    @Test
+    public void testUpdate() {
+        // 构造条件
+        Example example = new Example(SysUser.class);
+        example.createCriteria().andEqualTo(&quot;username&quot;, &quot;ludangxin&quot;);
+
+        // 构造一条测试数据
+        SysUser sysUser = new SysUser();
+        sysUser.setUsername(&quot;ludangxin&quot;);
+        sysUser.setPassword(&quot;123456&quot;);
+
+        // 修改数据
+        tbUserMapper.updateByExample(sysUser, example);
+    }
+
+    /**
+     * 测试查询集合
+     */
+    @Test
+    public void testSelect() {
+        List&lt;SysUser&gt; sysUsers = tbUserMapper.selectAll();
+        for (SysUser user : sysUsers) {
+            System.out.println(user.getUsername());
+        }
+    }
+
+    /**
+     * 测试分页查询
+     */
+    @Test
+    public void testPage() {
+        // PageHelper 使用非常简单，只需要设置页码和每页显示笔数即可
+        PageHelper.startPage(0, 2);
+
+        // 设置分页查询条件
+        Example example = new Example(SysUser.class);
+        PageInfo&lt;SysUser&gt; pageInfo = new PageInfo&lt;&gt;(tbUserMapper.selectByExample(example));
+
+        // 获取查询结果
+        List&lt;SysUser&gt; sysUsers = pageInfo.getList();
+        for (SysUser sysUser : sysUsers) {
+            System.out.println(sysUser.getUsername());
+        }
+    }
+}
+</code></pre>
+
+                        </div>
+                        
+                            <div class="post-toc">
+                                <ul class="markdownIt-TOC">
+<li><a href="#%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84%E5%9B%BE%E7%A4%BA">项目结构图示</a></li>
+<li><a href="#%E5%BC%95%E5%85%A5%E6%89%80%E9%9C%80%E4%BE%9D%E8%B5%96">引入所需依赖</a></li>
+<li><a href="#%E9%85%8D%E7%BD%AE-applicationyml">配置  application.yml</a></li>
+<li><a href="#%E5%88%9B%E5%BB%BA%E5%AE%9E%E4%BD%93%E7%B1%BB">创建实体类</a></li>
+<li><a href="#%E5%88%9B%E5%BB%BAtkmybatis%E5%9F%BA%E7%B1%BB">创建tkMybatis基类</a></li>
+<li><a href="#%E5%88%9B%E5%BB%BAmapper%E7%BB%A7%E6%89%BFbasemapper">创建mapper继承BaseMapper</a></li>
+<li><a href="#%E4%BF%AE%E6%94%B9%E5%90%AF%E5%8A%A8%E7%B1%BB">修改启动类</a></li>
+<li><a href="#%E5%88%9B%E5%BB%BA%E6%B5%8B%E8%AF%95%E7%B1%BB">创建测试类</a></li>
+</ul>
+
+                            </div>
+                            
+                                
+                                    
+                                        <!--en-->
+                                        <section class="post-copyright en">
+                                            <p class="copyright-item">
+                                                <span>Author:</span>
+                                                <span>断剑重铸之日，骑士归来之时。</span>
+                                            </p>
+
+                                            <p class="copyright-item">
+                                                <span>Permalink:</span>
+                                                <span><a href="http://blog.ludangxin.club/post/springboot-ji-cheng-tkmybatis-pagehelper/">http://blog.ludangxin.club/post/springboot-ji-cheng-tkmybatis-pagehelper/</a></span>
+                                            </p>
+
+                                            <p class="copyright-item">
+                                                <span>License:</span>
+                                                <span>MIT License</span>
+                                            </p>
+                                        </section>
+                                        
+                                                
+                                                    
+                                                        <!-- Share-->
+                                                        <span style="margin-right:15px">
+                                                    <i class="post-share"></i>
+                                                    <span>Share:</span>
+                                                        <a title="QR Code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://blog.ludangxin.club/post/springboot-ji-cheng-tkmybatis-pagehelper/"><i class="fa fa-qrcode"></i></a>
+                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.ludangxin.club/post/springboot-ji-cheng-tkmybatis-pagehelper/&sharesource=qzone&title=SpringBoot 集成 tkMybatis pageHelper&pics=http://blog.ludangxin.club/images/avatar.png?v=1597935637693&summary="><i class="fa fa-qq"></i></a>
+                                                        <a title="Weibo" target="_blank" href="https://service.weibo.com/share/share.php?url=http://blog.ludangxin.club/post/springboot-ji-cheng-tkmybatis-pagehelper/&sharesource=weibo&title=SpringBoot 集成 tkMybatis pageHelper + " - " + &pic="http://blog.ludangxin.club/images/avatar.png?v=1597935637693 "><i class="fa fa-weibo "></i></a>
+                                                        
+                                                                </span>
+                                                                <!--en-->
+                                                                <section class="post-tags en ">
+                                                                    <div>
+                                                                        <span>Tag(s):</span>
+                                                                        <span class="tag ">
+                        
+                        
+                        <a href="http://blog.ludangxin.club/tag/LSBz4Ej4I/">#
+                                                springboot
+                                                    </a>
+                                                    
+                                                        
+                                                            </span>
+                                                                    </div>
+                                                                    <div>
+                                                                        <a href="javascript:window.history.back();">back</a>
+                                                                        <span>&dot;</span>
+                                                                        <a href="#">home</a>
+                                                                    </div>
+                                                                </section>
+                                                                
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                        <a class="prev" rel="prev" href="http://blog.ludangxin.club/post/springboot-ji-cheng-shu-ju-yuan/">
+                                                                                            SpringBoot 集成 数据源
+                                                                                        </a>
+                                                                                        
+                                                                                            
+                                                                                </section>
+                    </article>
+                </div>
+                
+                                            
+                                                <script type="application/javascript" src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+<div id="vlaine-comment"></div>
+<script type="application/javascript">
+    new Valine({
+        el: '#vlaine-comment',
+        appId: '6v8KE1xPEnnI3VycbaTHPQvD-gzGzoHsz',
+        appKey: 'tCAPkuAx3JWn7YrPKlEpyaMH',
+        pageSize: 10,
+        avatar: 'mp',
+        placeholder: '来都来了，不妨评论一下',
+        visitor: true,
+        highlight: false,
+        recordIP: true,
+    })
+</script>
+                                                    
+            </div>
+    </div>
+    </div>
+    </div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                    <div class="Like">
+                        <div class="tip" data-tooltip="Do you like it?">
+                            <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                        </div>
+                    </div>
+                    
+                        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+                            
+                                <b id="hitokoto"></b><br>
+                                
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        断剑重铸之日，骑士归来之时。 &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+                                            | Powered by
+                                            <a href="https://coding.net" target="_blank">
+                                                Coding.net
+                                            </a>
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.4
+                </div>
+                
+                    <script>
+                        var port = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + port + '</div>')
+                    </script>
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+                    
+                    loadlive2d();
+                    
+                    
+                    hitokoto();
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1597935637693);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

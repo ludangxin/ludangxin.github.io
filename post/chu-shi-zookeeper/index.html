@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    断剑重铸之日，骑士归来之时。
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="鲁档信">
+<meta name="description" content="Hello World !">
+<meta name="keywords" content="鲁档信,ludangxin">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="http://blog.ludangxin.club/styles/main.css" />
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+        
+            <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/Card/prism.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/css/Card/prism.min.css" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+            <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+            
+                <!--点击特效-->
+                <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/love.min.js"></script>
+                
+                        <!--CDN样式-->
+                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+                        <script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+                        
+                            <script>
+                                (function() {
+                                    var bp = document.createElement('script');
+                                    var curProtocol = window.location.protocol.split(':')[0];
+                                    if (curProtocol === 'https') {
+                                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                                    } else {
+                                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                                    }
+                                    var s = document.getElementsByTagName("script")[0];
+                                    s.parentNode.insertBefore(bp, s);
+                                })();
+                            </script>
+                            
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="http://blog.ludangxin.club">
+                    断剑重铸之日，骑士归来之时。
+                </a>
+            </div>
+            <div id="tp-weather-widget"></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        🏠首页
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        📚归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        🏷️标签
+                    </a>
+                    
+                    <a class="menu-item" href="/posts">
+                        ✍️博客
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about/">
+                        👦关于
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1597935637693" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="http://blog.ludangxin.club">
+                            断剑重铸之日，骑士归来之时。
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1597935637693" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            🏠首页
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            📚归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            🏷️标签
+                        </a>
+                        
+                        <a class="menu-item" href="/posts">
+                            ✍️博客
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about/">
+                            👦关于
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+
+
+
+    <script>
+        (function(a, h, g, f, e, d, c, b) {
+            b = function() {
+                d = h.createElement(g);
+                c = h.getElementsByTagName(g)[0];
+                d.src = e;
+                d.charset = "utf-8";
+                d.async = 1;
+                c.parentNode.insertBefore(d, c)
+            };
+            a["SeniverseWeatherWidgetObject"] = f;
+            a[f] || (a[f] = function() {
+                (a[f].q = a[f].q || []).push(arguments)
+            });
+            a[f].l = +new Date();
+            if (a.attachEvent) {
+                a.attachEvent("onload", b)
+            } else {
+                a.addEventListener("load", b, false)
+            }
+        }(window, document, "script", "SeniverseWeatherWidget", "//cdn.sencdn.com/widget2/static/js/bundle.js?t=" + parseInt((new Date().getTime() / 100000000).toString(), 10)));
+        window.SeniverseWeatherWidget('show', {
+            flavor: "slim",
+            location: "WWEFQFPJZ7T8",
+            geolocation: true,
+            language: "auto",
+            unit: "c",
+            theme: "auto",
+            token: "61bcc333-3305-4728-9465-6785274bb0a3",
+            hover: "enabled",
+            container: "tp-weather-widget"
+        })
+    </script>
+    
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                初识 Zookeeper
+                            </h1>
+                            
+                                <!--en-->
+                                <div class="post-meta en">
+                                    Author:
+                                    <a itemprop="author" rel="author" href="/">
+                                        断剑重铸之日，骑士归来之时。
+                                    </a>
+                                    <span class="post-time">
+                                Date: <a href="#">2020-05-24</a>
+                            </span>
+                                    <span class="post-readtime">Reading Time:<a
+                                    href="#">16.7
+                                    mins</a></span>
+                                    <span class="post-words">words:<a href="#">4105</a></span>
+                                    
+                                        <span class="post-category">
+                                Category:
+                                
+                                <a href="http://blog.ludangxin.club/tag/4KBrXdUxz/">分布式</a>
+                                
+                            </span>
+                                        
+                                            Views:
+                                            <span data-hk-page="current"> - </span>
+                                            
+                                </div>
+                                
+                        </header>
+                        
+                            <img class="post-feature-image" src="http://blog.ludangxin.club/post-images/chu-shi-zookeeper.jpg" alt="">
+                          
+                        <div class="post-content">
+                            <h1 id="zookeeper是什么">zookeeper是什么</h1>
+<p>zookeeper是一个开源的分布式<strong>协调</strong>服务, 提供分布式<strong>数据一致性</strong>解决方案,分布式应用程序可以实现<strong>数据统一配置管理、统一命名服务、分布式锁、集群管理</strong>等功能.</p>
+<p>ZooKeeper主要<strong>服务于分布式系统</strong>，使用分布式系统就无法避免对节点管理的问题(需要实时感知节点的状态、对节点进行统一管理等等)，而由于这些问题处理起来可能相对麻烦和提高了系统的复杂性，ZooKeeper作为一个能够<strong>通用</strong>解决这些问题的中间件就应运而生了。</p>
+<h1 id="zookeeper为什么能干这么多">zookeeper为什么能干这么多</h1>
+<p>从上面我们可以知道，可以用ZooKeeper来做：统一配置管理、统一命名服务、分布式锁、集群管理。</p>
+<ul>
+<li>这里我们<strong>先</strong>不管<code>统一配置管理、统一命名服务、分布式锁、集群管理</code>每个具体的含义(后面会讲)</li>
+</ul>
+<p>那为什么ZooKeeper可以干那么多事？来看看ZooKeeper究竟是何方神物，在Wiki中其实也有提到：</p>
+<blockquote>
+<p>ZooKeeper nodes store their data in a hierarchical name space, much like a file system or a <a href="https://link.zhihu.com/?target=https%3A//en.wikipedia.org/wiki/Tree_(data_structure)">tree</a> data structure</p>
+<p>译文: ZooKeeper节点将其数据存储在分层名称空间中，这与文件系统或树数据结构非常相似</p>
+</blockquote>
+<p><strong>Zookeeper 一个最常用的使用场景就是用于担任服务生产者和服务消费者的注册中心</strong> 。服务生产者将自己提供的服务注册到Zookeeper中心，服务的消费者在进行服务调用的时候先到Zookeeper中查找服务，获取到服务生产者的详细信息之后，再去调用服务生产者的内容与数据。如下图所示，在 Dubbo架构中 Zookeeper 就担任了注册中心这一角色。<br>
+<img src="http://blog.ludangxin.club/post-images/1590297452731.jpg" alt="" loading="lazy"></p>
+<h2 id="数据结构">数据结构</h2>
+<p>ZooKeeper的数据结构，跟Unix文件系统非常类似，可以看做是一颗<strong>树</strong>，每个节点叫做<strong>ZNode</strong>。每一个节点可以通过<strong>路径</strong>来标识，结构图如下：<br>
+<img src="http://blog.ludangxin.club/post-images/1590297465572.jpg" alt="" loading="lazy"><br>
+那ZooKeeper这颗&quot;树&quot;有什么特点呢？？ZooKeeper的节点我们称之为<strong>Znode</strong>，Znode分为<strong>两种</strong>类型：</p>
+<ul>
+<li><strong>短暂/临时(Ephemeral)</strong>：当客户端和服务端断开连接后，所创建的Znode(节点)<strong>会自动删除</strong></li>
+<li><strong>持久(Persistent)</strong>：当客户端和服务端断开连接后，所创建的Znode(节点)<strong>不会删除</strong></li>
+</ul>
+<blockquote>
+<p>ZooKeeper和Redis一样，也是C/S结构(分成客户端和服务端)<br>
+<img src="http://blog.ludangxin.club/post-images/1590297481498.jpg" alt="" loading="lazy"></p>
+</blockquote>
+<h2 id="监听器">监听器</h2>
+<p>在上面我们已经简单知道了ZooKeeper的数据结构了，ZooKeeper还配合了<strong>监听器</strong>才能够做那么多事的。<br>
+<strong>常见</strong>的监听场景有以下两项：</p>
+<ul>
+<li>监听Znode节点的<strong>数据变化</strong></li>
+<li>监听子节点的<strong>增减变化</strong><br>
+<img src="http://blog.ludangxin.club/post-images/1590297499784.jpg" alt="" loading="lazy"><br>
+<img src="http://blog.ludangxin.club/post-images/1590297527050.jpg" alt="" loading="lazy"><br>
+没错，通过<strong>监听+Znode节点(持久/短暂[临时])</strong>，ZooKeeper就可以玩出这么多花样了。</li>
+</ul>
+<h1 id="zookeeper具体能干什么">zookeeper具体能干什么</h1>
+<h2 id="统一配置管理">统一配置管理</h2>
+<p>比如我们现在有三个系统A、B、C，他们有三份配置，分别是<code>ASystem.yml、BSystem.yml、CSystem.yml</code>，然后，这三份配置又非常类似，很多的配置项几乎都一样。</p>
+<ul>
+<li>此时，如果我们要改变其中一份配置项的信息，很可能其他两份都要改。并且，改变了配置项的信息<strong>很可能就要重启系统</strong><br>
+于是，我们希望把<code>ASystem.yml、BSystem.yml、CSystem.yml</code>相同的配置项抽取出来成一份<strong>公用</strong>的配置<code>common.yml</code>，并且即便<code>common.yml</code>改了，也不需要系统A、B、C重启。<br>
+<img src="http://blog.ludangxin.club/post-images/1590297542591.jpg" alt="" loading="lazy"><br>
+做法：我们可以将<code>common.yml</code>这份配置放在ZooKeeper的Znode节点中，系统A、B、C监听着这个Znode节点有无变更，如果变更了，<strong>及时</strong>响应。<br>
+<img src="http://blog.ludangxin.club/post-images/1590297551378.jpg" alt="" loading="lazy"></li>
+</ul>
+<h2 id="统一命名服务">统一命名服务</h2>
+<p>统一命名服务的理解其实跟<strong>域名</strong>一样，是我们为这某一部分的资源给它<strong>取一个名字</strong>，别人通过这个名字就可以拿到对应的资源。<br>
+比如说，现在我有一个域名<code>www.java3y.com</code>，但我这个域名下有多台机器：</p>
+<ul>
+<li>192.168.1.1</li>
+<li>192.168.1.2</li>
+<li>192.168.1.3</li>
+<li>192.168.1.4<br>
+别人访问<code>www.java3y.com</code>即可访问到我的机器，而不是通过IP去访问。<br>
+<img src="http://blog.ludangxin.club/post-images/1590297563202.jpg" alt="" loading="lazy"></li>
+</ul>
+<h2 id="分布式锁">分布式锁</h2>
+<p>我们可以使用ZooKeeper来实现分布式锁，那是怎么做的呢？？下面来看看：<br>
+系统A、B、C都去访问<code>/locks</code>节点<br>
+<img src="http://blog.ludangxin.club/post-images/1590297574406.jpg" alt="" loading="lazy"><br>
+访问的时候会创建<strong>带顺序号的临时/短暂</strong>(<code>EPHEMERAL_SEQUENTIAL</code>)节点，比如，系统A创建了<code>id_000000</code>节点，系统B创建了<code>id_000002</code>节点，系统C创建了<code>id_000001</code>节点。<br>
+<img src="http://blog.ludangxin.club/post-images/1590297582628.jpg" alt="" loading="lazy"><br>
+接着，拿到<code>/locks</code>节点下的所有子节点(id_000000,id_000001,id_000002)，<strong>判断自己创建的是不是最小的那个节点</strong></p>
+<ul>
+<li>如果是，则拿到锁。</li>
+<li>
+<ul>
+<li>释放锁：执行完操作后，把创建的节点给删掉</li>
+</ul>
+</li>
+<li>如果不是，则监听比自己要小1的节点变化<br>
+举个例子：</li>
+<li>系统A拿到<code>/locks</code>节点下的所有子节点，经过比较，发现自己(<code>id_000000</code>)，是所有子节点最小的。所以得到锁</li>
+<li>系统B拿到<code>/locks</code>节点下的所有子节点，经过比较，发现自己(<code>id_000002</code>)，不是所有子节点最小的。所以监听比自己小1的节点<code>id_000001</code>的状态</li>
+<li>系统C拿到<code>/locks</code>节点下的所有子节点，经过比较，发现自己(<code>id_000001</code>)，不是所有子节点最小的。所以监听比自己小1的节点<code>id_000000</code>的状态</li>
+<li>…...</li>
+<li>等到系统A执行完操作以后，将自己创建的节点删除(<code>id_000000</code>)。通过监听，系统C发现<code>id_000000</code>节点已经删除了，发现自己已经是最小的节点了，于是顺利拿到锁</li>
+<li>….系统B如上</li>
+</ul>
+<h2 id="集群状态">集群状态</h2>
+<p>经过上面几个例子，我相信大家也很容易想到ZooKeeper是怎么&quot;<strong>感知</strong>&quot;节点的动态新增或者删除的了。<br>
+还是以我们三个系统A、B、C为例，在ZooKeeper中创建<strong>临时节点</strong>即可：<br>
+<img src="http://blog.ludangxin.club/post-images/1590297610379.jpg" alt="" loading="lazy"><br>
+只要系统A挂了，那<code>/groupMember/A</code>这个节点就会删除，通过<strong>监听</strong><code>groupMember</code>下的子节点，系统B和C就能够感知到系统A已经挂了。(新增也是同理)<br>
+除了能够感知节点的上下线变化，ZooKeeper还可以实现<strong>动态选举Master</strong>的功能。(如果集群是主从架构模式下)<br>
+原理也很简单，如果想要实现动态选举Master的功能，Znode节点的类型是带<strong>顺序号的临时节点</strong>(<code>EPHEMERAL_SEQUENTIAL</code>)就好了。</p>
+<ul>
+<li>Zookeeper会每次选举最小编号的作为Master，如果Master挂了，自然对应的Znode节点就会删除。然后让<strong>新的最小编号作为Master</strong>，这样就可以实现动态选举的功能了。<br>
+转自: <a href="https://www.zhihu.com/question/65852003/answer/656091418">Java3y-zookeeper</a></li>
+</ul>
+<h1 id="zab-协议paxos算法">ZAB 协议&amp;Paxos算法</h1>
+<p><a href="https://www.zhihu.com/question/19787937/answer/107750652">paxos 算法</a><br>
+Paxos 算法应该可以说是 ZooKeeper 的灵魂了。但是，ZooKeeper 并没有完全采用 Paxos算法 ，而是使用 ZAB 协议作为其保证数据一致性的核心算法。另外，在ZooKeeper的官方文档中也指出，ZAB协议并不像 Paxos 算法那样，是一种通用的分布式一致性算法，它是一种特别为Zookeeper设计的崩溃可恢复的原子消息广播算法。</p>
+<h2 id="zab-协议介绍">ZAB 协议介绍</h2>
+<p><strong>ZAB（ZooKeeper Atomic Broadcast 原子广播） 协议是为分布式协调服务 ZooKeeper 专门设计的一种支持崩溃恢复的原子广播协议。 在 ZooKeeper 中，主要依赖 ZAB 协议来实现分布式数据一致性，基于该协议，ZooKeeper 实现了一种主备模式的系统架构来保持集群中各个副本之间的数据一致性。</strong><br>
+<strong>ZAB 协议两种基本的模式：崩溃恢复和消息广播</strong><br>
+ZAB协议包括两种基本的模式，分别是 <strong>崩溃恢复和消息广播</strong>。当整个服务框架在启动过程中，或是当 Leader 服务器出现网络中断、崩溃退出与重启等异常情况时，ZAB 协议就会进人恢复模式并选举产生新的Leader服务器。当选举产生了新的 Leader 服务器，同时集群中已经有过半的机器与该Leader服务器完成了状态同步之后，ZAB协议就会退出恢复模式。其中，<strong>所谓的状态同步是指数据同步，用来保证集群中存在过半的机器能够和Leader服务器的数据状态保持一致</strong>。<br>
+<strong>当集群中已经有过半的Follower服务器完成了和Leader服务器的状态同步，那么整个服务框架就可以进人消息广播模式了。</strong> 当一台同样遵守ZAB协议的服务器启动后加人到集群中时，如果此时集群中已经存在一个Leader服务器在负责进行消息广播，那么新加人的服务器就会自觉地进人数据恢复模式：找到Leader所在的服务器，并与其进行数据同步，然后一起参与到消息广播流程中去。正如上文介绍中所说的，ZooKeeper设计成只允许唯一的一个Leader服务器来进行事务请求的处理。Leader服务器在接收到客户端的事务请求后，会生成对应的事务提案并发起一轮广播协议；而如果集群中的其他机器接收到客户端的事务请求，那么这些非Leader服务器会首先将这个事务请求转发给Leader服务器。</p>
+<h1 id="zookeeper环境搭建">zookeeper环境搭建</h1>
+<h2 id="单机环境">单机环境</h2>
+<ol>
+<li>上传zookeeper到linux服务器</li>
+<li>解压缩压缩包</li>
+</ol>
+<pre><code class="language-bash">tar -zxvf zookeeper-3.5.8.tar
+</code></pre>
+<ol start="3">
+<li>进入zookeeper-3.5.8目录,创建data文件夹且创建cfg文件</li>
+</ol>
+<pre><code class="language-bash">mkdir data
+cd conf
+# zookeeper默认读取zoo.cfg的配置文件信息
+cp zoo_sample.cfg zoo.cfg
+</code></pre>
+<ol start="4">
+<li>修改zoo.cfg data目录</li>
+</ol>
+<pre><code class="language-bash">dataDir=/usr/local/zookeeper-3.5.8/data
+# zk服务器默认8080端口,为防止端口占用,增加serverPort配置
+admin.serverPort=6666
+</code></pre>
+<ol start="5">
+<li>到bin目录启动zookeeper</li>
+</ol>
+<pre><code class="language-bash">./zkServer.sh start
+</code></pre>
+<ol start="6">
+<li>查看zookeeper状态</li>
+</ol>
+<pre><code class="language-bash">./zkServer.sh status
+</code></pre>
+<h2 id="集群环境">集群环境</h2>
+<ol>
+<li>将zookeeper分别安装到三台服务器上并配置好基本信息(重复单机环境搭建过程)</li>
+<li>在每个zookeeper的data目录下创建一个myid文件,内容分别是1,2,3 这个文件就是记录每个服务器的id</li>
+</ol>
+<pre><code class="language-bash"># 192.168.1.110 服务器
+echo 1 &gt; myid 
+# 192.168.1.111 服务器
+echo 2 &gt; myid 
+# 192.168.1.112 服务器
+echo 3 &gt; myid 
+</code></pre>
+<ol start="3">
+<li>在每一个zookeeper的zoo.cfg配置客户端访问端口和集群服务器ip列表</li>
+</ol>
+<pre><code class="language-bash"># server.服务器id=服务器ip地址:服务器之间通信端口:服务器之间投票选举端口
+server.1=192.168.1.110:2181:3881
+server.2=192.168.1.111:2181:3881
+server.3=192.168.1.112:2181:3881
+</code></pre>
+<ol start="4">
+<li>启动集群<br>
+依次启动三个zk实例,其中有一个leader和两个follower</li>
+<li>通过<code>./zkServer.sh status</code>命令可以查看当前zk是 leader 还是 follower</li>
+<li>可以通过<code>./zkServer.sh stop</code>命令停止zk服务来测试zk的选举模式</li>
+</ol>
+<h1 id="zookeeper基本使用">zookeeper基本使用</h1>
+<h2 id="数据结构-2">数据结构</h2>
+<p>zookeeper数据模型的结构与Unix文件系统很类似,整体上可以看作是一棵树,每个节点称作一个ZNode,每个ZNode都可以通过其路径唯一标识. 如图示<br>
+<img src="http://blog.ludangxin.club/post-images/1590297680104.jpg" alt="" loading="lazy"><br>
+ZNode节点类型</p>
+<ul>
+<li>持久化目录节点(PERSISTENT)<br>
+客户端与zookeeper断开连接后,该节点依旧存在</li>
+<li>持久化顺序编号目录节点(PERSISTENT_SEQUENTIAL)<br>
+客户端与zookeeper断开连接后,该节点依旧存在,zookeeper会给该节点按照顺序编号</li>
+<li>临时目录节点(EPHEMERAL)<br>
+客户端与zookeeper断开连接后,该节点被删除</li>
+<li>临时顺序编号目录节点(EPHEMERAL_SEQUENTIAL)<br>
+客户端与zookeeper断开连接后,该节点被删除,zookeeper会给该节点按照顺序编号</li>
+</ul>
+<h2 id="命令行使用">命令行使用</h2>
+<ol>
+<li>在zookeeper bin目录中输入 <code>./zkCli.sh</code> 进入客户端</li>
+<li>输入help查看相关命令操作,结果如下<br>
+<img src="http://blog.ludangxin.club/post-images/1590297708595.jpg" alt="" loading="lazy"><br>
+常用命令讲解:</li>
+</ol>
+<h2 id="节点目录操作">节点目录操作</h2>
+<ol>
+<li>使用ls命令来查看当前znode中锁包含的内容</li>
+</ol>
+<pre><code class="language-bash"># ls [-s] [-w] [-R] path
+[zk: localhost:2181(CONNECTED) 3] ls /
+[ludangxin, zookeeper]
+</code></pre>
+<ol start="2">
+<li>使用ls2查看当前节点数据并能看到更新次数等数据</li>
+</ol>
+<pre><code class="language-bash"># ls2 path [watch] 官方不推荐直接使用ls2查看, 使用 ls -s path 效果一样
+[zk: localhost:2181(CONNECTED) 4] ls2 /
+'ls2' has been deprecated. Please use 'ls [-s] path' instead.
+[ludangxin, zookeeper]
+cZxid = 0x0
+ctime = Thu Jan 01 00:00:00 UTC 1970
+mZxid = 0x0
+mtime = Thu Jan 01 00:00:00 UTC 1970
+pZxid = 0x2
+cversion = 0
+dataVersion = 0
+aclVersion = 0
+ephemeralOwner = 0x0
+dataLength = 0
+numChildren = 2
+</code></pre>
+<ol start="3">
+<li>使用create创建节点  -s 含有序列  -e 临时</li>
+</ol>
+<pre><code class="language-bash"># create [-s] [-e] [-c] [-t ttl] path [data] [acl]
+# zk客户端不能递归创建目录,只能一级一级创建
+[zk: localhost:2181(CONNECTED) 6] create /ludangxin/app1
+Created /ludangxin/app1
+</code></pre>
+<ol start="4">
+<li>使用set设置节点值</li>
+</ol>
+<pre><code class="language-bash"># set [-s] [-v version] path data
+[zk: localhost:2181(CONNECTED) 8] set /ludangxin/app1 helloworld
+</code></pre>
+<ol start="5">
+<li>使用get获得节点的值</li>
+</ol>
+<pre><code class="language-bash"># get [-s] [-w] path 
+[zk: localhost:2181(CONNECTED) 9] get /ludangxin/app1
+helloworld
+</code></pre>
+<ol start="6">
+<li>使用stat查看节点状态</li>
+</ol>
+<pre><code class="language-bash"># stat [-w] path
+[zk: localhost:2181(CONNECTED) 1] stat /ludangxin/app1
+cZxid = 0x3
+ctime = Sat May 23 13:03:07 UTC 2020
+mZxid = 0x4
+mtime = Sat May 23 13:05:56 UTC 2020
+pZxid = 0x3
+cversion = 0
+dataVersion = 1
+aclVersion = 0
+ephemeralOwner = 0x0
+dataLength = 10
+numChildren = 0
+</code></pre>
+<ol start="7">
+<li>使用delete删除节点</li>
+</ol>
+<pre><code class="language-bash"># delete [-v version] path
+# delete不能递归删除目录,只能一级一级删除
+[zk: localhost:2181(CONNECTED) 3] delete /ludangxin/app1
+</code></pre>
+<ol start="8">
+<li>使用rmr或deleteall递归删除节点</li>
+</ol>
+<pre><code class="language-bash"># rmr path 官方不推荐使用rmr 推荐使用deleteall
+[zk: localhost:2181(CONNECTED) 4] create /ludangxin/app1
+Created /ludangxin/app1
+[zk: localhost:2181(CONNECTED) 5] create /ludangxin/app1/test1
+Created /ludangxin/app1/test1
+[zk: localhost:2181(CONNECTED) 7] rmr /ludangxin
+The command 'rmr' has been deprecated. Please use 'deleteall' instead.
+[zk: localhost:2181(CONNECTED) 8] ls /ludangxin
+Node does not exist: /ludangxin
+[zk: localhost:2181(CONNECTED) 9] ls /
+[zookeeper]
+</code></pre>
+<h2 id="监听操作">监听操作</h2>
+<p><strong>监听只能监听一次,触发后就销毁了</strong></p>
+<ol>
+<li>使用ls创建监听</li>
+</ol>
+<pre><code class="language-bash"># ls -w path 当监听的节点包括他的子节点发目录发生变化的时候才触发监听
+# 例:当前监听 /a/b 如果删除b节点,或者创建 /a/b/c 的时候会触发监听且只能触发一次
+[zk: localhost:2181(CONNECTED) 15] ls -w  /ludangxin/app1
+[]
+[zk: localhost:2181(CONNECTED) 16] set /ludangxin/app1 helloworld
+[zk: localhost:2181(CONNECTED) 17] create /ludangxin/app1/testwatch
+Created /ludangxin/app1/testwatch
+WATCHER::
+WatchedEvent state:SyncConnected type:NodeChildrenChanged path:/ludangxin/app1
+</code></pre>
+<ol start="2">
+<li>使用get创建监听(只能当前节点监听节点值的变化)</li>
+</ol>
+<pre><code class="language-bash"># get -w path
+get -w /ludangxin/app1
+</code></pre>
+<ol start="3">
+<li>使用stat创建监听(当 当前节点的状态发生改变的时候触发)</li>
+</ol>
+<pre><code class="language-bash"># stat -w path
+stat -w /ludangxin/app1
+</code></pre>
+<h1 id="zookeeper-api使用">zookeeper api使用</h1>
+<h2 id="引入依赖">引入依赖</h2>
+<p><strong>注</strong>: 引入依赖的版本最好和安装的zk服务的版本一致</p>
+<pre><code class="language-xml">&lt;!-- zookeeper --&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;org.apache.zookeeper&lt;/groupId&gt;
+    &lt;artifactId&gt;zookeeper&lt;/artifactId&gt;
+    &lt;version&gt;3.5.8&lt;/version&gt;
+&lt;/dependency&gt;
+&lt;!-- lombok --&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;
+    &lt;artifactId&gt;lombok&lt;/artifactId&gt;
+    &lt;optional&gt;true&lt;/optional&gt;
+&lt;/dependency&gt;
+</code></pre>
+<h2 id="创建测试类">创建测试类</h2>
+<pre><code class="language-java">import lombok.extern.slf4j.Slf4j;
+import org.apache.zookeeper.*;
+import org.apache.zookeeper.data.Stat;
+import org.junit.jupiter.api.Test;
+import java.io.IOException;
+import java.util.List;
+
+@Slf4j
+public class ZkApiTest {
+
+    public static final String URL = &quot;192.168.128.130:2181&quot;;
+
+    public static final int SESSION_TIME_OUT = 20000;
+
+    @Test
+    public void test() throws IOException, KeeperException, InterruptedException {
+        //1. 创建zookeeper连接
+        ZooKeeper zooKeeper = new ZooKeeper(URL,SESSION_TIME_OUT, watch -&gt;
+                log.info(&quot;触发了&quot;+ watch.getType() +&quot;事件&quot;)
+        );
+        //2. 创建父节点
+        //Ids.OPEN_ACL_UNSAFE 无权限 CreateMode.PERSISTENT 持久化节点
+        String testParentPath = zooKeeper.create(&quot;/testPath1&quot;, &quot;testParentValue&quot;.getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
+        log.info(&quot;testParentPath===&quot;+testParentPath);
+        //3. 创建子节点
+        String testChildPath = zooKeeper.create(testParentPath+&quot;/child1&quot;, &quot;testChildValue&quot;.getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
+        log.info(&quot;testChildPath===&quot;+testChildPath);
+        //4. 获取节点中的值(父节点和子节点)
+        byte[] parentData = zooKeeper.getData(testParentPath, false, null);
+        byte[] childData = zooKeeper.getData(testChildPath, false, null);
+        List&lt;String&gt; childrenNodes = zooKeeper.getChildren(testParentPath, false);
+        log.info(&quot;parentData===&quot;+new String(parentData));
+        log.info(&quot;childData===&quot;+new String(childData));
+        for (String childrenNode : childrenNodes) {
+            log.info(&quot;childrenNode===&quot;+childrenNode);
+        }
+        //5. 修改节点的值
+        //version 节点版本 -1 匹配任何版本
+        zooKeeper.setData(testParentPath, &quot;testValueUpdate&quot;.getBytes(), -1);
+        byte[] parentNewData = zooKeeper.getData(testParentPath, false, null);
+        log.info(&quot;parentNewData===&quot;+new String(parentNewData));
+        //6. 判断某个节点是否存在
+        Stat exists = zooKeeper.exists(testChildPath, false);
+        log.info(exists.toString());
+        //7. 删除节点
+        zooKeeper.delete(testChildPath,-1);
+    }
+}
+</code></pre>
+<h2 id="输出结果">输出结果</h2>
+<pre><code class="language-java">23:37:36.574 [main-EventThread] INFO com.ldx.springboot.ZkApiTest - 触发了None事件
+23:37:36.581 [main] INFO com.ldx.springboot.ZkApiTest - testParentPath===/testPath1
+23:37:36.585 [main] INFO com.ldx.springboot.ZkApiTest - testChildPath===/testPath1/child1
+23:37:36.595 [main] INFO com.ldx.springboot.ZkApiTest - parentData===testParentValue
+23:37:36.595 [main] INFO com.ldx.springboot.ZkApiTest - childData===testChildValue
+23:37:36.595 [main] INFO com.ldx.springboot.ZkApiTest - childrenNode===child1
+23:37:36.603 [main] INFO com.ldx.springboot.ZkApiTest - parentNewData===testValueUpdate
+23:37:36.606 [main] INFO com.ldx.springboot.ZkApiTest - 111,111,1590248257090,1590248257090,0,0,0,0,14,0,111
+</code></pre>
+
+                        </div>
+                        
+                            <div class="post-toc">
+                                <ul class="markdownIt-TOC">
+<li><a href="#zookeeper%E6%98%AF%E4%BB%80%E4%B9%88">zookeeper是什么</a></li>
+<li><a href="#zookeeper%E4%B8%BA%E4%BB%80%E4%B9%88%E8%83%BD%E5%B9%B2%E8%BF%99%E4%B9%88%E5%A4%9A">zookeeper为什么能干这么多</a>
+<ul>
+<li><a href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84">数据结构</a></li>
+<li><a href="#%E7%9B%91%E5%90%AC%E5%99%A8">监听器</a></li>
+</ul>
+</li>
+<li><a href="#zookeeper%E5%85%B7%E4%BD%93%E8%83%BD%E5%B9%B2%E4%BB%80%E4%B9%88">zookeeper具体能干什么</a>
+<ul>
+<li><a href="#%E7%BB%9F%E4%B8%80%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86">统一配置管理</a></li>
+<li><a href="#%E7%BB%9F%E4%B8%80%E5%91%BD%E5%90%8D%E6%9C%8D%E5%8A%A1">统一命名服务</a></li>
+<li><a href="#%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81">分布式锁</a></li>
+<li><a href="#%E9%9B%86%E7%BE%A4%E7%8A%B6%E6%80%81">集群状态</a></li>
+</ul>
+</li>
+<li><a href="#zab-%E5%8D%8F%E8%AE%AEpaxos%E7%AE%97%E6%B3%95">ZAB 协议&amp;Paxos算法</a>
+<ul>
+<li><a href="#zab-%E5%8D%8F%E8%AE%AE%E4%BB%8B%E7%BB%8D">ZAB 协议介绍</a></li>
+</ul>
+</li>
+<li><a href="#zookeeper%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA">zookeeper环境搭建</a>
+<ul>
+<li><a href="#%E5%8D%95%E6%9C%BA%E7%8E%AF%E5%A2%83">单机环境</a></li>
+<li><a href="#%E9%9B%86%E7%BE%A4%E7%8E%AF%E5%A2%83">集群环境</a></li>
+</ul>
+</li>
+<li><a href="#zookeeper%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8">zookeeper基本使用</a>
+<ul>
+<li><a href="#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-2">数据结构</a></li>
+<li><a href="#%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%BD%BF%E7%94%A8">命令行使用</a></li>
+<li><a href="#%E8%8A%82%E7%82%B9%E7%9B%AE%E5%BD%95%E6%93%8D%E4%BD%9C">节点目录操作</a></li>
+<li><a href="#%E7%9B%91%E5%90%AC%E6%93%8D%E4%BD%9C">监听操作</a></li>
+</ul>
+</li>
+<li><a href="#zookeeper-api%E4%BD%BF%E7%94%A8">zookeeper api使用</a>
+<ul>
+<li><a href="#%E5%BC%95%E5%85%A5%E4%BE%9D%E8%B5%96">引入依赖</a></li>
+<li><a href="#%E5%88%9B%E5%BB%BA%E6%B5%8B%E8%AF%95%E7%B1%BB">创建测试类</a></li>
+<li><a href="#%E8%BE%93%E5%87%BA%E7%BB%93%E6%9E%9C">输出结果</a></li>
+</ul>
+</li>
+</ul>
+
+                            </div>
+                            
+                                
+                                    
+                                        <!--en-->
+                                        <section class="post-copyright en">
+                                            <p class="copyright-item">
+                                                <span>Author:</span>
+                                                <span>断剑重铸之日，骑士归来之时。</span>
+                                            </p>
+
+                                            <p class="copyright-item">
+                                                <span>Permalink:</span>
+                                                <span><a href="http://blog.ludangxin.club/post/chu-shi-zookeeper/">http://blog.ludangxin.club/post/chu-shi-zookeeper/</a></span>
+                                            </p>
+
+                                            <p class="copyright-item">
+                                                <span>License:</span>
+                                                <span>MIT License</span>
+                                            </p>
+                                        </section>
+                                        
+                                                
+                                                    
+                                                        <!-- Share-->
+                                                        <span style="margin-right:15px">
+                                                    <i class="post-share"></i>
+                                                    <span>Share:</span>
+                                                        <a title="QR Code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://blog.ludangxin.club/post/chu-shi-zookeeper/"><i class="fa fa-qrcode"></i></a>
+                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.ludangxin.club/post/chu-shi-zookeeper/&sharesource=qzone&title=初识 Zookeeper&pics=http://blog.ludangxin.club/images/avatar.png?v=1597935637693&summary="><i class="fa fa-qq"></i></a>
+                                                        <a title="Weibo" target="_blank" href="https://service.weibo.com/share/share.php?url=http://blog.ludangxin.club/post/chu-shi-zookeeper/&sharesource=weibo&title=初识 Zookeeper + " - " + &pic="http://blog.ludangxin.club/images/avatar.png?v=1597935637693 "><i class="fa fa-weibo "></i></a>
+                                                        
+                                                                </span>
+                                                                <!--en-->
+                                                                <section class="post-tags en ">
+                                                                    <div>
+                                                                        <span>Tag(s):</span>
+                                                                        <span class="tag ">
+                        
+                        
+                        <a href="http://blog.ludangxin.club/tag/4KBrXdUxz/">#
+                                                分布式
+                                                    </a>
+                                                    
+                                                        
+                                                            </span>
+                                                                    </div>
+                                                                    <div>
+                                                                        <a href="javascript:window.history.back();">back</a>
+                                                                        <span>&dot;</span>
+                                                                        <a href="#">home</a>
+                                                                    </div>
+                                                                </section>
+                                                                
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                        <a class="prev" rel="prev" href="http://blog.ludangxin.club/post/chu-shi-dubbo/">
+                                                                                            初识 Dubbo
+                                                                                        </a>
+                                                                                        
+                                                                                            
+                                                                                                <a class="next" rel="next" href="http://blog.ludangxin.club/post/fen-bu-shi-ji-qun-wei-fu-wu/">
+                                                                                                    浅谈 分布式 集群 微服务
+                                                                                                </a>
+                                                                                                
+                                                                                </section>
+                    </article>
+                </div>
+                
+                                            
+                                                <script type="application/javascript" src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+<div id="vlaine-comment"></div>
+<script type="application/javascript">
+    new Valine({
+        el: '#vlaine-comment',
+        appId: '6v8KE1xPEnnI3VycbaTHPQvD-gzGzoHsz',
+        appKey: 'tCAPkuAx3JWn7YrPKlEpyaMH',
+        pageSize: 10,
+        avatar: 'mp',
+        placeholder: '来都来了，不妨评论一下',
+        visitor: true,
+        highlight: false,
+        recordIP: true,
+    })
+</script>
+                                                    
+            </div>
+    </div>
+    </div>
+    </div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                    <div class="Like">
+                        <div class="tip" data-tooltip="Do you like it?">
+                            <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                        </div>
+                    </div>
+                    
+                        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+                            
+                                <b id="hitokoto"></b><br>
+                                
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        断剑重铸之日，骑士归来之时。 &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+                                            | Powered by
+                                            <a href="https://coding.net" target="_blank">
+                                                Coding.net
+                                            </a>
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.4
+                </div>
+                
+                    <script>
+                        var port = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + port + '</div>')
+                    </script>
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+                    
+                    loadlive2d();
+                    
+                    
+                    hitokoto();
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1597935637693);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    断剑重铸之日，骑士归来之时。
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="鲁档信">
+<meta name="description" content="Hello World !">
+<meta name="keywords" content="鲁档信,ludangxin">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="http://blog.ludangxin.club/styles/main.css" />
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+        
+            <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/Card/prism.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/css/Card/prism.min.css" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+            <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+            
+                <!--点击特效-->
+                <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/love.min.js"></script>
+                
+                        <!--CDN样式-->
+                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+                        <script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+                        
+                            <script>
+                                (function() {
+                                    var bp = document.createElement('script');
+                                    var curProtocol = window.location.protocol.split(':')[0];
+                                    if (curProtocol === 'https') {
+                                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                                    } else {
+                                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                                    }
+                                    var s = document.getElementsByTagName("script")[0];
+                                    s.parentNode.insertBefore(bp, s);
+                                })();
+                            </script>
+                            
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="http://blog.ludangxin.club">
+                    断剑重铸之日，骑士归来之时。
+                </a>
+            </div>
+            <div id="tp-weather-widget"></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        🏠首页
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        📚归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        🏷️标签
+                    </a>
+                    
+                    <a class="menu-item" href="/posts">
+                        ✍️博客
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about/">
+                        👦关于
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1597935637693" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="http://blog.ludangxin.club">
+                            断剑重铸之日，骑士归来之时。
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1597935637693" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            🏠首页
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            📚归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            🏷️标签
+                        </a>
+                        
+                        <a class="menu-item" href="/posts">
+                            ✍️博客
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about/">
+                            👦关于
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+
+
+
+    <script>
+        (function(a, h, g, f, e, d, c, b) {
+            b = function() {
+                d = h.createElement(g);
+                c = h.getElementsByTagName(g)[0];
+                d.src = e;
+                d.charset = "utf-8";
+                d.async = 1;
+                c.parentNode.insertBefore(d, c)
+            };
+            a["SeniverseWeatherWidgetObject"] = f;
+            a[f] || (a[f] = function() {
+                (a[f].q = a[f].q || []).push(arguments)
+            });
+            a[f].l = +new Date();
+            if (a.attachEvent) {
+                a.attachEvent("onload", b)
+            } else {
+                a.addEventListener("load", b, false)
+            }
+        }(window, document, "script", "SeniverseWeatherWidget", "//cdn.sencdn.com/widget2/static/js/bundle.js?t=" + parseInt((new Date().getTime() / 100000000).toString(), 10)));
+        window.SeniverseWeatherWidget('show', {
+            flavor: "slim",
+            location: "WWEFQFPJZ7T8",
+            geolocation: true,
+            language: "auto",
+            unit: "c",
+            theme: "auto",
+            token: "61bcc333-3305-4728-9465-6785274bb0a3",
+            hover: "enabled",
+            container: "tp-weather-widget"
+        })
+    </script>
+    
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                SpringBoot  集成 任务调度
+                            </h1>
+                            
+                                <!--en-->
+                                <div class="post-meta en">
+                                    Author:
+                                    <a itemprop="author" rel="author" href="/">
+                                        断剑重铸之日，骑士归来之时。
+                                    </a>
+                                    <span class="post-time">
+                                Date: <a href="#">2020-06-07</a>
+                            </span>
+                                    <span class="post-readtime">Reading Time:<a
+                                    href="#">9.3
+                                    mins</a></span>
+                                    <span class="post-words">words:<a href="#">1904</a></span>
+                                    
+                                            Views:
+                                            <span data-hk-page="current"> - </span>
+                                            
+                                </div>
+                                
+                        </header>
+                        
+                            <img class="post-feature-image" src="http://blog.ludangxin.club/post-images/springboot-ji-cheng-ren-wu-diao-du.jpg" alt="">
+                          
+                        <div class="post-content">
+                            <h1 id="为什么要使用任务调度">为什么要使用任务调度</h1>
+<p>定时任务的场景可以说非常广泛，比如某些视频网站，购买会员后，每天会给会员送成长值，每月会给会员送一些电影券；比如在保证最终一致性的场景中，往往利用定时任务调度进行一些比对工作；比如一些定时需要生成的报表、邮件；比如一些需要定时清理数据的任务等。</p>
+<h1 id="scheduled">@Scheduled</h1>
+<p><a href="https://spring.io/guides/gs/scheduling-tasks/">springboot scheduling 官方教程</a></p>
+<h2 id="快速上手">快速上手</h2>
+<p><strong>需求:</strong> 每个五秒打印一次日志</p>
+<h2 id="引入所需依赖">引入所需依赖</h2>
+<p><strong>因spring-boot-starter中默认引入了scheduler依赖,所以不用额外添加</strong></p>
+<pre><code class="language-xml">&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter&lt;/artifactId&gt;
+&lt;/dependency&gt;
+
+&lt;!-- lombok 工具类 --&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;
+    &lt;artifactId&gt;lombok&lt;/artifactId&gt;
+    &lt;optional&gt;true&lt;/optional&gt;
+&lt;/dependency&gt;
+</code></pre>
+<h2 id="修改启动类">修改启动类</h2>
+<pre><code class="language-java">import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableScheduling;
+// 开启Scheduler
+@EnableScheduling
+@SpringBootApplication
+public class SpringbootApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(SpringbootApplication.class, args);
+    }
+
+}
+</code></pre>
+<h2 id="创建日志打印任务">创建日志打印任务</h2>
+<pre><code class="language-java">import lombok.extern.slf4j.Slf4j;
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Component;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+@Slf4j
+@Component
+public class PrintTask {
+
+    private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat(&quot;HH:mm:ss&quot;);
+
+    /**
+     * 每隔5秒打印一次日志
+     */
+    @Scheduled(fixedRate = 5000)
+    public void reportCurrentTime() {
+        log.info(&quot;The time is now {}&quot;, DATE_FORMAT.format(new Date()));
+    }
+
+}
+</code></pre>
+<h2 id="输出结果">输出结果</h2>
+<pre><code class="language-verilog">2020-06-04 21:33:06.130  INFO 1244 --- [   scheduling-1] com.ldx.springboot.scheduler.PrintTask   : The time is now 21:33:06
+2020-06-04 21:33:11.131  INFO 1244 --- [   scheduling-1] com.ldx.springboot.scheduler.PrintTask   : The time is now 21:33:11
+2020-06-04 21:33:16.133  INFO 1244 --- [   scheduling-1] com.ldx.springboot.scheduler.PrintTask   : The time is now 21:33:16
+2020-06-04 21:33:21.135  INFO 1244 --- [   scheduling-1] com.ldx.springboot.scheduler.PrintTask   : The time is now 21:33:21
+2020-06-04 21:33:26.137  INFO 1244 --- [   scheduling-1] com.ldx.springboot.scheduler.PrintTask   : The time is now 21:33:26
+2020-06-04 21:33:31.139  INFO 1244 --- [   scheduling-1] com.ldx.springboot.scheduler.PrintTask   : The time is now 21:33:31
+2020-06-04 21:33:36.140  INFO 1244 --- [   scheduling-1] com.ldx.springboot.scheduler.PrintTask   : The time is now 21:33:36
+2020-06-04 21:33:41.142  INFO 1244 --- [   scheduling-1] com.ldx.springboot.scheduler.PrintTask   : The time is now 21:33:41
+</code></pre>
+<h2 id="配置taskscheduler线程池">配置TaskScheduler线程池</h2>
+<p>在实际项目中，我们一个系统可能会定义多个定时任务。那么多个定时任务之间是可以相互独立且可以并行执行的。</p>
+<p>通过查看org.springframework.scheduling.config.ScheduledTaskRegistrar源代码，发现spring默认会创建一个单线程池。这样对于我们的多任务调度可能会是致命的，当多个任务并发（或需要在同一时间）执行时，任务调度器就会出现时间漂移，任务执行时间将不确定。</p>
+<h3 id="源码">源码</h3>
+<pre><code class="language-java">protected void scheduleTasks() {
+    if (this.taskScheduler == null) {
+        this.localExecutor = Executors.newSingleThreadScheduledExecutor();
+        this.taskScheduler = new ConcurrentTaskScheduler(this.localExecutor);
+    }
+    //省略...
+}
+</code></pre>
+<h3 id="自定义线程池">自定义线程池</h3>
+<pre><code class="language-java">import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.scheduling.TaskScheduler;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler;
+
+@Configuration
+public class ScheduleConfig {
+
+    @Bean
+    public TaskScheduler taskScheduler() {
+        //org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler
+        ThreadPoolTaskScheduler threadPoolTaskScheduler = new ThreadPoolTaskScheduler();
+        threadPoolTaskScheduler.setPoolSize(20);
+        return threadPoolTaskScheduler;
+    }
+}
+</code></pre>
+<h2 id="注解参数介绍">注解参数介绍</h2>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fixedRate</td>
+<td>该属性的含义是上一个调用开始后再次调用的延时（不用等待上一次调用完成），这样就会存在重复执行的问题，所以不是建议使用，但数据量如果不大时在配置的间隔时间内可以执行完也是可以使用的。</td>
+</tr>
+<tr>
+<td>fixedDelay</td>
+<td>该属性的功效与上面的fixedRate则是相反的，配置了该属性后会等到方法执行完成后延迟配置的时间再次执行该方法.</td>
+</tr>
+<tr>
+<td>initialDelay</td>
+<td>该属性跟上面的fixedDelay、fixedRate有着密切的关系，为什么这么说呢？该属性的作用是第一次执行延迟时间，只是做延迟的设定，并不会控制其他逻辑，所以要配合fixedDelay或者fixedRate来使用</td>
+</tr>
+<tr>
+<td>cron</td>
+<td>cron就不做赘述了。<a href="https://www.cnblogs.com/yanghj010/p/10875151.html">传送门</a></td>
+</tr>
+<tr>
+<td>zone</td>
+<td>指定解析cron表达式的时区</td>
+</tr>
+</tbody>
+</table>
+<h2 id="特点">特点</h2>
+<p>优点: 足够简单 , 易上手</p>
+<p>缺点:</p>
+<ol>
+<li>
+<p>无法实现复杂的业务场景</p>
+</li>
+<li>
+<p>如果服务器宕机 , 那么内存中的定时任务就会释放,无法支持<code>misfire</code></p>
+</li>
+<li>
+<p>分布式部署会出现重复调用的问题等...</p>
+</li>
+</ol>
+<h1 id="quartz">Quartz</h1>
+<p>Quartz是纯Java实现，而且作为Spring的默认调度框架，由于Quartz的强大的调度功能、灵活的使用方式、还具有分布式集群能力，可以说Quartz出马，可以搞定一切定时任务调度！</p>
+<figure data-type="image" tabindex="1"><img src="http://blog.ludangxin.club/post-images/1591529517702.jpg" alt="" loading="lazy"></figure>
+<h2 id="quartz-中主要对象">Quartz  中主要对象</h2>
+<ul>
+<li>Scheduler：调度任务的主要API</li>
+<li>ScheduleBuilder：用于构建Scheduler，例如其简单实现类SimpleScheduleBuilder</li>
+<li>Job：调度任务执行的接口，也即定时任务执行的方法</li>
+<li>JobDetail：定时任务作业的实例</li>
+<li>JobBuilder：关联具体的Job，用于构建JobDetail</li>
+<li>Trigger：定义调度执行计划的组件，即定时执行</li>
+<li>TriggerBuilder：构建Trigger</li>
+</ul>
+<h2 id="快速上手-2">快速上手</h2>
+<h3 id="添加所需依赖">添加所需依赖</h3>
+<pre><code class="language-xml">	    &lt;!-- spring boot --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+
+        &lt;!-- quartz 任务调度 --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-quartz&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+
+        &lt;!-- mysql依赖 --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;mysql&lt;/groupId&gt;
+            &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;
+            &lt;version&gt;5.1.47&lt;/version&gt;
+        &lt;/dependency&gt;
+
+        &lt;!-- mybatis --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.mybatis.spring.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;mybatis-spring-boot-starter&lt;/artifactId&gt;
+            &lt;version&gt;2.1.1&lt;/version&gt;
+        &lt;/dependency&gt;
+
+        &lt;!-- lombok 工具类 --&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;
+            &lt;artifactId&gt;lombok&lt;/artifactId&gt;
+            &lt;optional&gt;true&lt;/optional&gt;
+        &lt;/dependency&gt;
+</code></pre>
+<h3 id="配置applicationyml">配置application.yml</h3>
+<pre><code class="language-yaml">spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&amp;zeroDateTimeBehavior=convertToNull&amp;autoReconnect=true&amp;characterEncoding=utf-8
+    username: root
+    password: root
+    hikari:
+      minimum-idle: 5
+      idle-timeout: 600000
+      maximum-pool-size: 10
+      auto-commit: true
+      pool-name: MyHikariCP
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: SELECT 1
+  quartz:
+    # 相关属性配置
+    properties:
+      org:
+        quartz:
+          scheduler:
+            # 实例名称
+            instanceName: TestScheduler
+            # 实例id
+            instanceId: AUTO
+          jobStore:
+            class: org.quartz.impl.jdbcjobstore.JobStoreTX
+            driverDelegateClass: org.quartz.impl.jdbcjobstore.StdJDBCDelegate
+            tablePrefix: QRTZ_
+            useProperties: false
+            # 开启集群
+            isClustered: true
+            clusterCheckinInterval: 15000
+          threadPool:
+            class: org.quartz.simpl.SimpleThreadPool
+            threadCount: 20
+            threadPriority: 8
+            threadsInheritContextClassLoaderOfInitializingThread: true
+    # 初始化后是否自动启动调度程序
+    auto-startup: true
+    # 数据库方式 memory 内存 ; jdbc 数据库
+    job-store-type: jdbc
+    # 初始化表结构
+    jdbc:
+      # 项目启动时初始化数据库  never 从不 ; always 每次启动都初始化
+      initialize-schema: always
+    # 是否覆盖已经持久化的job
+    overwrite-existing-jobs: true
+</code></pre>
+<p><a href="https://github.com/quartz-scheduler/quartz/blob/master/docs/configuration.adoc">quartz官方配置文档</a></p>
+<h3 id="创建job">创建Job</h3>
+<pre><code class="language-java">import lombok.extern.slf4j.Slf4j;
+import org.quartz.JobExecutionContext;
+import org.quartz.JobExecutionException;
+import org.springframework.scheduling.quartz.QuartzJobBean;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+@Slf4j
+public class LogJob extends QuartzJobBean {
+
+    private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat(&quot;HH:mm:ss&quot;);
+
+    @Override
+    protected void executeInternal(JobExecutionContext jobExecutionContext) throws JobExecutionException {
+        log.info(&quot;The time is now {}&quot;, DATE_FORMAT.format(new Date()));
+    }
+}
+</code></pre>
+<h3 id="注册job信息">注册Job信息</h3>
+<pre><code class="language-java">import org.quartz.*;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class QuartzConfig {
+
+    @Bean
+    public JobDetail logJobDetail(){
+        return JobBuilder.newJob(LogJob.class).storeDurably().build();
+    }
+
+    @Bean
+    public Trigger logTrigger(){
+        SimpleScheduleBuilder scheduleBuilder = SimpleScheduleBuilder.simpleSchedule()
+                //每一秒执行一次
+                .withIntervalInSeconds(1)
+                //永久重复，一直执行下去
+                .repeatForever();
+        return TriggerBuilder.newTrigger()
+                .forJob(logJobDetail())
+                .withSchedule(scheduleBuilder)
+                .build();
+    }
+
+}
+</code></pre>
+<h3 id="启动项目测试">启动项目,测试</h3>
+<pre><code class="language-verilog">2020-06-06 17:04:50.904  INFO 9920 --- [eduler_Worker-1] com.ldx.springboot.quartz.LogJob         : The time is now 17:04:50
+2020-06-06 17:04:50.914  INFO 9920 --- [eduler_Worker-2] com.ldx.springboot.quartz.LogJob         : The time is now 17:04:50
+2020-06-06 17:04:51.791  INFO 9920 --- [eduler_Worker-3] com.ldx.springboot.quartz.LogJob         : The time is now 17:04:51
+2020-06-06 17:04:52.791  INFO 9920 --- [eduler_Worker-4] com.ldx.springboot.quartz.LogJob         : The time is now 17:04:52
+2020-06-06 17:04:53.792  INFO 9920 --- [eduler_Worker-5] com.ldx.springboot.quartz.LogJob         : The time is now 17:04:53
+2020-06-06 17:04:54.791  INFO 9920 --- [eduler_Worker-6] com.ldx.springboot.quartz.LogJob         : The time is now 17:04:54
+2020-06-06 17:04:55.791  INFO 9920 --- [eduler_Worker-7] com.ldx.springboot.quartz.LogJob         : The time is now 17:04:55
+</code></pre>
+
+                        </div>
+                        
+                            <div class="post-toc">
+                                <ul class="markdownIt-TOC">
+<li><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8%E4%BB%BB%E5%8A%A1%E8%B0%83%E5%BA%A6">为什么要使用任务调度</a></li>
+<li><a href="#scheduled">@Scheduled</a>
+<ul>
+<li><a href="#%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B">快速上手</a></li>
+<li><a href="#%E5%BC%95%E5%85%A5%E6%89%80%E9%9C%80%E4%BE%9D%E8%B5%96">引入所需依赖</a></li>
+<li><a href="#%E4%BF%AE%E6%94%B9%E5%90%AF%E5%8A%A8%E7%B1%BB">修改启动类</a></li>
+<li><a href="#%E5%88%9B%E5%BB%BA%E6%97%A5%E5%BF%97%E6%89%93%E5%8D%B0%E4%BB%BB%E5%8A%A1">创建日志打印任务</a></li>
+<li><a href="#%E8%BE%93%E5%87%BA%E7%BB%93%E6%9E%9C">输出结果</a></li>
+<li><a href="#%E9%85%8D%E7%BD%AEtaskscheduler%E7%BA%BF%E7%A8%8B%E6%B1%A0">配置TaskScheduler线程池</a>
+<ul>
+<li><a href="#%E6%BA%90%E7%A0%81">源码</a></li>
+<li><a href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BA%BF%E7%A8%8B%E6%B1%A0">自定义线程池</a></li>
+</ul>
+</li>
+<li><a href="#%E6%B3%A8%E8%A7%A3%E5%8F%82%E6%95%B0%E4%BB%8B%E7%BB%8D">注解参数介绍</a></li>
+<li><a href="#%E7%89%B9%E7%82%B9">特点</a></li>
+</ul>
+</li>
+<li><a href="#quartz">Quartz</a>
+<ul>
+<li><a href="#quartz-%E4%B8%AD%E4%B8%BB%E8%A6%81%E5%AF%B9%E8%B1%A1">Quartz  中主要对象</a></li>
+<li><a href="#%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B-2">快速上手</a>
+<ul>
+<li><a href="#%E6%B7%BB%E5%8A%A0%E6%89%80%E9%9C%80%E4%BE%9D%E8%B5%96">添加所需依赖</a></li>
+<li><a href="#%E9%85%8D%E7%BD%AEapplicationyml">配置application.yml</a></li>
+<li><a href="#%E5%88%9B%E5%BB%BAjob">创建Job</a></li>
+<li><a href="#%E6%B3%A8%E5%86%8Cjob%E4%BF%A1%E6%81%AF">注册Job信息</a></li>
+<li><a href="#%E5%90%AF%E5%8A%A8%E9%A1%B9%E7%9B%AE%E6%B5%8B%E8%AF%95">启动项目,测试</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                            </div>
+                            
+                                
+                                    
+                                        <!--en-->
+                                        <section class="post-copyright en">
+                                            <p class="copyright-item">
+                                                <span>Author:</span>
+                                                <span>断剑重铸之日，骑士归来之时。</span>
+                                            </p>
+
+                                            <p class="copyright-item">
+                                                <span>Permalink:</span>
+                                                <span><a href="http://blog.ludangxin.club/post/springboot-ji-cheng-ren-wu-diao-du/">http://blog.ludangxin.club/post/springboot-ji-cheng-ren-wu-diao-du/</a></span>
+                                            </p>
+
+                                            <p class="copyright-item">
+                                                <span>License:</span>
+                                                <span>MIT License</span>
+                                            </p>
+                                        </section>
+                                        
+                                                
+                                                    
+                                                        <!-- Share-->
+                                                        <span style="margin-right:15px">
+                                                    <i class="post-share"></i>
+                                                    <span>Share:</span>
+                                                        <a title="QR Code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://blog.ludangxin.club/post/springboot-ji-cheng-ren-wu-diao-du/"><i class="fa fa-qrcode"></i></a>
+                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.ludangxin.club/post/springboot-ji-cheng-ren-wu-diao-du/&sharesource=qzone&title=SpringBoot  集成 任务调度&pics=http://blog.ludangxin.club/images/avatar.png?v=1597935637693&summary="><i class="fa fa-qq"></i></a>
+                                                        <a title="Weibo" target="_blank" href="https://service.weibo.com/share/share.php?url=http://blog.ludangxin.club/post/springboot-ji-cheng-ren-wu-diao-du/&sharesource=weibo&title=SpringBoot  集成 任务调度 + " - " + &pic="http://blog.ludangxin.club/images/avatar.png?v=1597935637693 "><i class="fa fa-weibo "></i></a>
+                                                        
+                                                                </span>
+                                                                <!--en-->
+                                                                <section class="post-tags en ">
+                                                                    <div>
+                                                                        <span>Tag(s):</span>
+                                                                        <span class="tag ">
+                        
+                                                            </span>
+                                                                    </div>
+                                                                    <div>
+                                                                        <a href="javascript:window.history.back();">back</a>
+                                                                        <span>&dot;</span>
+                                                                        <a href="#">home</a>
+                                                                    </div>
+                                                                </section>
+                                                                
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                        <a class="prev" rel="prev" href="http://blog.ludangxin.club/post/mybatis-plus/">
+                                                                                            SpringBoot 集成 Mybatis-Plus
+                                                                                        </a>
+                                                                                        
+                                                                                            
+                                                                                                <a class="next" rel="next" href="http://blog.ludangxin.club/post/oauth20/">
+                                                                                                    OAuth2.0
+                                                                                                </a>
+                                                                                                
+                                                                                </section>
+                    </article>
+                </div>
+                
+                                            
+                                                <script type="application/javascript" src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+<div id="vlaine-comment"></div>
+<script type="application/javascript">
+    new Valine({
+        el: '#vlaine-comment',
+        appId: '6v8KE1xPEnnI3VycbaTHPQvD-gzGzoHsz',
+        appKey: 'tCAPkuAx3JWn7YrPKlEpyaMH',
+        pageSize: 10,
+        avatar: 'mp',
+        placeholder: '来都来了，不妨评论一下',
+        visitor: true,
+        highlight: false,
+        recordIP: true,
+    })
+</script>
+                                                    
+            </div>
+    </div>
+    </div>
+    </div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                    <div class="Like">
+                        <div class="tip" data-tooltip="Do you like it?">
+                            <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                        </div>
+                    </div>
+                    
+                        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+                            
+                                <b id="hitokoto"></b><br>
+                                
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        断剑重铸之日，骑士归来之时。 &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+                                            | Powered by
+                                            <a href="https://coding.net" target="_blank">
+                                                Coding.net
+                                            </a>
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.4
+                </div>
+                
+                    <script>
+                        var port = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + port + '</div>')
+                    </script>
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+                    
+                    loadlive2d();
+                    
+                    
+                    hitokoto();
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1597935637693);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    断剑重铸之日，骑士归来之时。
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="鲁档信">
+<meta name="description" content="Hello World !">
+<meta name="keywords" content="鲁档信,ludangxin">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="http://blog.ludangxin.club/styles/main.css" />
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+        
+            <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/Card/prism.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/css/Card/prism.min.css" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+            <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+            
+                <!--点击特效-->
+                <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/love.min.js"></script>
+                
+                        <!--CDN样式-->
+                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+                        <script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+                        
+                            <script>
+                                (function() {
+                                    var bp = document.createElement('script');
+                                    var curProtocol = window.location.protocol.split(':')[0];
+                                    if (curProtocol === 'https') {
+                                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                                    } else {
+                                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                                    }
+                                    var s = document.getElementsByTagName("script")[0];
+                                    s.parentNode.insertBefore(bp, s);
+                                })();
+                            </script>
+                            
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="http://blog.ludangxin.club">
+                    断剑重铸之日，骑士归来之时。
+                </a>
+            </div>
+            <div id="tp-weather-widget"></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        🏠首页
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        📚归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        🏷️标签
+                    </a>
+                    
+                    <a class="menu-item" href="/posts">
+                        ✍️博客
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about/">
+                        👦关于
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1597935637693" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="http://blog.ludangxin.club">
+                            断剑重铸之日，骑士归来之时。
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1597935637693" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            🏠首页
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            📚归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            🏷️标签
+                        </a>
+                        
+                        <a class="menu-item" href="/posts">
+                            ✍️博客
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about/">
+                            👦关于
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+
+
+
+    <script>
+        (function(a, h, g, f, e, d, c, b) {
+            b = function() {
+                d = h.createElement(g);
+                c = h.getElementsByTagName(g)[0];
+                d.src = e;
+                d.charset = "utf-8";
+                d.async = 1;
+                c.parentNode.insertBefore(d, c)
+            };
+            a["SeniverseWeatherWidgetObject"] = f;
+            a[f] || (a[f] = function() {
+                (a[f].q = a[f].q || []).push(arguments)
+            });
+            a[f].l = +new Date();
+            if (a.attachEvent) {
+                a.attachEvent("onload", b)
+            } else {
+                a.addEventListener("load", b, false)
+            }
+        }(window, document, "script", "SeniverseWeatherWidget", "//cdn.sencdn.com/widget2/static/js/bundle.js?t=" + parseInt((new Date().getTime() / 100000000).toString(), 10)));
+        window.SeniverseWeatherWidget('show', {
+            flavor: "slim",
+            location: "WWEFQFPJZ7T8",
+            geolocation: true,
+            language: "auto",
+            unit: "c",
+            theme: "auto",
+            token: "61bcc333-3305-4728-9465-6785274bb0a3",
+            hover: "enabled",
+            container: "tp-weather-widget"
+        })
+    </script>
+    
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                浅谈 分布式 集群 微服务
+                            </h1>
+                            
+                                <!--en-->
+                                <div class="post-meta en">
+                                    Author:
+                                    <a itemprop="author" rel="author" href="/">
+                                        断剑重铸之日，骑士归来之时。
+                                    </a>
+                                    <span class="post-time">
+                                Date: <a href="#">2020-05-23</a>
+                            </span>
+                                    <span class="post-readtime">Reading Time:<a
+                                    href="#">15.9
+                                    mins</a></span>
+                                    <span class="post-words">words:<a href="#">4666</a></span>
+                                    
+                                        <span class="post-category">
+                                Category:
+                                
+                                <a href="http://blog.ludangxin.club/tag/4KBrXdUxz/">分布式</a>
+                                
+                            </span>
+                                        
+                                            Views:
+                                            <span data-hk-page="current"> - </span>
+                                            
+                                </div>
+                                
+                        </header>
+                        
+                        <div class="post-content">
+                            <h1 id="概念">概念</h1>
+<p><strong>集群是个物理形态，分布式是系统部署方式，微服务是架构设计方式。</strong></p>
+<h2 id="集群是啥">集群是啥?</h2>
+<p>单机处理到达瓶颈的时候，你就把单机复制几份，这样就构成了一个“集群”。集群中每台服务器就叫做这个集群的一个“节点”，所有节点构成了一个集群。每个节点都提供相同的服务，那么这样系统的处理能力就相当于提升了好几倍（有几个节点就相当于提升了这么多倍）。从单机结构到集群结构，你的代码基本无需要作任何修改。你要做的仅仅是多部署几台服务器，每台服务器上运行相同的代码就行了。</p>
+<h2 id="分布式是啥">分布式是啥？</h2>
+<p>分布式服务顾名思义服务是分散部署在不同的机器上的，一个服务可能负责几个功能，是一种面向SOA架构的，服务之间也是通过rpc来交互或者是webservice来交互的。逻辑架构设计完后就该做物理架构设计，系统应用部署在超过一台服务器或虚拟机上，且各分开部署的部分彼此通过各种通讯协议交互信息，就可算作分布式部署，生产环境下的微服务肯定是分布式部署的，分布式部署的应用不一定是微服务架构的，比如集群部署，它是把相同应用复制到不同服务器上，但是逻辑功能上还是单体应用。</p>
+<h2 id="微服务又是啥">微服务又是啥?</h2>
+<p>简单来说微服务就是很小的服务，小到一个服务只对应一个单一的功能，只做一件事。<br>
+这个服务可以单独部署运行，服务之间可以通过RPC来相互交互，每个微服务都是由独立的小团队开发，测试，部署，上线，负责它的整个生命周期。</p>
+<h2 id="微服务架构又又是啥">微服务架构又又是啥？</h2>
+<p>在做架构设计的时候，先做逻辑架构，再做物理架构，当你拿到需求后，估算过最大用户量和并发量后，计算单个应用服务器能否满足需求。<br>
+如果用户量只有几百人的小应用，单体应用就能搞定，即所有应用部署在一个应用服务器里，如果是很大用户量，且某些功能会被频繁访问，或者某些功能计算量很大，建议将应用拆解为多个子系统，各自负责各自功能，这就是微服务架构。</p>
+<h2 id="区别">区别</h2>
+<ol>
+<li>
+<p>分布式是指将不同的业务分布在不同的地方。</p>
+</li>
+<li>
+<p>集群指的是将几台服务器集中在一起，实现同一业务。<br>
+简单说，分布式是以缩短单个任务的执行时间来提升效率的，而集群则是通过提高单位时间内执行的任务数来提升效率。</p>
+</li>
+<li>
+<p>微服务与分布式的细微差别是，微服务的应用不一定是分散在多个服务器上，他也可以是同一个服务器。微服务相比分布式服务来说，它的粒度更小，服务之间耦合度更低，由于每个微服务都由独立的小团队负责，因此它敏捷性更高，分布式服务最后都会向微服务架构演化，这是一种趋势， 不过服务微服务化后带来的挑战也是显而易见的，例如服务粒度小，数量大，后期运维将会很难</p>
+</li>
+</ol>
+<p>图示:</p>
+<figure data-type="image" tabindex="1"><img src="http://blog.ludangxin.club/post-images/1590216688867.jpg" alt="" loading="lazy"></figure>
+<h1 id="架构的演变过程">架构的演变过程</h1>
+<p>下面我们来简单模拟一个架构演变过程。 我们以 javaweb 为例，来搭建一个简单的电商系统，从这个系统中来看系统的演变过程。要注意的是接下来的演示模型， 关注的是数据量、访问量提升，网站结构的变化， 而不关注具体业务的功能点。其次，这个过程是为了让大家能更好的了解网站演进过程中的一些问题和应对策略。</p>
+<p>假如我们系统具备以下功能:</p>
+<ul>
+<li>用户模块:用户注册和管理。</li>
+<li>商品模块:商品展示和管理。</li>
+<li>交易模块:创建交易及支付结算。</li>
+</ul>
+<h2 id="阶段一单应用架构">阶段一：单应用架构</h2>
+<p><img src="http://blog.ludangxin.club/post-images/1590216730582.jpg" alt="" loading="lazy"><br>
+　　这个阶段是网站的初期，也可以认为是互联网发展的早期，系统架构如上图所示。我们经常会在单台服务器上运行我们所有的程序和软件。 把所有软件和应用都部署在一台机器上，这样就完成一个简单系统的搭建，这个阶段的讲究的是效率。效率决定生死。</p>
+<h2 id="阶段二应用服务器和数据库服务器分离">阶段二：应用服务器和数据库服务器分离</h2>
+<p>随着网站的上线，访问量逐步上升，服务器的负载慢慢提高，我们应该在服务器还没有超载的时候就做好规划、提升网站的负载能力。假若此时已经没办法在代码层面继续优化提高，那么在单台机器的性能遇到瓶颈的时候，增加机器是一个比较简单好用的方式，投入产出比相当高。这个阶段增加机器的主要目的是将 web 服务器和 数据库服务器拆分开来，这样做的话不仅提高了单机的负载能力，也提高了整个系统的容灾能力。<br>
+<img src="http://blog.ludangxin.club/post-images/1590216749619.jpg" alt="" loading="lazy"><br>
+　　这个阶段的系统架构如上图所示，应用服务器和数据库服务器完全隔离开来，相互互不影响，大大减少了网站宕机的风险，此阶段我们已经开始关注到应用服务器的管理了。</p>
+<h2 id="阶段三应用服务器集群">阶段三：应用服务器集群</h2>
+<p>这个阶段，随着访问量的继续不断增加，单台应用服务器已经无法满足我们的需求。 假设我的数据库服务器还没有遇到性能问题，那我们可以通过增加应用服务器的方式来将应用服务器集群化，这样就可以将用户请求分流到各个服务器中，从而达到继续提升系统负载能力的目的。此时各个应用服务器之间没有直接的交互，他们都是依赖数据库各自对外提供服务。<br>
+<img src="http://blog.ludangxin.club/post-images/1590216760176.jpg" alt="" loading="lazy"><br>
+系统架构发展到这个阶段，各种问题也会接踵而至：</p>
+<ul>
+<li>用户请求交由谁来转发到具体的应用服务器上(谁来负责负载均衡)</li>
+<li>用户如果每次访问到的服务器不一样，那么如何维护session，达到session共享的目的。<br>
+那么此时，系统架构又会变成如下方式：<br>
+<img src="http://blog.ludangxin.club/post-images/1590216771958.jpg" alt="" loading="lazy"><br>
+　　负载均衡又可以分为软负载和硬负载。软负载我们可以选择Nginx、Apache等，硬负载我们可以选择F5等。而session共享问题我们可以通过配置tomcat的session共享解决。</li>
+</ul>
+<h2 id="阶段四数据库压力变大数据库读写分离">阶段四：数据库压力变大，数据库读写分离</h2>
+<p>架构演变到上面的阶段，并不是终点。通过上面的设计，应用层的性能被我们拉上来了， 但数据库的负载也在逐渐增大，那如何去提高数据库层面的性能呢？有了前面的设计思路以后，我们自然也会想到通过增加服务器来提高性能。但假如我们单纯的把数据库一分为二，然后对于数据库的请求，分别负载到两台数据库服务器上，那必定会造成数据库数据不统一的问题。 所以我们一般先考虑将数据库读写分离。<br>
+<img src="http://blog.ludangxin.club/post-images/1590216784417.jpg" alt="" loading="lazy"><br>
+这个架构设计的变化会带来如下几个问题：</p>
+<ul>
+<li>主从数据库之间的数据需要同步(可以使用 mysql 自带的 master-slave 方式实现主从复制 )</li>
+<li>应用中需要根据业务进行对应数据源的选择( 采用第三方数据库中间件，例如 mycat )</li>
+</ul>
+<h2 id="阶段五使用搜索引擎缓解读库的压力">阶段五：使用搜索引擎缓解读库的压力</h2>
+<p>我们都知道数据库常常对模糊查找效率不是很高，像电商类的网站，搜索是非常核心的功能，即使是做了读写分离，这个问题也不能得到有效解决。那么这个时候我们就需要引入搜索引擎了，使用搜索引擎能够大大提升我们系统的查询速度，但同时也会带来一 些附加的问题，比如维护索引的构建、数据同步到搜索引擎等。<br>
+<img src="http://blog.ludangxin.club/post-images/1590216793033.jpg" alt="" loading="lazy"></p>
+<h2 id="阶段六引入缓存机制缓解数据库的压力">阶段六：引入缓存机制缓解数据库的压力</h2>
+<p>然后，随着访问量的持续不断增加，逐渐会出现许多用户访问同一内容的情况，那么对于这些热点数据，没必要每次都从数据库重读取，这时我们可以使用到缓存技术，比如 redis、memcache 来作为我们应用层的缓存。另外在某些场景下，如我们对用户的某些 IP 的访问频率做限制， 那这个放内存中就又不合适，放数据库又太麻烦了，那这个时候可以使用 Nosql 的方式比如 mongDB 来代替传统的关系型数据库。<br>
+<img src="http://blog.ludangxin.club/post-images/1590216802188.jpg" alt="" loading="lazy"></p>
+<h2 id="阶段七数据库的水平垂直拆分">阶段七：数据库的水平/垂直拆分</h2>
+<p>我们的网站演进的变化过程，交易、商品、用户的数据都还在同一 个数据库中，尽管采取了增加缓存，读写分离的方式，但是随着数 据库的压力持续增加，数据库的瓶颈仍然是个最大的问题。因此我 们可以考虑对数据的垂直拆分和水平拆分。<br>
+<img src="http://blog.ludangxin.club/post-images/1590216810460.jpg" alt="" loading="lazy"><br>
+垂直拆分:把数据库中不同业务数据拆分到不同的数据库。<br>
+水平拆分:把同一个表中的数据拆分到两个甚至更多的数据库中，水平拆分的原因是某些业务数据量已经达到了单个数据库的瓶颈，这时可以采取将表拆分到多个数据库中。<br>
+<img src="http://blog.ludangxin.club/post-images/1590216821835.jpg" alt="" loading="lazy"></p>
+<h2 id="阶段八应用的拆分">阶段八：应用的拆分</h2>
+<p>随着业务的发展，业务量越来越大，应用的压力越来越大。工程规模也越来越庞大。这个时候就可以考虑将应用拆分，按照领域模型将我们的用户、商品、交易拆分成多个子系统。<br>
+<img src="http://blog.ludangxin.club/post-images/1590216830257.jpg" alt="" loading="lazy"><br>
+　　这样拆分以后，可能会有一些相同的代码，比如用户操作，在商品和交易都需要查询，所以会导致每个系统都会有用户查询访问相关操作。这些相同的操作一定是要抽象出来，否则就是一个坑。所以通过走服务化路线的方式来解决。<br>
+<img src="http://blog.ludangxin.club/post-images/1590216837471.jpg" alt="" loading="lazy"><br>
+　　那么服务拆分以后，各个服务之间如何进行远程通信呢? 通过 RPC 技术，比较典型的有:dubbo、webservice、hessian、http、RMI 等等。前期通过这些技术能够很好的解决各个服务之间通信问题，但是， 互联网的发展是持续的，所以架构的演变和优化也还在持续。</p>
+<p>转自:<a href="https://www.cnblogs.com/zhy-1992/">领悟.海洋-分布式架构的总结</a></p>
+<h1 id="cap理论概述">CAP理论概述</h1>
+<p><strong>一个分布式系统最多只能同时满足一致性（Consistency）、可用性（Availability）和分区容错性（Partition tolerance）这三项中的两项</strong>。<br>
+<img src="http://blog.ludangxin.club/post-images/1590304044178.jpg" alt="" loading="lazy"></p>
+<h2 id="cap的定义">CAP的定义</h2>
+<h3 id="consistency-一致性">Consistency 一致性</h3>
+<p>一致性指“<code>all nodes see the same data at the same time</code>”，即所有节点在同一时间的数据完全一致。<br>
+一致性是因为多个数据拷贝下并发读写才有的问题，因此理解时一定要注意结合考虑多个数据拷贝下并发读写的场景。<br>
+对于一致性，可以分为从客户端和服务端两个不同的视角。</p>
+<ul>
+<li>客户端<br>
+从客户端来看，一致性主要指的是多并发访问时更新过的数据如何获取的问题。</li>
+<li>服务端<br>
+从服务端来看，则是更新如何分布到整个系统，以保证数据最终一致。<br>
+对于一致性，可以分为强/弱/最终一致性三类<br>
+从客户端角度，多进程并发访问时，更新过的数据在不同进程如何获取的不同策略，决定了不同的一致性。</li>
+<li>强一致性<br>
+对于关系型数据库，要求更新过的数据能被后续的访问都能看到，这是强一致性。</li>
+<li>弱一致性<br>
+如果能容忍后续的部分或者全部访问不到，则是弱一致性。</li>
+<li>最终一致性<br>
+如果经过一段时间后要求能访问到更新后的数据，则是最终一致性。</li>
+</ul>
+<h3 id="availability-可用性">Availability 可用性</h3>
+<p>可用性指“<code>Reads and writes always succeed</code>”，即服务在正常响应时间内一直可用。<br>
+好的可用性主要是指系统能够很好的为用户服务，不出现用户操作失败或者访问超时等用户体验不好的情况。可用性通常情况下可用性和分布式数据冗余，负载均衡等有着很大的关联。</p>
+<h3 id="partition-tolerance分区容错性">Partition Tolerance分区容错性</h3>
+<p>分区容错性指“<code>the system continues to operate despite arbitrary message loss or failure of part of the system</code>”，即分布式系统在遇到某节点或网络分区故障的时候，仍然能够对外提供满足一致性或可用性的服务。</p>
+<h2 id="cap的证明">CAP的证明</h2>
+<p><img src="http://blog.ludangxin.club/post-images/1590304055359.jpg" alt="" loading="lazy"><br>
+上图是我们证明CAP的基本场景，网络中有两个节点N1和N2，可以简单的理解N1和N2分别是两台计算机，他们之间网络可以连通，N1中有一个应用程序A，和一个数据库V，N2也有一个应用程序B2和一个数据库V。现在，A和B是分布式系统的两个部分，V是分布式系统的数据存储的两个子数据库。</p>
+<p>在满足一致性的时候，N1和N2中的数据是一样的，V0=V0。在满足可用性的时候，用户不管是请求N1或者N2，都会得到立即响应。在满足分区容错性的情况下，N1和N2有任何一方宕机，或者网络不通的时候，都不会影响N1和N2彼此之间的正常运作。<br>
+<img src="http://blog.ludangxin.club/post-images/1590304064859.jpg" alt="" loading="lazy"><br>
+上图是分布式系统正常运转的流程，用户向N1机器请求数据更新，程序A更新数据库Vo为V1，分布式系统将数据进行同步操作M，将V1同步的N2中V0，使得N2中的数据V0也更新为V1，N2中的数据再响应N2的请求。</p>
+<p>这里，可以定义N1和N2的数据库V之间的数据是否一样为一致性；外部对N1和N2的请求响应为可用性；N1和N2之间的网络环境为分区容错性。</p>
+<p>这是正常运作的场景，也是理想的场景，然而现实是残酷的，当错误发生的时候，一致性和可用性还有分区容错性，是否能同时满足，还是说要进行取舍呢？</p>
+<p>作为一个分布式系统，它和单机系统的最大区别，就在于网络，现在假设一种极端情况，N1和N2之间的网络断开了，我们要支持这种网络异常，相当于要满足分区容错性，能不能同时满足一致性和响应性呢？还是说要对他们进行取舍。<br>
+<img src="http://blog.ludangxin.club/post-images/1590304075502.jpg" alt="" loading="lazy"><br>
+假设在N1和N2之间网络断开的时候，有用户向N1发送数据更新请求，那N1中的数据V0将被更新为V1，由于网络是断开的，所以分布式系统同步操作M，所以N2中的数据依旧是V0；这个时候，有用户向N2发送数据读取请求，由于数据还没有进行同步，应用程序没办法立即给用户返回最新的数据V1，怎么办呢？</p>
+<p>有二种选择，第一，牺牲数据一致性，响应旧的数据V0给用户；第二，牺牲可用性，阻塞等待，直到网络连接恢复，数据更新操作M完成之后，再给用户响应最新的数据V1。</p>
+<p>这个过程，证明了要满足分区容错性的分布式系统，只能在一致性和可用性两者中，选择其中一个。</p>
+<h2 id="cap权衡">CAP权衡</h2>
+<p>通过CAP理论，我们知道无法同时满足一致性、可用性和分区容错性这三个特性，那要舍弃哪个呢？</p>
+<blockquote>
+<p>CA without P：如果不要求P（不允许分区），则C（强一致性）和A（可用性）是可以保证的。但其实分区不是你想不想的问题，而是始终会存在，因此CA的系统更多的是允许分区后各子系统依然保持CA。<br>
+CP without A：如果不要求A（可用），相当于每个请求都需要在Server之间强一致，而P（分区）会导致同步时间无限延长，如此CP也是可以保证的。很多传统的数据库分布式事务都属于这种模式。<br>
+AP wihtout C：要高可用并允许分区，则需放弃一致性。一旦分区发生，节点之间可能会失去联系，为了高可用，每个节点只能用本地数据提供服务，而这样会导致全局数据的不一致性。现在众多的NoSQL都属于此类。</p>
+</blockquote>
+<p>对于多数大型互联网应用的场景，主机众多、部署分散，而且现在的集群规模越来越大，所以节点故障、网络故障是常态，而且要保证服务可用性达到N个9，即保证P和A，舍弃C（退而求其次保证最终一致性）。虽然某些地方会影响客户体验，但没达到造成用户流程的严重程度。</p>
+<p>对于涉及到钱财这样不能有一丝让步的场景，C必须保证。网络发生故障宁可停止服务，这是保证CA，舍弃P。貌似这几年国内银行业发生了不下10起事故，但影响面不大，报道也不多，广大群众知道的少。还有一种是保证CP，舍弃A。例如网络故障事只读不写。</p>
+<p>孰优孰略，没有定论，只能根据场景定夺，适合的才是最好的。</p>
+
+                        </div>
+                        
+                            <div class="post-toc">
+                                <ul class="markdownIt-TOC">
+<li><a href="#%E6%A6%82%E5%BF%B5">概念</a>
+<ul>
+<li><a href="#%E9%9B%86%E7%BE%A4%E6%98%AF%E5%95%A5">集群是啥?</a></li>
+<li><a href="#%E5%88%86%E5%B8%83%E5%BC%8F%E6%98%AF%E5%95%A5">分布式是啥？</a></li>
+<li><a href="#%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%8F%88%E6%98%AF%E5%95%A5">微服务又是啥?</a></li>
+<li><a href="#%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E5%8F%88%E5%8F%88%E6%98%AF%E5%95%A5">微服务架构又又是啥？</a></li>
+<li><a href="#%E5%8C%BA%E5%88%AB">区别</a></li>
+</ul>
+</li>
+<li><a href="#%E6%9E%B6%E6%9E%84%E7%9A%84%E6%BC%94%E5%8F%98%E8%BF%87%E7%A8%8B">架构的演变过程</a>
+<ul>
+<li><a href="#%E9%98%B6%E6%AE%B5%E4%B8%80%E5%8D%95%E5%BA%94%E7%94%A8%E6%9E%B6%E6%9E%84">阶段一：单应用架构</a></li>
+<li><a href="#%E9%98%B6%E6%AE%B5%E4%BA%8C%E5%BA%94%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%92%8C%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%88%86%E7%A6%BB">阶段二：应用服务器和数据库服务器分离</a></li>
+<li><a href="#%E9%98%B6%E6%AE%B5%E4%B8%89%E5%BA%94%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%9B%86%E7%BE%A4">阶段三：应用服务器集群</a></li>
+<li><a href="#%E9%98%B6%E6%AE%B5%E5%9B%9B%E6%95%B0%E6%8D%AE%E5%BA%93%E5%8E%8B%E5%8A%9B%E5%8F%98%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AF%BB%E5%86%99%E5%88%86%E7%A6%BB">阶段四：数据库压力变大，数据库读写分离</a></li>
+<li><a href="#%E9%98%B6%E6%AE%B5%E4%BA%94%E4%BD%BF%E7%94%A8%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E7%BC%93%E8%A7%A3%E8%AF%BB%E5%BA%93%E7%9A%84%E5%8E%8B%E5%8A%9B">阶段五：使用搜索引擎缓解读库的压力</a></li>
+<li><a href="#%E9%98%B6%E6%AE%B5%E5%85%AD%E5%BC%95%E5%85%A5%E7%BC%93%E5%AD%98%E6%9C%BA%E5%88%B6%E7%BC%93%E8%A7%A3%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%8E%8B%E5%8A%9B">阶段六：引入缓存机制缓解数据库的压力</a></li>
+<li><a href="#%E9%98%B6%E6%AE%B5%E4%B8%83%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E6%B0%B4%E5%B9%B3%E5%9E%82%E7%9B%B4%E6%8B%86%E5%88%86">阶段七：数据库的水平/垂直拆分</a></li>
+<li><a href="#%E9%98%B6%E6%AE%B5%E5%85%AB%E5%BA%94%E7%94%A8%E7%9A%84%E6%8B%86%E5%88%86">阶段八：应用的拆分</a></li>
+</ul>
+</li>
+<li><a href="#cap%E7%90%86%E8%AE%BA%E6%A6%82%E8%BF%B0">CAP理论概述</a>
+<ul>
+<li><a href="#cap%E7%9A%84%E5%AE%9A%E4%B9%89">CAP的定义</a>
+<ul>
+<li><a href="#consistency-%E4%B8%80%E8%87%B4%E6%80%A7">Consistency 一致性</a></li>
+<li><a href="#availability-%E5%8F%AF%E7%94%A8%E6%80%A7">Availability 可用性</a></li>
+<li><a href="#partition-tolerance%E5%88%86%E5%8C%BA%E5%AE%B9%E9%94%99%E6%80%A7">Partition Tolerance分区容错性</a></li>
+</ul>
+</li>
+<li><a href="#cap%E7%9A%84%E8%AF%81%E6%98%8E">CAP的证明</a></li>
+<li><a href="#cap%E6%9D%83%E8%A1%A1">CAP权衡</a></li>
+</ul>
+</li>
+</ul>
+
+                            </div>
+                            
+                                
+                                    
+                                        <!--en-->
+                                        <section class="post-copyright en">
+                                            <p class="copyright-item">
+                                                <span>Author:</span>
+                                                <span>断剑重铸之日，骑士归来之时。</span>
+                                            </p>
+
+                                            <p class="copyright-item">
+                                                <span>Permalink:</span>
+                                                <span><a href="http://blog.ludangxin.club/post/fen-bu-shi-ji-qun-wei-fu-wu/">http://blog.ludangxin.club/post/fen-bu-shi-ji-qun-wei-fu-wu/</a></span>
+                                            </p>
+
+                                            <p class="copyright-item">
+                                                <span>License:</span>
+                                                <span>MIT License</span>
+                                            </p>
+                                        </section>
+                                        
+                                                
+                                                    
+                                                        <!-- Share-->
+                                                        <span style="margin-right:15px">
+                                                    <i class="post-share"></i>
+                                                    <span>Share:</span>
+                                                        <a title="QR Code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://blog.ludangxin.club/post/fen-bu-shi-ji-qun-wei-fu-wu/"><i class="fa fa-qrcode"></i></a>
+                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.ludangxin.club/post/fen-bu-shi-ji-qun-wei-fu-wu/&sharesource=qzone&title=浅谈 分布式 集群 微服务&pics=http://blog.ludangxin.club/images/avatar.png?v=1597935637693&summary="><i class="fa fa-qq"></i></a>
+                                                        <a title="Weibo" target="_blank" href="https://service.weibo.com/share/share.php?url=http://blog.ludangxin.club/post/fen-bu-shi-ji-qun-wei-fu-wu/&sharesource=weibo&title=浅谈 分布式 集群 微服务 + " - " + &pic="http://blog.ludangxin.club/images/avatar.png?v=1597935637693 "><i class="fa fa-weibo "></i></a>
+                                                        
+                                                                </span>
+                                                                <!--en-->
+                                                                <section class="post-tags en ">
+                                                                    <div>
+                                                                        <span>Tag(s):</span>
+                                                                        <span class="tag ">
+                        
+                        
+                        <a href="http://blog.ludangxin.club/tag/4KBrXdUxz/">#
+                                                分布式
+                                                    </a>
+                                                    
+                                                        
+                                                            </span>
+                                                                    </div>
+                                                                    <div>
+                                                                        <a href="javascript:window.history.back();">back</a>
+                                                                        <span>&dot;</span>
+                                                                        <a href="#">home</a>
+                                                                    </div>
+                                                                </section>
+                                                                
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                        <a class="prev" rel="prev" href="http://blog.ludangxin.club/post/chu-shi-zookeeper/">
+                                                                                            初识 Zookeeper
+                                                                                        </a>
+                                                                                        
+                                                                                            
+                                                                                                <a class="next" rel="next" href="http://blog.ludangxin.club/post/springboot-ji-cheng-biao-dan-yan-zheng-he-yi-chang-tong-yi-chu-li/">
+                                                                                                    SpringBoot 集成 表单验证 和 异常统一处理
+                                                                                                </a>
+                                                                                                
+                                                                                </section>
+                    </article>
+                </div>
+                
+                                            
+                                                <script type="application/javascript" src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+<div id="vlaine-comment"></div>
+<script type="application/javascript">
+    new Valine({
+        el: '#vlaine-comment',
+        appId: '6v8KE1xPEnnI3VycbaTHPQvD-gzGzoHsz',
+        appKey: 'tCAPkuAx3JWn7YrPKlEpyaMH',
+        pageSize: 10,
+        avatar: 'mp',
+        placeholder: '来都来了，不妨评论一下',
+        visitor: true,
+        highlight: false,
+        recordIP: true,
+    })
+</script>
+                                                    
+            </div>
+    </div>
+    </div>
+    </div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                    <div class="Like">
+                        <div class="tip" data-tooltip="Do you like it?">
+                            <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                        </div>
+                    </div>
+                    
+                        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+                            
+                                <b id="hitokoto"></b><br>
+                                
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        断剑重铸之日，骑士归来之时。 &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+                                            | Powered by
+                                            <a href="https://coding.net" target="_blank">
+                                                Coding.net
+                                            </a>
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.4
+                </div>
+                
+                    <script>
+                        var port = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + port + '</div>')
+                    </script>
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+                    
+                    loadlive2d();
+                    
+                    
+                    hitokoto();
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1597935637693);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>

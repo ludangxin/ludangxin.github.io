@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<title>
+    断剑重铸之日，骑士归来之时。
+</title>
+<!--[if lt IE 9]><script src="//cdn.bootcss.com/html5shiv/r29/html5.js"></script><![endif]-->
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+<meta name="author" content="鲁档信">
+<meta name="description" content="Hello World !">
+<meta name="keywords" content="鲁档信,ludangxin">
+<script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+<link rel="stylesheet" href="http://blog.ludangxin.club/styles/main.css" />
+<link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/script.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/icon.min.js"></script>
+        
+            <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/Card/prism.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/css/Card/prism.min.css" />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+            <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js"></script>
+            
+                <!--点击特效-->
+                <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/love.min.js"></script>
+                
+                        <!--CDN样式-->
+                        <script src="https://cdn.jsdelivr.net/gh/ITJoker233/ITJoker233.github.io@latest/CDN/js/hit-kounter-lc-0.3.0.js"></script>
+                        <script src="https://cdn1.lncld.net/static/js/av-min-1.5.0.js"></script>
+                        
+                            <script>
+                                (function() {
+                                    var bp = document.createElement('script');
+                                    var curProtocol = window.location.protocol.split(':')[0];
+                                    if (curProtocol === 'https') {
+                                        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+                                    } else {
+                                        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+                                    }
+                                    var s = document.getElementsByTagName("script")[0];
+                                    s.parentNode.insertBefore(bp, s);
+                                })();
+                            </script>
+                            
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo">
+                <a href="http://blog.ludangxin.club">
+                    断剑重铸之日，骑士归来之时。
+                </a>
+            </div>
+            <div id="tp-weather-widget"></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/">
+                        🏠首页
+                    </a>
+                    
+                    <a class="menu-item" href="/archives">
+                        📚归档
+                    </a>
+                    
+                    <a class="menu-item" href="/tags">
+                        🏷️标签
+                    </a>
+                    
+                    <a class="menu-item" href="/posts">
+                        ✍️博客
+                    </a>
+                    
+                    <a class="menu-item" href="/post/about/">
+                        👦关于
+                    </a>
+                    
+                        <input id="switch_default" type="checkbox" class="switch_default">
+                        <label for="switch_default" class="toggleBtn"></label>
+            </div>
+            <form id="gridea-search-form" data-update="1597935637693" action="/search/index.html">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+            </form>
+        </div>
+    </nav>
+
+    
+        <nav class="navbar-mobile" id="nav-mobile">
+            <div class="container">
+                <div class="navbar-header">
+                    <div>
+                        <a href="http://blog.ludangxin.club">
+                            断剑重铸之日，骑士归来之时。
+                        </a>
+                        <!--en-->
+                        <a id="mobile-toggle-theme-en" class="a en">&nbsp;Dark</a>
+                        <!--zh-->
+                        <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
+                    </div>
+                    <form id="gridea-search-form" data-update="1597935637693" action="/search/index.html">
+                        <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
+                    </form>
+                    <!--en-->
+                    <div class="menu-toggle" id="menu-toggle-en" onclick="mobileBtn()">&#9776; Menu</div>
+                    <!--zh-->
+                    <div class="menu-toggle" id="menu-toggle-zh" onclick="mobileBtn()">&#9776; &#x83DC;&#x5355;</div>
+
+                </div>
+                <div class="menu" id="mobile-menu">
+                    
+                        <a class="menu-item" href="/">
+                            🏠首页
+                        </a>
+                        
+                        <a class="menu-item" href="/archives">
+                            📚归档
+                        </a>
+                        
+                        <a class="menu-item" href="/tags">
+                            🏷️标签
+                        </a>
+                        
+                        <a class="menu-item" href="/posts">
+                            ✍️博客
+                        </a>
+                        
+                        <a class="menu-item" href="/post/about/">
+                            👦关于
+                        </a>
+                        
+                </div>
+            </div>
+        </nav>
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementById("menu-toggle-en");
+        var toggleMenu_zh = document.getElementById("menu-toggle-zh");
+
+        var mobileMenu = document.getElementById("mobile-menu");
+        if (toggleMenu.display != "none") {
+            if (toggleMenu.classList.contains("active")) {
+                toggleMenu.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        } else if (toggleMenu_zh.display != "none") {
+            if (toggleMenu_zh.classList.contains("active")) {
+                toggleMenu_zh.classList.remove("active")
+                mobileMenu.classList.remove("active")
+            } else {
+                toggleMenu_zh.classList.add("active")
+                mobileMenu.classList.add("active")
+            }
+        }
+
+    }
+</script>
+
+
+
+    <script>
+        (function(a, h, g, f, e, d, c, b) {
+            b = function() {
+                d = h.createElement(g);
+                c = h.getElementsByTagName(g)[0];
+                d.src = e;
+                d.charset = "utf-8";
+                d.async = 1;
+                c.parentNode.insertBefore(d, c)
+            };
+            a["SeniverseWeatherWidgetObject"] = f;
+            a[f] || (a[f] = function() {
+                (a[f].q = a[f].q || []).push(arguments)
+            });
+            a[f].l = +new Date();
+            if (a.attachEvent) {
+                a.attachEvent("onload", b)
+            } else {
+                a.addEventListener("load", b, false)
+            }
+        }(window, document, "script", "SeniverseWeatherWidget", "//cdn.sencdn.com/widget2/static/js/bundle.js?t=" + parseInt((new Date().getTime() / 100000000).toString(), 10)));
+        window.SeniverseWeatherWidget('show', {
+            flavor: "slim",
+            location: "WWEFQFPJZ7T8",
+            geolocation: true,
+            language: "auto",
+            unit: "c",
+            theme: "auto",
+            token: "61bcc333-3305-4728-9465-6785274bb0a3",
+            hover: "enabled",
+            container: "tp-weather-widget"
+        })
+    </script>
+    
+            <div class="main">
+                <div class="container">
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                Java8新特性
+                            </h1>
+                            
+                                <!--en-->
+                                <div class="post-meta en">
+                                    Author:
+                                    <a itemprop="author" rel="author" href="/">
+                                        断剑重铸之日，骑士归来之时。
+                                    </a>
+                                    <span class="post-time">
+                                Date: <a href="#">2020-05-16</a>
+                            </span>
+                                    <span class="post-readtime">Reading Time:<a
+                                    href="#">5.1
+                                    mins</a></span>
+                                    <span class="post-words">words:<a href="#">1407</a></span>
+                                    
+                                        <span class="post-category">
+                                Category:
+                                
+                                <a href="http://blog.ludangxin.club/tag/TS4PPziT1/">java</a>
+                                
+                            </span>
+                                        
+                                            Views:
+                                            <span data-hk-page="current"> - </span>
+                                            
+                                </div>
+                                
+                        </header>
+                        
+                            <img class="post-feature-image" src="http://blog.ludangxin.club/post-images/java8-xin-te-xing.jpg" alt="">
+                          
+                        <div class="post-content">
+                            <h1 id="java8新特性介绍">java8新特性介绍</h1>
+<pre><code>速度更快
+代码更少
+强大的stream API
+便于并行
+最大化减少空指针异常 Optional
+</code></pre>
+<h2 id="lanmbda">Lanmbda</h2>
+<pre><code>lambda是一个匿名函数，我们可以把lambda表达式理解为是一段可以
+传递的代码（将代码像数据一样进行传递）。可以细写出更简洁，更灵活的代码。
+</code></pre>
+<ul>
+<li>Lanmbda 语法：<br>
+横批：<u><em><strong>能省则省</strong></em></u><br>
+上联：<u>左右遇一括号省</u><br>
+下联：<u>左侧推断类型省</u>
+<ul>
+<li>方法引用：若Lambda 体内的内容有方法已经实现了，我们可以使用“方法引用”（可以理解为方法引用是Lambda表达式的另外一种表现形式）</li>
+<li>主要有三种语法格式：注意：Lambda 体中调用的方法参数列表与返回值类型必须与函数的抽象方法一致
+<ul>
+<li>对象::实例方法名</li>
+<li>类::静态方法名</li>
+<li>类::实例方法名</li>
+</ul>
+</li>
+<li>构造器引用：具体使用哪个构造器，取决于Lambda 函数抽象类的参数列表
+<ul>
+<li>格式：ClassName::new</li>
+</ul>
+</li>
+<li>数组引用：
+<ul>
+<li>格式：Type[]::new</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Java8 内置的四大核心函数是接口
+<ul>
+<li>Consumer<T> : 消费型接口
+<ul>
+<li>void accept(T t);</li>
+</ul>
+</li>
+<li>Supplier<T> : 供给型接口
+<ul>
+<li>T get();</li>
+</ul>
+</li>
+<li>Function&lt;T,R&gt; : 函数型接口
+<ul>
+<li>R apply(T t);</li>
+</ul>
+</li>
+<li>Predicate<T> : 断言型接口
+<ul>
+<li>boolean test(T t);</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="stream-apijavaunilstream">Stream API(java.unil.stream.*)</h2>
+<pre><code>Stream是java8中处理集合的关键抽象概念，它可以指定你希望对集合进行的操作，可以执行非常负责的查找，过滤和映射数据等操作。
+使用Stream API 对集合数据进行操作，就类似于使用过SQL执行的数据查询。也可以使用Stream API来并行执行操作。简而言之，
+StreamAPI提供了一种高校且易于使用的处理数据的方式。
+</code></pre>
+<ul>
+<li>什么是流（Stream）？
+<ul>
+<li><strong>是数据渠道，用于操作数据源</strong>（集合，数组等）所生成的元素序列。“集合讲的是数据，流讲的是计算”</li>
+<li>Stream自己不会存储元素</li>
+<li>Stream不会改变源对象。相反，他们会返回一个持有结果的新Stream。</li>
+<li>Stream操作时延迟执行的。这意味着他们等到需要结果的时候才执行。</li>
+</ul>
+</li>
+<li>Stream的操作三个步骤
+<ul>
+<li>创建Stream：一个数据源（如：集合，数组），获取一个流</li>
+<li>中间操作：一个中间操作链，对数据源的数据进行处理</li>
+<li>终止操作（终端操作）：一个终止操作，执行中间操作链，并产生结果</li>
+</ul>
+</li>
+<li>Stream Api
+<ul>
+<li>关于中间操作的
+<ul>
+<li>筛选与切片
+<ul>
+<li>filter   ：接受Lambda，从流中派出某些元素</li>
+<li>limit    ：截断流，使其元素不超过给定数量</li>
+<li>skip(n)  ：跳过元素，返回一个扔掉了前n个元素的流。若流中元素不足n个，则返回一个空留。与limit(n)互补</li>
+<li>distinct ：筛选，通过流所生成元素的hashCode() 和 equals()去除重复元素</li>
+</ul>
+</li>
+<li>映射
+<ul>
+<li>map:接收Lambda，将元素转换成其他形式或提取信息。接收一个函数作为参数，该函数会被应用到每个元素上，并将其映射成一个新的元素。</li>
+<li>flatMap:接收一个函数作为参数，将流中的每个值都换成另一个流，然后把所有流连接成一个流</li>
+</ul>
+</li>
+<li>排序
+<ul>
+<li>sorted():自然排序(Comparable)</li>
+<li>sorted(Comparator com):定制排序(Comparator)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>关于终止操作
+<ul>
+<li>查找与匹配
+<ul>
+<li>allMatch:检查是否匹配所有元素</li>
+<li>anyMatch:检查是否至少匹配一个元素</li>
+<li>noneMatch:检查是否没有匹配所有元素</li>
+<li>findFirst:返回第一个元素</li>
+<li>findAny:返回当前刘忠德任意元素</li>
+<li>count:返回流中元素的总个数</li>
+<li>max:返回流中的最大值</li>
+<li>min:返回流中最小值</li>
+</ul>
+</li>
+<li>规约
+<ul>
+<li>reduce(T identity,BinaryOperator)/reduce(BinaryOperator):可以将流中元素反复结合起来，得到一个值</li>
+</ul>
+</li>
+<li>收集
+<ul>
+<li>collect:将流转化为其他形式。接受一个Collector接口的实现，用于Stream中元素做汇总的方法</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>并行流
+<ul>
+<li>并行流就是把一个内容分成多个数据块，并用不同的县城分别处理每个数据块的流，其底层原理用的时fork/join。</li>
+<li>Java8中将并行进行了优化，我们可以很容易的对数据进行并行操作。StreamApi可以声明性的通过parallel()与sequential()在并行流与顺序流之间进行切换</li>
+</ul>
+</li>
+<li>Fork/Join框架（了解）
+<ul>
+<li>就时在必要的情况下，将一个大任务，进行拆分(fork)成若干个小任务（拆到不可再拆时），再将一个个的小任务运算的结果进行join汇总。</li>
+<li>总体实现过程类似与将一个大任务以二叉树的形式拆分到不可拆分，在把最小单元进行运算类似于倒着的二叉树进行汇总</li>
+</ul>
+</li>
+<li>Optional类
+<ul>
+<li>Optional<T> 类(java.unit.Optional)是一个容器类，代表一个值存在或不存在，原来用null表示一个值不存在，现在Optional可以更好的表达这个概念。并且可以避免空指针异常。</li>
+<li>常用方法：
+<ul>
+<li>Optional.of(T t):创建一个Optional实例</li>
+<li>Optional.empty():创建一个空的Optional实例</li>
+<li>Optional.ofNullable(T t):若t不为null,创建Optional实例,否则创建空实例</li>
+<li>isPresent():判断是否包含值</li>
+<li>orElse(T t): 如果调用对象包含值,返回该值，否则返回t</li>
+<li>orElseGet(Supplier s):如果调用对象包含值，返回该值，否则返回s获取的值</li>
+<li>map(Function f):如果有值对其处理,并返回处理后的Optional,否则返回Optional.empty()</li>
+<li>flatMap(Function mapper):与map类似，要求返回值必须是Optionaljava8</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                        </div>
+                        
+                            <div class="post-toc">
+                                <ul class="markdownIt-TOC">
+<li><a href="#java8%E6%96%B0%E7%89%B9%E6%80%A7%E4%BB%8B%E7%BB%8D">java8新特性介绍</a>
+<ul>
+<li><a href="#lanmbda">Lanmbda</a></li>
+<li><a href="#stream-apijavaunilstream">Stream API(java.unil.stream.*)</a></li>
+</ul>
+</li>
+</ul>
+
+                            </div>
+                            
+                                
+                                    
+                                        <!--en-->
+                                        <section class="post-copyright en">
+                                            <p class="copyright-item">
+                                                <span>Author:</span>
+                                                <span>断剑重铸之日，骑士归来之时。</span>
+                                            </p>
+
+                                            <p class="copyright-item">
+                                                <span>Permalink:</span>
+                                                <span><a href="http://blog.ludangxin.club/post/java8-xin-te-xing/">http://blog.ludangxin.club/post/java8-xin-te-xing/</a></span>
+                                            </p>
+
+                                            <p class="copyright-item">
+                                                <span>License:</span>
+                                                <span>MIT License</span>
+                                            </p>
+                                        </section>
+                                        
+                                                
+                                                    
+                                                        <!-- Share-->
+                                                        <span style="margin-right:15px">
+                                                    <i class="post-share"></i>
+                                                    <span>Share:</span>
+                                                        <a title="QR Code" target="_blank" href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://blog.ludangxin.club/post/java8-xin-te-xing/"><i class="fa fa-qrcode"></i></a>
+                                                        <a title="QQ" target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://blog.ludangxin.club/post/java8-xin-te-xing/&sharesource=qzone&title=Java8新特性&pics=http://blog.ludangxin.club/images/avatar.png?v=1597935637693&summary="><i class="fa fa-qq"></i></a>
+                                                        <a title="Weibo" target="_blank" href="https://service.weibo.com/share/share.php?url=http://blog.ludangxin.club/post/java8-xin-te-xing/&sharesource=weibo&title=Java8新特性 + " - " + &pic="http://blog.ludangxin.club/images/avatar.png?v=1597935637693 "><i class="fa fa-weibo "></i></a>
+                                                        
+                                                                </span>
+                                                                <!--en-->
+                                                                <section class="post-tags en ">
+                                                                    <div>
+                                                                        <span>Tag(s):</span>
+                                                                        <span class="tag ">
+                        
+                        
+                        <a href="http://blog.ludangxin.club/tag/TS4PPziT1/">#
+                                                java
+                                                    </a>
+                                                    
+                                                        
+                                                            </span>
+                                                                    </div>
+                                                                    <div>
+                                                                        <a href="javascript:window.history.back();">back</a>
+                                                                        <span>&dot;</span>
+                                                                        <a href="#">home</a>
+                                                                    </div>
+                                                                </section>
+                                                                
+                                                                                <!---->
+                                                                                <section class="post-nav">
+                                                                                    
+                                                                                        <a class="prev" rel="prev" href="http://blog.ludangxin.club/post/linux/">
+                                                                                            Linux
+                                                                                        </a>
+                                                                                        
+                                                                                            
+                                                                                                <a class="next" rel="next" href="http://blog.ludangxin.club/post/springboot-ji-cheng-shu-ju-yuan/">
+                                                                                                    SpringBoot 集成 数据源
+                                                                                                </a>
+                                                                                                
+                                                                                </section>
+                    </article>
+                </div>
+                
+                                            
+                                                <script type="application/javascript" src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+<div id="vlaine-comment"></div>
+<script type="application/javascript">
+    new Valine({
+        el: '#vlaine-comment',
+        appId: '6v8KE1xPEnnI3VycbaTHPQvD-gzGzoHsz',
+        appKey: 'tCAPkuAx3JWn7YrPKlEpyaMH',
+        pageSize: 10,
+        avatar: 'mp',
+        placeholder: '来都来了，不妨评论一下',
+        visitor: true,
+        highlight: false,
+        recordIP: true,
+    })
+</script>
+                                                    
+            </div>
+    </div>
+    </div>
+    </div>
+    
+        <footer id="footer" class="footer">
+            <div class="copyright">
+                
+                    <div class="Like">
+                        <div class="tip" data-tooltip="Do you like it?">
+                            <a href="https://github.com/ITJoker233/Gridea-theme-Chic" target="_blank" title=""><svg class="icon"
+                        aria-hidden="true">
+                        <use xlink:href="#like"></use>
+                    </svg><b class="like_text" id="star"></b></a>
+                        </div>
+                    </div>
+                    
+                        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+                            
+                                <b id="hitokoto"></b><br>
+                                
+                                        <svg viewBox="0 0 1024 1024" style="margin-left: 5px;margin-right: 5px;" version="1.0" width="8" height="8" class="my-face">
+            <path
+                d="M863.597631 513.574282l-271.33965-140.213484L729.783667 81.926656c3.583731-7.87141 7.167462-15.742819 7.167462-25.214109C736.887134 25.226908 708.345275 0.012799 672.635953 0.012799a63.611229 63.611229 0 0 0-39.293053 12.607055c-1.791866 1.59988-3.519736 3.19976-5.311602 3.19976L147.87531 418.925381a55.547834 55.547834 0 0 0-19.646527 47.356448c1.791866 17.278704 14.27093 33.021523 32.125591 42.492813l271.33965 141.749369L292.504463 945.221908c-12.479064 25.214109-1.791866 53.563983 23.166262 69.306802 10.751194 6.335525 23.230258 9.47129 35.709322 9.47129 16.062795 0 32.125591-4.735645 44.604655-15.742819l480.091993-403.297753a55.547834 55.547834 0 0 0 19.646526-47.228458 61.243407 61.243407 0 0 0-32.12559-44.156688z"
+                fill="#93b5cf"></path>
+        </svg>
+                                        断剑重铸之日，骑士归来之时。 &copy;Copyright
+                                            <script>
+                                                var date = new Date();
+                                                document.write("" + date.getFullYear());
+                                            </script>
+                                            | Powered by
+                                            <a href="https://coding.net" target="_blank">
+                                                Coding.net
+                                            </a>
+            </div>
+            <div id="update" style="display:none;">
+                on
+            </div>
+            
+                <div id="version" style="display:none;">
+                    1.7.4
+                </div>
+                
+                    <script>
+                        var port = '';
+                        
+                        document.write('<div id="home_path" style="display:none;">' + document.location.protocol + '//' + window.document.location.hostname + port + '</div>')
+                    </script>
+        </footer>
+        
+            <script src='https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js'></script>
+            
+                <script>
+                    
+                    
+                    loadlive2d();
+                    
+                    
+                    hitokoto();
+                    
+                    getStar();
+                    hljs.initHighlighting();
+                    console.clear();
+                    
+                    CheckVersion();
+                    
+                    var newDate = new Date();
+                    newDate.setTime(1597935637693);
+                    console.log(" Blog Update Time: " + newDate.toLocaleDateString());
+                    console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
+                </script>
+        </div>
+</body>
+<script>
+    scroll();
+</script>
+
+</html>
