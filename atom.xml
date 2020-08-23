@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://blog.ludangxin.club</id>
     <title>断剑重铸之日，骑士归来之时。</title>
-    <updated>2020-08-20T15:00:42.634Z</updated>
+    <updated>2020-08-23T08:16:59.044Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://blog.ludangxin.club"/>
     <link rel="self" href="http://blog.ludangxin.club/atom.xml"/>
@@ -10,6 +10,685 @@
     <logo>http://blog.ludangxin.club/images/avatar.png</logo>
     <icon>http://blog.ludangxin.club/favicon.ico</icon>
     <rights>All rights reserved 2020, 断剑重铸之日，骑士归来之时。</rights>
+    <entry>
+        <title type="html"><![CDATA[SpringBoot]]></title>
+        <id>http://blog.ludangxin.club/post/springboot/</id>
+        <link href="http://blog.ludangxin.club/post/springboot/">
+        </link>
+        <updated>2020-08-23T08:11:49.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="spring-boot-简介">spring boot 简介</h1>
+<h2 id="概述">概述</h2>
+<p>Spring Boot 可以称之为 <strong>新一代 JavaEE 开发标准</strong>；随着动态语言的流行 (Ruby、Groovy、Scala、Node.js)，Java 的开发显得格外的笨重：繁多的配置、低下的开发效率、复杂的部署流程以及第三方技术集成难度大。</p>
+<p>在上述环境下，Spring Boot 应运而生。它使用 “<strong>习惯优于配置</strong>” （项目中存在大量的配置，此外还内置了一个习惯性的配置，让你无需手动进行配置）的理念让你的项目快速的运行起来,即<strong>开箱即用</strong>。使用 Spring Boot 很容易创建一个独立运行（运行 Jar，内嵌 Servlet 容器）准生产级别的基于 Spring 框架的项目，使用 Spring Boot 你可以不用或者只需很少的 Spring 配置。</p>
+<h2 id="spring-简史">Spring 简史</h2>
+<h3 id="spring-1x-时代">Spring 1.x 时代</h3>
+<p>在 Spring1.x 时代，都是通过 xml 文件配置 bean，随着项目的不断扩大，需要将 xml 配置分放到不同的配置文件中，需要频繁的在 java 类和 xml 配置文件中切换。</p>
+<h3 id="spring-2x-时代">Spring 2.x 时代</h3>
+<p>随着 JDK 1.5 带来的注解支持，Spring2.x 可以使用注解对 Bean 进行申明和注入，大大的减少了 xml 配置文件，同时也大大简化了项目的开发。</p>
+<p>那么，问题来了，究竟是应该使用 xml 还是注解呢？</p>
+<p>最佳实践：</p>
+<ul>
+<li>应用的基本配置用 xml，比如：数据源、资源文件等</li>
+<li>业务开发用注解，比如：Service 中注入 bean 等</li>
+</ul>
+<h3 id="spring-3x-时代">Spring 3.x 时代</h3>
+<p>从 Spring3.x 开始提供了 Java 配置方式，使用 Java 配置方式可以更好的理解你配置的 Bean，现在我们就处于这个时代，并且 Spring4.x 和 Spring boot 都推荐使用 java 配置的方式。</p>
+<h3 id="spring-5x-时代">Spring 5.x 时代</h3>
+<p>Spring5.x 是 Java 界首个支持响应式的 Web 框架，是 Spring 的一个重要版本，距离 Spring4.x 差不多四年。在此期间，大多数增强都是在 Spring Boot 项目中完成的，其最大的亮点就是提供了完整的端到端响应式编程的支持（新增 Spring WebFlux 模块）。</p>
+<p>Spring WebFlux 同时支持使用旧的 Spring MVC 注解声明 <code>Reactive Controller</code>。和传统的 <code>MVC Controller</code> 不同，<code>Reactive Controller</code> 操作的是 <strong>非阻塞</strong> 的 <code>ServerHttpRequest</code> 和 <code>ServerHttpResponse</code>，而不再是 Spring MVC 里的 HttpServletRequest 和 HttpServletResponse。</p>
+<p>至此也代表着 Java 正式迎来了响应式异步编程的时代。</p>
+<h2 id="spring-boot-优缺点">Spring Boot 优缺点</h2>
+<h3 id="优点">优点</h3>
+<ul>
+<li>快速构建项目</li>
+<li>对主流开发框架的无配置集成</li>
+<li>项目可独立运行，无需外部依赖 Servlet 容器</li>
+<li>提供运行时的应用监控</li>
+<li>极大地提高了开发、部署效率</li>
+<li>与云计算的天然集成</li>
+</ul>
+<h3 id="缺点">缺点</h3>
+<ul>
+<li>版本迭代速度很快，一些模块改动很大</li>
+<li>由于不用自己做配置，报错时很难定位</li>
+</ul>
+<h1 id="spring-boot-常用配置">spring boot 常用配置</h1>
+<h2 id="概述-2">概述</h2>
+<p>本章节主要介绍一下 Spring Boot 中的一些常用配置，比如：自定义 Banner、配置日志、关闭特定的自动配置等。</p>
+<h2 id="自定义-banner">自定义 Banner</h2>
+<p>在 Spring Boot 启动的时候会有一个默认的启动图案</p>
+<pre><code> .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.6.RELEASE)
+</code></pre>
+<p>我们在 <code>src/main/resources</code> 目录下新建一个 banner.txt</p>
+<p>通过 <a href="http://www.qfdmy.com/wp-content/themes/quanbaike/go.php?url=aHR0cDovL3BhdG9yamsuY29tL3NvZnR3YXJlL3RhYWc=">http://patorjk.com/software/taag</a> 网站生成字符串，将网站生成的字符复制到 banner.txt 中</p>
+<p>再次运行这个程序</p>
+<pre><code class="language-bash">${AnsiColor.BRIGHT_RED}
+////////////////////////////////////////////////////////////////////
+//                          _ooOoo_                               //
+//                         o8888888o                              //
+//                         88&quot; . &quot;88                              //
+//                         (| ^_^ |)                              //
+//                         O\  =  /O                              //
+//                      ____/`---'\____                           //
+//                    .'  \\|     |//  `.                         //
+//                   /  \\|||  :  |||//  \                        //
+//                  /  _||||| -:- |||||-  \                       //
+//                  |   | \\\  -  /// |   |                       //
+//                  | \_|  ''\---/''  |   |                       //
+//                  \  .-\__  `-`  ___/-. /                       //
+//                ___`. .'  /--.--\  `. . ___                     //
+//              .&quot;&quot; '&lt;  `.___\_&lt;|&gt;_/___.'  &gt;'&quot;&quot;.                  //
+//            | | :  `- \`.;`\ _ /`;.`/ - ` : | |                 //
+//            \  \ `-.   \_ __\ /__ _/   .-` /  /                 //
+//      ========`-.____`-.___\_____/___.-`____.-'========         //
+//                           `=---='                              //
+//      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^        //
+//            佛祖保佑       永不宕机     永无BUG                  //
+////////////////////////////////////////////////////////////////////
+</code></pre>
+<p>常用属性设置：</p>
+<ul>
+<li><code>${AnsiColor.BRIGHT_RED}</code>：设置控制台中输出内容的颜色</li>
+<li><code>${application.version}</code>：用来获取 <code>MANIFEST.MF</code> 文件中的版本号</li>
+<li><code>${application.formatted-version}</code>：格式化后的 <code>${application.version}</code> 版本信息</li>
+<li><code>${spring-boot.version}</code>：Spring Boot 的版本号</li>
+<li><code>${spring-boot.formatted-version}</code>：格式化后的 <code>${spring-boot.version}</code> 版本信息</li>
+</ul>
+<h2 id="配置文件">配置文件</h2>
+<p>Spring Boot 项目使用一个全局的配置文件 <code>application.properties</code> 或者是 <code>application.yml</code>，在 <code>resources</code> 目录下或者类路径下的 <code>/config</code> 下，一般我们放到 <code>resources</code> 下。</p>
+<p>修改 Tomcat 的端口为 9090，并将默认的访问路径 &quot;/&quot; 修改为 &quot;boot&quot;，可以在 <code>application.properties</code> 中添加：</p>
+<pre><code class="language-properties">server.port=9090
+server.context-path=/boot
+</code></pre>
+<p>或在 application.yml 中添加：</p>
+<pre><code class="language-yaml">server:
+  port: 9090
+  context-path: /boot
+</code></pre>
+<p><a href="http://www.qfdmy.com/wp-content/themes/quanbaike/go.php?url=aHR0cHM6Ly9kb2NzLnNwcmluZy5pby9zcHJpbmctYm9vdC9kb2NzLzIuMC4yLlJFTEVBU0UvcmVmZXJlbmNlL2h0bWwvY29tbW9uLWFwcGxpY2F0aW9uLXByb3BlcnRpZXMuaHRtbA==">更多配置</a></p>
+<h2 id="starter-pom">Starter POM</h2>
+<p>Spring Boot 为我们提供了简化企业级开发绝大多数场景的 starter pom ，只要使用了应用场景所需要的 starter pom ，相关的技术配置将会消除，就可以得到 Spring Boot 为我们提供的自动配置的 Bean。</p>
+<p><a href="http://www.qfdmy.com/wp-content/themes/quanbaike/go.php?url=aHR0cHM6Ly9kb2NzLnNwcmluZy5pby9zcHJpbmctYm9vdC9kb2NzLzIuMC4yLlJFTEVBU0UvcmVmZXJlbmNlL2h0bWwvdXNpbmctYm9vdC1idWlsZC1zeXN0ZW1zLmh0bWwjdXNpbmctYm9vdC1zdGFydGVy">更多 Starter POM</a></p>
+<h2 id="日志配置">日志配置</h2>
+<p>Spring Boot 对各种日志框架都做了支持，我们可以通过配置来修改默认的日志的配置</p>
+<p>默认情况下，Spring Boot 使用 Logback 作为日志框架</p>
+<pre><code class="language-yaml">logging:
+  file: ../logs/spring-boot-hello.log
+  level.org.springframework.web: DEBUG
+</code></pre>
+<h2 id="关闭特定的自动配置">关闭特定的自动配置</h2>
+<p>关闭特定的自动配置使用 <code>@SpringBootApplication</code> 注解的 <code>exclude</code> 参数即可，这里以关闭数据源的自动配置为例</p>
+<pre><code class="language-java">@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
+</code></pre>
+<p>https://www.zhihu.com/question/28594409/answer/74003996)</p>
+<h2 id="读取配置文件">读取配置文件</h2>
+<ol>
+<li>@Value</li>
+<li>Environment</li>
+<li>@ConfigurationProperties</li>
+</ol>
+<h2 id="多环境配置">多环境配置</h2>
+<p>我们在开发Spring Boot应用时，通常同一套程序会被安装到不同环境，比如：开发、测试、生产等。其中数据库地址、服务器端口等等配置都不同，如果每次打包时，都要修改配置文件，那么非常麻烦。profile功能就是来进行动态配置切换的。</p>
+<ol>
+<li>profile配置方式</li>
+</ol>
+<ul>
+<li>多profile文件方式</li>
+<li>yml多文档方式</li>
+</ul>
+<pre><code class="language-tex">多profile文件方式：提供多个配置文件，每个代表一种环境:
+    application-dev.properties/yml 开发环境
+    application-test.properties/yml 测试环境
+    application-pro.properties/yml 生产环境
+yml多文档方式：
+    在yml中使用  --- 分隔不同配置
+</code></pre>
+<ol start="2">
+<li>profile激活方式</li>
+</ol>
+<ul>
+<li>配置文件</li>
+<li>虚拟机参数</li>
+<li>命令行参数</li>
+</ul>
+<pre><code class="language-tex">配置文件： 再配置文件中配置：spring.profiles.active=dev
+虚拟机参数：在VM options 指定：-Dspring.profiles.active=dev
+命令行参数：java –jar xxx.jar  --spring.profiles.active=dev
+</code></pre>
+<h2 id="spring-boot-内部配置加载顺序">spring boot 内部配置加载顺序</h2>
+<p>Springboot程序启动时，会从以下位置加载配置文件：</p>
+<ol>
+<li>file:./config/：当前项目下的/config目录下</li>
+<li>file:./           ：当前项目的根目录</li>
+<li>classpath:/config/：classpath的/config目录</li>
+<li>classpath:/  ：classpath的根目录</li>
+</ol>
+<h1 id="spring-boot-高级">spring boot 高级</h1>
+<h2 id="spring-boot-自动配置">spring boot 自动配置</h2>
+<h3 id="1问题">1问题</h3>
+<p>SpringBoot是如何知道要创建哪个Bean的？比如SpringBoot是如何知道要创建RedisTemplate的？</p>
+<h4 id="11-获取redistemplate">1.1 获取RedisTemplate</h4>
+<h5 id="111-创建一个干净的springboot项目并修改启动类">1.1.1 创建一个干净的springboot项目并修改启动类</h5>
+<pre><code class="language-java">@SpringBootApplication
+public class SpringbootStudyApplication {
+
+    public static void main(String[] args) {
+        //启动SpringBoot的应用，返回Spring的IOC容器
+        ConfigurableApplicationContext context = SpringApplication.run(SpringbootStudyApplication.class, args);
+        //获取Bean，redisTemplate
+        Object redisTemplate = context.getBean(&quot;redisTemplate&quot;);
+        System.out.println(redisTemplate);
+    }
+
+}
+</code></pre>
+<h5 id="112-启动项目">1.1.2 启动项目</h5>
+<ul>
+<li>报错找不到redisTemplate bean</li>
+</ul>
+<pre><code class="language-shell">Exception in thread &quot;main&quot; org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'redisTemplate' available
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:816)
+	...
+</code></pre>
+<h5 id="113-添加依赖">1.1.3  添加依赖</h5>
+<pre><code class="language-xml">&lt;dependency&gt;
+  &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+  &lt;artifactId&gt;spring-boot-starter-data-redis&lt;/artifactId&gt;
+&lt;/dependency&gt;
+</code></pre>
+<h5 id="114-再启动项目">1.1.4 再启动项目</h5>
+<ul>
+<li>启动不报错 输出redisTemplate 对象信息</li>
+</ul>
+<pre><code class="language-shell">org.springframework.data.redis.core.RedisTemplate@287f94b1
+</code></pre>
+<h4 id="12-思考">1.2 思考</h4>
+<p>为什么添加了redis的依赖后,就能获取到redisTemplate bean了?</p>
+<h3 id="2-做一个condition小练习">2 做一个Condition小练习</h3>
+<h4 id="21-需求">2.1 需求</h4>
+<p>在 Spring 的 IOC 容器中有一个 User 的 Bean，现要求：</p>
+<ol>
+<li>导入Jedis坐标后，加载该Bean，没导入，则不加载。</li>
+<li>将类的判断定义为动态的。判断哪个字节码文件存在可以动态指定。</li>
+</ol>
+<h4 id="22-conditional">2.2 @Conditional</h4>
+<h5 id="231-查看conditional源码">2.3.1 查看<code>@Conditional</code>源码</h5>
+<pre><code class="language-java">@Target({ElementType.TYPE, ElementType.METHOD})
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+public @interface Conditional {
+    Class&lt;? extends Condition&gt;[] value();
+}
+</code></pre>
+<ul>
+<li>Conditional 注解参数为 Condition 的子类的Class对象</li>
+</ul>
+<h5 id="232-继续查看condition">2.3.2  继续查看Condition</h5>
+<pre><code class="language-java">@FunctionalInterface
+public interface Condition {
+    boolean matches(ConditionContext var1, AnnotatedTypeMetadata var2);
+}
+</code></pre>
+<ul>
+<li>Condition 为接口,其中方法matches</li>
+<li>matches 作用: 当实现类的 matches 方法返回true时,则注册标识的类或方法,false反之</li>
+</ul>
+<h4 id="22-创建pojo">2.2 创建pojo</h4>
+<pre><code class="language-java">public class User {
+}
+</code></pre>
+<h4 id="23-创建配置类">2.3 创建配置类</h4>
+<pre><code class="language-java">@Configuration
+public class UserConfig {
+    @Bean
+    @Conditional(ClassCondition.class)
+    public User user(){
+        return new User();
+    }
+}
+</code></pre>
+<h4 id="24-条件实现类">2.4 条件实现类</h4>
+<pre><code class="language-java">public class ClassCondition implements Condition {
+   /**
+    * @param context  上下文对象。用于获取环境，IOC容器，ClassLoader对象
+    * @param metadata 注解元对象。 可以用于获取注解定义的属性值
+    * @return
+   */
+   @Override
+   public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata){
+        return true;
+    }
+}
+</code></pre>
+<ul>
+<li>直接返回true,测试能不能直接获取到user bean</li>
+</ul>
+<h4 id="25-修改启动类">2.5 修改启动类</h4>
+<pre><code class="language-java">@SpringBootApplication
+public class SpringbootStudyApplication {
+
+    public static void main(String[] args) {
+        //启动SpringBoot的应用，返回Spring的IOC容器
+        ConfigurableApplicationContext context = SpringApplication.run(SpringbootStudyApplication.class, args);
+        //获取Bean，redisTemplate
+//        Object redisTemplate = context.getBean(&quot;redisTemplate&quot;);
+
+        Object user = context.getBean(&quot;user&quot;);
+        System.out.println(user);
+    }
+
+}
+</code></pre>
+<ul>
+<li>启动运行之后,可以直接获取到user bean.</li>
+<li>验证猜想后,继续完善需求</li>
+</ul>
+<h4 id="26-引入jedis依赖">2.6 引入jedis依赖</h4>
+<pre><code class="language-xml">&lt;dependency&gt;
+   &lt;groupId&gt;redis.clients&lt;/groupId&gt;
+   &lt;artifactId&gt;jedis&lt;/artifactId&gt;
+&lt;/dependency&gt;
+</code></pre>
+<h4 id="27-完善条件类逻辑">2.7 完善条件类逻辑</h4>
+<pre><code class="language-java">public class ClassCondition implements Condition {
+   /**
+    *
+    * @param context 上下文对象。用于获取环境，IOC容器，ClassLoader对象
+    * @param metadata 注解元对象。 可以用于获取注解定义的属性值
+    * @return
+   */
+   @Override
+   public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata){
+        //1.需求： 导入Jedis坐标后创建Bean
+        //思路：判断redis.clients.jedis.Jedis.class文件是否存在
+        boolean flag = true;
+        try {
+            Class&lt;?&gt; cls = Class.forName(&quot;redis.clients.jedis.Jedis&quot;);
+        } catch (ClassNotFoundException e) {
+            flag = false;
+        }
+        return flag;
+    }
+}
+</code></pre>
+<h4 id="28-再次启动项目">2.8 再次启动项目</h4>
+<pre><code class="language-shell">com.ludangxin.springbootstudy.domain.User@7dac3fd8
+</code></pre>
+<ul>
+<li>正常获取user bean</li>
+<li>到这里需求一完成</li>
+</ul>
+<h4 id="29-动态的判断依赖坐标创建注解">2.9 动态的判断依赖坐标创建注解</h4>
+<pre><code class="language-java">@Target({ElementType.TYPE, ElementType.METHOD})
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+@Conditional(ClassCondition.class)
+public @interface ConditionOnClass {
+    String[] value();
+}
+</code></pre>
+<h4 id="210-修改user-bean">2.10 修改user bean</h4>
+<pre><code class="language-java">    @Bean
+//    @Conditional(ClassCondition.class)
+    @ConditionOnClass(&quot;redis.clients.jedis.Jedis&quot;)
+    public User user(){
+        return new User();
+    }
+</code></pre>
+<h4 id="修改条件实现">修改条件实现</h4>
+<pre><code class="language-java">public class ClassCondition implements Condition {
+    /**
+     *
+     * @param context 上下文对象。用于获取环境，IOC容器，ClassLoader对象
+     * @param metadata 注解元对象。 可以用于获取注解定义的属性值
+     * @return
+     */
+    @Override
+    public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata) {
+        /*
+        //1.需求： 导入Jedis坐标后创建Bean
+        //思路：判断redis.clients.jedis.Jedis.class文件是否存在
+        boolean flag = true;
+        try {
+            Class&lt;?&gt; cls = Class.forName(&quot;redis.clients.jedis.Jedis&quot;);
+        } catch (ClassNotFoundException e) {
+            flag = false;
+        }
+        return flag;
+        */
+
+        //2.需求： 导入通过注解属性值value指定坐标后创建Bean
+
+        //获取注解属性值  value
+        Map&lt;String, Object&gt; map = metadata.getAnnotationAttributes(ConditionOnClass.class.getName());
+        //System.out.println(map);
+        String[] value = (String[]) map.get(&quot;value&quot;);
+
+        boolean flag = true;
+        try {
+            for (String className : value) {
+                Class&lt;?&gt; cls = Class.forName(className);
+            }
+        } catch (ClassNotFoundException e) {
+            flag = false;
+        }
+        return flag;
+
+    }
+}
+</code></pre>
+<h4 id="启动项目">启动项目</h4>
+<pre><code class="language-shell">com.ludangxin.springbootstudy.domain.User@62573c86
+</code></pre>
+<ul>
+<li>正常获取user bean</li>
+<li>到这里需求完成</li>
+<li>练习做完后大概明白了condition注解的作用</li>
+</ul>
+<h3 id="3-condition">3  Condition</h3>
+<p>Condition 是在Spring 4.0 增加的条件判断功能，通过这个可以功能可以实现选择性的创建 Bean 操作.</p>
+<h4 id="springboot-提供的常用条件注解">SpringBoot 提供的常用条件注解：</h4>
+<p>Spring提供的一些成品的(不需要自行扩展的)条件注解<br>
+<code>@ConditionOnClass</code> 判断环境中是否有对应字节码文件才初始化Bean<br>
+<code>@ConditionOnBean</code> 判断环境中是否有对应bean才初始化Bean<br>
+<code>@ConditionOnWebApplication</code> 当前项目是Web项目的条件<br>
+<code>@ConditionOnExpression</code> 基于SpEL表达式作为判断条件<br>
+<code>@ConditionOnJndi</code> 在JNDI存在时查找指定的位置<br>
+<code>@ConditionMissingBean</code> 当SpringIoc容器内不存在指定的Bean的条件<br>
+<code>@ConditionMissingClass</code> 当SpringIoc容器内不存在指定的Class的条件<br>
+<code>@ConditionOnNotWebApplication</code> 当前项目不是Web项目的条件<br>
+<code>@ConditionOnProperty</code> 指定的属性是否有指定的值<br>
+<code>@ConditionOnResource</code> 类路径是否有指定的值<br>
+<code>@ConditionOnSingleCandidate</code> 当指定Bean在IOC容器内只有一个，或者虽然有多个但时指定首选的Bean</p>
+<h3 id="4-做一个enable小练习">4 做一个Enable小练习</h3>
+<p>SpringBoot中提供了很多Enable开头的注解，这些注解都是用于动态启用某些功能的。而其底层原理是使用@Import注解导入一些配置类，实现Bean的动态加载。</p>
+<h4 id="41-思考">4.1 思考</h4>
+<p>SpringBoot 工程是否可以直接获取jar包中定义的Bean？</p>
+<h4 id="42-验证">4.2 验证</h4>
+<h5 id="421-新建一个model">4.2.1 新建一个model</h5>
+<p>创建模块</p>
+<pre><code class="language-xml">&lt;groupId&gt;com.ludangxin&lt;/groupId&gt;
+&lt;artifactId&gt;springboot-study-other&lt;/artifactId&gt;
+&lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+</code></pre>
+<h5 id="422-新建pojo">4.2.2 新建pojo</h5>
+<pre><code class="language-java">public class User {
+}
+</code></pre>
+<h5 id="423-新建config类">4.2.3 新建config类</h5>
+<pre><code class="language-java">@Configuration
+public class UserConfig {
+    @Bean
+    public User user() {
+        return new User();
+    }
+}
+</code></pre>
+<h5 id="424-springbootstudy-模块引用刚创建的other模块">4.2.4 springbootstudy 模块引用刚创建的other模块</h5>
+<pre><code class="language-xml">&lt;dependency&gt;
+   &lt;groupId&gt;com.ludangxin&lt;/groupId&gt;
+   &lt;artifactId&gt;springboot-study-other&lt;/artifactId&gt;
+   &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+<h5 id="425-注释掉study模块中的config配置类">4.2.5 注释掉study模块中的config配置类</h5>
+<pre><code class="language-java">//@Configuration
+public class UserConfig {
+    @Bean
+//    @Conditional(ClassCondition.class)
+    @ConditionOnClass(&quot;redis.clients.jedis.Jedis&quot;)
+    public User user() {
+        return new User();
+    }
+}
+</code></pre>
+<h5 id="426-验证-是否能获取到other模块中的user-bean">4.2.6 验证 是否能获取到other模块中的user bean</h5>
+<pre><code class="language-shell">Exception in thread &quot;main&quot; org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'user' available
+</code></pre>
+<ul>
+<li>启动项目后发现无法获取到user bean</li>
+</ul>
+<h5 id="427-为什么获取不到呢">4.2.7 为什么获取不到呢?</h5>
+<ul>
+<li>因为spring boot 默认只扫描当前项目的启动引导类的同级或者同级以下的类,也就是只会注册当前启动类所在包下的springbean</li>
+<li>因为新模块的报名和study模块的报名不同导致扫描不到bean ,所以无法自动注入无法直接使用引用包中的bean</li>
+</ul>
+<h5 id="428-那是不是只要让扫描上配置类就可以了呢">4.2.8 那是不是只要让扫描上配置类就可以了呢?</h5>
+<h6 id="4281-componentscan">4.2.8.1 @ComponentScan</h6>
+<p>ComponentScan  扫描指定包</p>
+<pre><code class="language-java">@SpringBootApplication
+@ComponentScan({&quot;com.ludangxin.springbootstudyother.config&quot;})
+public class SpringbootStudyApplication {
+    public static void main(String[] args) {
+        //启动SpringBoot的应用，返回Spring的IOC容器
+        ConfigurableApplicationContext context = SpringApplication.run(SpringbootStudyApplication.class, args);
+        //获取Bean，redisTemplate
+//        Object redisTemplate = context.getBean(&quot;redisTemplate&quot;);
+
+        Object user = context.getBean(&quot;user&quot;);
+        System.out.println(user);
+    }
+}
+</code></pre>
+<p>启动项目</p>
+<pre><code class="language-shell">com.ludangxin.springbootstudyother.domain.User@602c4656
+</code></pre>
+<ul>
+<li>可以获取,验证猜想</li>
+</ul>
+<h6 id="4282-import">4.2.8.2 @Import</h6>
+<p>Import  指定想要导入的配置类,这些类会被spring创建,并放入ioc容器</p>
+<pre><code class="language-java">@SpringBootApplication
+//@ComponentScan({&quot;com.ludangxin.springbootstudyother.config&quot;})
+@Import(com.ludangxin.springbootstudyother.config.UserConfig.class)
+public class SpringbootStudyApplication {
+    public static void main(String[] args) {
+        //启动SpringBoot的应用，返回Spring的IOC容器
+        ConfigurableApplicationContext context = SpringApplication.run(SpringbootStudyApplication.class, args);
+        //获取Bean，redisTemplate
+//        Object redisTemplate = context.getBean(&quot;redisTemplate&quot;);
+        Object user = context.getBean(&quot;user&quot;);
+        System.out.println(user);
+    }
+}
+</code></pre>
+<p>启动项目</p>
+<pre><code class="language-shell">com.ludangxin.springbootstudyother.domain.User@712cfb63
+</code></pre>
+<ul>
+<li>可以获取,验证猜想</li>
+</ul>
+<h5 id="429-改造import">4.2.9  改造import</h5>
+<ol>
+<li>在springboot-study-other 模块中添加配置 用于激活UserConfig 配置类</li>
+</ol>
+<pre><code class="language-java">@Target(ElementType.TYPE)
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+@Import(UserConfig.class)
+public @interface EnableUser {
+}
+</code></pre>
+<ol start="2">
+<li>
+<p>在springboot-study 启动类上添加该配置</p>
+<pre><code class="language-java">@SpringBootApplication
+//@ComponentScan({&quot;com.ludangxin.springbootstudyother.config&quot;})
+//@Import(com.ludangxin.springbootstudyother.config.UserConfig.class)
+@EnableUser
+public class SpringbootStudyApplication {
+    public static void main(String[] args) {
+        //启动SpringBoot的应用，返回Spring的IOC容器
+        ConfigurableApplicationContext context = SpringApplication.run(SpringbootStudyApplication.class, args);
+        //获取Bean，redisTemplate
+//        Object redisTemplate = context.getBean(&quot;redisTemplate&quot;);
+
+        Object user = context.getBean(&quot;user&quot;);
+        System.out.println(user);
+    }
+}
+</code></pre>
+</li>
+<li>
+<p>启动项目</p>
+</li>
+</ol>
+<pre><code class="language-shell">com.ludangxin.springbootstudyother.domain.User@ca66933
+</code></pre>
+<ul>
+<li>改造后 比前两种方法更好用,不错</li>
+</ul>
+<h3 id="5-import">5 Import</h3>
+<p>@Enable*底层依赖于@Import注解导入一些类，使用@Import导入的类会被Spring加载到IOC容器中。而@Import提供4中用法：</p>
+<ol>
+<li>导入Bean</li>
+<li>导入配置类</li>
+<li>导入 ImportSelector 实现类。一般用于加载配置文件中的类</li>
+<li>导入 ImportBeanDefinitionRegistrar 实现类。</li>
+</ol>
+<h3 id="6-enableautoconfiguration">6 EnableAutoConfiguration</h3>
+<h4 id="61-源码追踪">6.1 源码追踪</h4>
+<ol>
+<li>
+<p>查看@SpringBootApplication源码</p>
+<pre><code class="language-java">@Target(ElementType.TYPE)
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+@Inherited
+@SpringBootConfiguration
+@EnableAutoConfiguration
+@ComponentScan(excludeFilters = { @Filter(type = FilterType.CUSTOM, classes = TypeExcludeFilter.class),
+		@Filter(type = FilterType.CUSTOM, classes = AutoConfigurationExcludeFilter.class) })
+public @interface SpringBootApplication {...}
+</code></pre>
+</li>
+<li>
+<p>查看@EnableAutoConfiguration源码</p>
+<pre><code class="language-java">@Target(ElementType.TYPE)
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+@Inherited
+@AutoConfigurationPackage
+@Import(AutoConfigurationImportSelector.class)
+public @interface EnableAutoConfiguration {...}
+</code></pre>
+</li>
+<li>
+<p>查看AutoConfigurationImportSelector 类</p>
+<pre><code class="language-java">public class AutoConfigurationImportSelector implements DeferredImportSelector, BeanClassLoaderAware,
+		ResourceLoaderAware, BeanFactoryAware, EnvironmentAware, Ordered {
+	...
+    /**
+     * 核心代码(实现了DeferredImportSelector接口,重写selectImports方法)
+    */
+	@Override
+	public String[] selectImports(AnnotationMetadata annotationMetadata) {
+		if (!isEnabled(annotationMetadata)) {
+			return NO_IMPORTS;
+		}
+		AutoConfigurationEntry autoConfigurationEntry = getAutoConfigurationEntry(annotationMetadata);
+		return StringUtils.toStringArray(autoConfigurationEntry.getConfigurations());
+	}
+</code></pre>
+</li>
+<li>
+<p>查看getAutoConfigurationEntry方法</p>
+<pre><code class="language-java">protected AutoConfigurationEntry getAutoConfigurationEntry(AnnotationMetadata annotationMetadata) {
+		if (!isEnabled(annotationMetadata)) {
+			return EMPTY_ENTRY;
+		}
+		AnnotationAttributes attributes = getAttributes(annotationMetadata);
+		List&lt;String&gt; configurations = getCandidateConfigurations(annotationMetadata, attributes);
+		configurations = removeDuplicates(configurations);
+		Set&lt;String&gt; exclusions = getExclusions(annotationMetadata, attributes);
+		checkExcludedClasses(configurations, exclusions);
+		configurations.removeAll(exclusions);
+		configurations = getConfigurationClassFilter().filter(configurations);
+		fireAutoConfigurationImportEvents(configurations, exclusions);
+		return new AutoConfigurationEntry(configurations, exclusions);
+	}
+</code></pre>
+</li>
+<li>
+<p>继续查看getCandidateConfigurations方法</p>
+<pre><code class="language-java">protected List&lt;String&gt; getCandidateConfigurations(AnnotationMetadata metadata, AnnotationAttributes attributes) {
+		List&lt;String&gt; configurations = SpringFactoriesLoader.loadFactoryNames(getSpringFactoriesLoaderFactoryClass(),
+				getBeanClassLoader());
+		Assert.notEmpty(configurations, &quot;No auto configuration classes found in META-INF/spring.factories. If you &quot;
+				+ &quot;are using a custom packaging, make sure that file is correct.&quot;);
+		return configurations;
+	}
+</code></pre>
+<ul>
+<li>从该方法断言可以得知,默认读取的是META-INF/spring.factories 下的配置</li>
+</ul>
+</li>
+<li>
+<p>查看spring.factories文件(这里只列举了一部分)</p>
+<pre><code class="language-properties"># Initializers
+org.springframework.context.ApplicationContextInitializer=\
+org.springframework.boot.autoconfigure.SharedMetadataReaderFactoryContextInitializer,\
+org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener
+
+# Application Listeners
+org.springframework.context.ApplicationListener=\
+org.springframework.boot.autoconfigure.BackgroundPreinitializer
+
+# Auto Configuration Import Listeners
+org.springframework.boot.autoconfigure.AutoConfigurationImportListener=\
+org.springframework.boot.autoconfigure.condition.ConditionEvaluationReportAutoConfigurationImportListener
+
+# Auto Configuration Import Filters
+org.springframework.boot.autoconfigure.AutoConfigurationImportFilter=\
+org.springframework.boot.autoconfigure.condition.OnBeanCondition,\
+org.springframework.boot.autoconfigure.condition.OnClassCondition,\
+org.springframework.boot.autoconfigure.condition.OnWebApplicationCondition...
+org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration...
+</code></pre>
+</li>
+<li>
+<p>查看最后一行的RedisAutoConfiguration文件信息</p>
+<pre><code class="language-java">@Configuration(proxyBeanMethods = false)
+@ConditionalOnClass(RedisOperations.class)
+@EnableConfigurationProperties(RedisProperties.class)
+@Import({ LettuceConnectionConfiguration.class, JedisConnectionConfiguration.class })
+public class RedisAutoConfiguration {
+
+	@Bean
+	@ConditionalOnMissingBean(name = &quot;redisTemplate&quot;)
+	public RedisTemplate&lt;Object, Object&gt; redisTemplate(RedisConnectionFactory redisConnectionFactory)
+			throws UnknownHostException {
+		RedisTemplate&lt;Object, Object&gt; template = new RedisTemplate&lt;&gt;();
+		template.setConnectionFactory(redisConnectionFactory);
+		return template;
+	}
+	
+	@Bean
+	@ConditionalOnMissingBean
+	public StringRedisTemplate stringRedisTemplate(RedisConnectionFactory redisConnectionFactory)
+			throws UnknownHostException {
+		StringRedisTemplate template = new StringRedisTemplate();
+		template.setConnectionFactory(redisConnectionFactory);
+		return template;
+	}
+
+}
+</code></pre>
+</li>
+</ol>
+<h4 id="62-真相了">6.2 真相了</h4>
+<ul>
+<li>原来springboot 是同过import的第三种方式(导入 ImportSelector 实现类。一般用于加载配置文件中的类),通过实现<code>ImportSelector</code> 的<code>selectImports</code>方法来默认读取<code>spring.factories</code>中的配置类信息,然后再通过<code>spring.factories</code>中的配置信息,默认去加载一些配置类,然后再通过配置类中的条件注解去加载一些默认配置.</li>
+<li>大功告成</li>
+</ul>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[SpringBoot 集成 Mybatis-Plus]]></title>
         <id>http://blog.ludangxin.club/post/mybatis-plus/</id>
@@ -4438,811 +5117,6 @@ upstream server_pool{
 <p><code>worker_connections * worker_processes/4</code></p>
 <p>因为作为反向代理服务器，每个并发会建立与客户端的连接和与后端服务的连接，会占用两个连接。</p>
 <figure data-type="image" tabindex="7"><img src="https://i.loli.net/2020/04/19/LcyKewbUuTN2kF4.png" alt="image.png" loading="lazy"></figure>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[SpringBoot  集成redis]]></title>
-        <id>http://blog.ludangxin.club/post/springboot-ji-cheng-redis/</id>
-        <link href="http://blog.ludangxin.club/post/springboot-ji-cheng-redis/">
-        </link>
-        <updated>2020-05-16T15:51:29.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="简介">简介</h1>
-<p>Redis 是完全开源免费的，遵守BSD协议，是一个高性能的key-value非关系性数据库(NoSql)。<br>
-Redis 与其他 key - value 缓存产品有以下三个特点：</p>
-<ol>
-<li>Redis支持数据的持久化，可以将内存中的数据保存在磁盘中，重启的时候可以再次加载进行使用。</li>
-<li>Redis不仅仅支持简单的key-value类型的数据，同时还提供list，set，zset，hash等数据结构的存储。</li>
-<li>Redis支持数据的备份，即master-slave模式的数据备份。</li>
-</ol>
-<h2 id="数据结构介绍">数据结构介绍</h2>
-<p>Redis可以存储键与5种不同数据结构类型之间的映射，这5种数据结构类型分别为String（字符串）、List（列表）、Set（集合）、Hash（散列）和 Zset（有序集合）。</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">结构类型</th>
-<th style="text-align:center">结构存储的值</th>
-<th style="text-align:center">读写能力</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">String</td>
-<td style="text-align:center">可以是字符串、整数或者浮点数</td>
-<td style="text-align:center">对整个字符串或者字符串的其中一部分执行操作；对象和浮点数执行自增(increment)或者自减(decrement)</td>
-</tr>
-<tr>
-<td style="text-align:center">List</td>
-<td style="text-align:center">一个链表，链表上的每个节点都包含了一个字符串</td>
-<td style="text-align:center">从链表的两端推入或者弹出元素；根据偏移量对链表进行修剪(trim)；读取单个或者多个元素；根据值来查找或者移除元素</td>
-</tr>
-<tr>
-<td style="text-align:center">Set</td>
-<td style="text-align:center">包含字符串的无序收集器(unorderedcollection)，并且被包含的每个字符串都是独一无二的、各不相同</td>
-<td style="text-align:center">添加、获取、移除单个元素；检查一个元素是否存在于某个集合中；计算交集、并集、差集；从集合里卖弄随机获取元素</td>
-</tr>
-<tr>
-<td style="text-align:center">Hash</td>
-<td style="text-align:center">包含键值对的无序散列表</td>
-<td style="text-align:center">添加、获取、移除单个键值对；获取所有键值对</td>
-</tr>
-<tr>
-<td style="text-align:center">Zset</td>
-<td style="text-align:center">字符串成员(member)与浮点数分值(score)之间的有序映射，元素的排列顺序由分值的大小决定</td>
-<td style="text-align:center">添加、获取、删除单个元素；根据分值范围(range)或者成员来获取元素</td>
-</tr>
-</tbody>
-</table>
-<h2 id="redis-为什么这么快">redis 为什么这么快</h2>
-<ol>
-<li>完全<strong>基于内存</strong>，绝大部分请求是纯粹的内存操作，非常快速。数据存在内存中，类似于HashMap，HashMap的优势就是查找和操作的时间复杂度都是O(1)；</li>
-<li><strong>数据结构简单</strong>，对数据操作也简单，Redis中的数据结构是专门进行设计的；</li>
-<li><strong>采用单进程单线程</strong>(这也解释为什么redis可以处理高并发问题)，避免了不必要的上下文切换和竞争条件，也不存在多进程或者多线程导致的切换而消耗 CPU，不用去考虑各种锁的问题，不存在加锁释放锁操作，没有因为可能出现死锁而导致的性能消耗；</li>
-<li>使用<strong>多路I/O复用模型</strong>(最后有介绍)；</li>
-<li>使用底层模型不同，它们之间底层实现方式以及与客户端之间通信的应用协议不一样，Redis直接自己构建了VM 机制 ，因为一般的系统调用系统函数的话，会浪费一定的时间去移动和请求；</li>
-</ol>
-<h1 id="注解介绍">注解介绍</h1>
-<h2 id="cacheable">@Cacheable</h2>
-<p>@Cacheable(value=&quot;myCache&quot;)，这个注释的意思是，当调用这个方法的时候，会从一个名叫myCache 的缓存中查询，如果没有，则执行实际的方法（即查询数据库），并将执行的结果存入缓存中，否则返回缓存中的对象。</p>
-<h2 id="cacheput">@CachePut</h2>
-<p>@CachePut 的作用 主要针对方法配置，能够根据方法的请求参数对其<strong>结果</strong>进行缓存，和 @Cacheable 不同的是，它每次都会触发真实方法的调用.</p>
-<h2 id="cacheevict">@CacheEvict</h2>
-<p>@CachEvict 的作用 主要针对方法配置，能够根据一定的条件对缓存进行清空</p>
-<h2 id="cacheconfig">@CacheConfig</h2>
-<p>@Cacheable()里面都有一个value＝“xxx”的属性，这显然如果方法多了，写起来也是挺累的，如果可以一次性声明完 那就省事了， 所以，有了@CacheConfig这个配置，@CacheConfig is a class-level annotation that allows to share the cache names，如果你在你的方法写别的名字，那么依然以方法的名字为准。</p>
-<h2 id="caching">@Caching</h2>
-<p>@Caching可以使注解组合使用,比如根据id查询用户信息,查询完的结果为{key = id,value = userInfo},但我们现在为了方遍,想用用户的手机号,邮箱等缓存对应用户的信息,这时候我们就要使用@Caching。例:</p>
-<pre><code class="language-java">@Caching(put = {
-@CachePut(value = &quot;user&quot;, key = &quot;#user.id&quot;),
-@CachePut(value = &quot;user&quot;, key = &quot;#user.username&quot;),
-@CachePut(value = &quot;user&quot;, key = &quot;#user.email&quot;)
-})
-public User getUserInfo(User user){
-    ...
-return user;
-}
-</code></pre>
-<h1 id="项目结构图示">项目结构图示</h1>
-<figure data-type="image" tabindex="1"><img src="http://blog.ludangxin.club/post-images/1589644541652.jpg" alt="" loading="lazy"></figure>
-<h1 id="引入所需依赖">引入所需依赖</h1>
-<pre><code class="language-xml">        &lt;!-- redis --&gt;
-        &lt;dependency&gt;
-            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
-            &lt;artifactId&gt;spring-boot-starter-data-redis&lt;/artifactId&gt;
-        &lt;/dependency&gt;
-
-        &lt;!-- lettuce pool --&gt;
-        &lt;dependency&gt;
-            &lt;groupId&gt;org.apache.commons&lt;/groupId&gt;
-            &lt;artifactId&gt;commons-pool2&lt;/artifactId&gt;
-        &lt;/dependency&gt;
-
-        &lt;!-- aop 本项目中为了方便记录日志 --&gt;
-        &lt;dependency&gt;
-            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
-            &lt;artifactId&gt;spring-boot-starter-aop&lt;/artifactId&gt;
-        &lt;/dependency&gt;
-
-        &lt;!-- SpringBoot Web容器 --&gt;
-        &lt;dependency&gt;
-            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
-            &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
-        &lt;/dependency&gt;
-
-        &lt;!-- lombok 工具类--&gt;
-        &lt;dependency&gt;
-            &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;
-            &lt;artifactId&gt;lombok&lt;/artifactId&gt;
-            &lt;optional&gt;true&lt;/optional&gt;
-        &lt;/dependency&gt;
-        &lt;!-- 单元测试依赖 --&gt;
-        &lt;dependency&gt;
-            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
-            &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;
-            &lt;scope&gt;test&lt;/scope&gt;
-            &lt;exclusions&gt;
-                &lt;exclusion&gt;
-                    &lt;groupId&gt;org.junit.vintage&lt;/groupId&gt;
-                    &lt;artifactId&gt;junit-vintage-engine&lt;/artifactId&gt;
-                &lt;/exclusion&gt;
-            &lt;/exclusions&gt;
-        &lt;/dependency&gt;
-        &lt;dependency&gt;
-            &lt;groupId&gt;junit&lt;/groupId&gt;
-            &lt;artifactId&gt;junit&lt;/artifactId&gt;
-            &lt;scope&gt;test&lt;/scope&gt;
-        &lt;/dependency&gt;
-</code></pre>
-<h1 id="配置applicationyml">配置application.yml</h1>
-<pre><code class="language-yaml">spring:
-  # redis 配置
-  redis:
-    # 地址
-    host: localhost
-    # 端口，默认为6379
-    port: 6379
-    # 密码
-    password:
-    # 连接超时时间
-    timeout: 10s
-    lettuce:
-      pool:
-        # 连接池中的最小空闲连接
-        min-idle: 0
-        # 连接池中的最大空闲连接
-        max-idle: 8
-        # 连接池的最大数据库连接数
-        max-active: 8
-        # #连接池最大阻塞等待时间（使用负值表示没有限制）
-        max-wait: -1ms
-</code></pre>
-<h1 id="添加项目配置信息">添加项目配置信息</h1>
-<h2 id="创建redis配置类">创建redis配置类</h2>
-<pre><code class="language-java">import org.springframework.cache.annotation.EnableCaching;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.data.redis.connection.RedisConnectionFactory;
-import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
-import org.springframework.data.redis.serializer.StringRedisSerializer;
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.PropertyAccessor;
-import com.fasterxml.jackson.databind.ObjectMapper;
-/**
- * redis配置类
- * @author ludangxin
- */
-@Configuration
-@EnableCaching
-public class RedisConfig {
-
-    @Bean
-    @SuppressWarnings(&quot;all&quot;)
-    public RedisTemplate&lt;String, Object&gt; redisTemplate(RedisConnectionFactory factory) {
-        RedisTemplate&lt;String, Object&gt; template = new RedisTemplate&lt;String, Object&gt;();
-        template.setConnectionFactory(factory);
-        Jackson2JsonRedisSerializer jackson2JsonRedisSerializer = new Jackson2JsonRedisSerializer(Object.class);
-        ObjectMapper om = new ObjectMapper();
-        om.setVisibility(PropertyAccessor.ALL, JsonAutoDetect.Visibility.ANY);
-        om.enableDefaultTyping(ObjectMapper.DefaultTyping.NON_FINAL);
-        jackson2JsonRedisSerializer.setObjectMapper(om);
-        StringRedisSerializer stringRedisSerializer = new StringRedisSerializer();
-        // key采用String的序列化方式
-        template.setKeySerializer(stringRedisSerializer);
-        // hash的key也采用String的序列化方式
-        template.setHashKeySerializer(stringRedisSerializer);
-        // value序列化方式采用jackson
-        template.setValueSerializer(jackson2JsonRedisSerializer);
-        // hash的value序列化方式采用jackson
-        template.setHashValueSerializer(jackson2JsonRedisSerializer);
-        template.afterPropertiesSet();
-        return template;
-    }
-    
-}
-</code></pre>
-<h2 id="创建redis-util">创建redis util</h2>
-<pre><code class="language-java">/**
- * spring redis 工具类
- *
- * @author ludangxin
- **/
-@SuppressWarnings(value = { &quot;unchecked&quot;, &quot;rawtypes&quot; })
-@Component
-public class RedisUtil {
-
-    @Autowired
-    public RedisTemplate redisTemplate;
-
-    /**
-     * 缓存基本的对象，Integer、String、实体类等
-     *
-     * @param key 缓存的键值
-     * @param value 缓存的值
-     * @return 缓存的对象
-     */
-    public &lt;T&gt; ValueOperations&lt;String, T&gt; setCacheObject(String key, T value) {
-        ValueOperations&lt;String, T&gt; operation = redisTemplate.opsForValue();
-        operation.set(key, value);
-        return operation;
-    }
-
-    /**
-     * 缓存基本的对象，Integer、String、实体类等
-     *
-     * @param key 缓存的键值
-     * @param value 缓存的值
-     * @param timeout 时间
-     * @param timeUnit 时间颗粒度
-     * @return 缓存的对象
-     */
-    public &lt;T&gt; ValueOperations&lt;String, T&gt; setCacheObject(String key, T value, Integer timeout, TimeUnit timeUnit) {
-        ValueOperations&lt;String, T&gt; operation = redisTemplate.opsForValue();
-        operation.set(key, value, timeout, timeUnit);
-        return operation;
-    }
-
-    /**
-     * 获得缓存的基本对象。
-     *
-     * @param key 缓存键值
-     * @return 缓存键值对应的数据
-     */
-    public &lt;T&gt; T getCacheObject(String key) {
-        ValueOperations&lt;String, T&gt; operation = redisTemplate.opsForValue();
-        return operation.get(key);
-    }
-
-    /**
-     * 删除单个对象
-     *
-     * @param key
-     */
-    public void deleteObject(String key) {
-        redisTemplate.delete(key);
-    }
-
-    /**
-     * 删除集合对象
-     *
-     * @param collection
-     */
-    public void deleteObject(Collection collection) {
-        redisTemplate.delete(collection);
-    }
-
-    /**
-     * 缓存List数据
-     *
-     * @param key 缓存的键值
-     * @param dataList 待缓存的List数据
-     * @return 缓存的对象
-     */
-    public &lt;T&gt; ListOperations&lt;String, T&gt; setCacheList(String key, List&lt;T&gt; dataList) {
-        ListOperations listOperation = redisTemplate.opsForList();
-        if (null != dataList)
-        {
-            int size = dataList.size();
-            for (int i = 0; i &lt; size; i++)
-            {
-                listOperation.leftPush(key, dataList.get(i));
-            }
-        }
-        return listOperation;
-    }
-
-    /**
-     * 获得缓存的list对象
-     *
-     * @param key 缓存的键值
-     * @return 缓存键值对应的数据
-     */
-    public &lt;T&gt; List&lt;T&gt; getCacheList(String key) {
-        List&lt;T&gt; dataList = new ArrayList&lt;T&gt;();
-        ListOperations&lt;String, T&gt; listOperation = redisTemplate.opsForList();
-        Long size = listOperation.size(key);
-        for (int i = 0; i &lt; size; i++)
-        {
-            dataList.add(listOperation.index(key, i));
-        }
-        return dataList;
-    }
-
-    /**
-     * 缓存Set
-     *
-     * @param key 缓存键值
-     * @param dataSet 缓存的数据
-     * @return 缓存数据的对象
-     */
-    public &lt;T&gt; BoundSetOperations&lt;String, T&gt; setCacheSet(String key, Set&lt;T&gt; dataSet) {
-        BoundSetOperations&lt;String, T&gt; setOperation = redisTemplate.boundSetOps(key);
-        Iterator&lt;T&gt; it = dataSet.iterator();
-        while (it.hasNext())
-        {
-            setOperation.add(it.next());
-        }
-        return setOperation;
-    }
-
-    /**
-     * 获得缓存的set
-     *
-     * @param key
-     * @return
-     */
-    public &lt;T&gt; Set&lt;T&gt; getCacheSet(String key) {
-        Set&lt;T&gt; dataSet = new HashSet&lt;T&gt;();
-        BoundSetOperations&lt;String, T&gt; operation = redisTemplate.boundSetOps(key);
-        dataSet = operation.members();
-        return dataSet;
-    }
-
-    /**
-     * 缓存Map
-     *
-     * @param key
-     * @param dataMap
-     * @return
-     */
-    public &lt;T&gt; HashOperations&lt;String, String, T&gt; setCacheMap(String key, Map&lt;String, T&gt; dataMap) {
-        HashOperations hashOperations = redisTemplate.opsForHash();
-        if (null != dataMap)
-        {
-            for (Map.Entry&lt;String, T&gt; entry : dataMap.entrySet())
-            {
-                hashOperations.put(key, entry.getKey(), entry.getValue());
-            }
-        }
-        return hashOperations;
-    }
-
-    /**
-     * 获得缓存的Map
-     *
-     * @param key
-     * @return
-     */
-    public &lt;T&gt; Map&lt;String, T&gt; getCacheMap(String key) {
-        Map&lt;String, T&gt; map = redisTemplate.opsForHash().entries(key);
-        return map;
-    }
-
-    /**
-     * 获得缓存的基本对象列表
-     *
-     * @param pattern 字符串前缀
-     * @return 对象列表
-     */
-    public Collection&lt;String&gt; keys(String pattern) {
-        return redisTemplate.keys(pattern);
-    }
-}
-</code></pre>
-<h2 id="创建-aop-log-切面-方便记录日志">创建 aop log 切面 方便记录日志</h2>
-<pre><code class="language-java">import lombok.extern.slf4j.Slf4j;
-import org.aspectj.lang.JoinPoint;
-import org.aspectj.lang.annotation.After;
-import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Pointcut;
-import org.springframework.stereotype.Component;
-
-/**
- * 设置日志切面
- * @author ludangxin
- */
-@Slf4j
-@Aspect
-@Component
-public class LogAspect {
-    
-    @Pointcut(&quot;execution(public * com.ldx.springboot.service.impl.UserServiceImpl.*(..))&quot;)//切入点描述
-    public void userServiceLog(){}//签名，可以理解成这个切入点的一个名称
-    
-    @After(&quot;userServiceLog()&quot;) //在切入点的方法run之前要干的
-    public void logBeforeController(JoinPoint joinPoint) {
-        //下面这个getSignature().getDeclaringTypeName()是获取包+类名的   然后后面的joinPoint.getSignature.getName()获取了方法名
-        log.info(&quot;################执行方法 : &quot; + joinPoint.getSignature().getDeclaringTypeName() + &quot;.&quot; + joinPoint.getSignature().getName());
-    }
-
-}
-</code></pre>
-<h2 id="创建缓存常量信息">创建缓存常量信息</h2>
-<pre><code class="language-java">public class CacheConstant {
-
-    /** 用户信息cache */
-    public static final String USER_CACHE_NAME = &quot;user_cache&quot;;
-
-    /** 用户cache key 前缀 */
-    public static final String USER_CACHE_KEY_PREFIX = &quot;user_&quot;;
-}
-
-</code></pre>
-<h2 id="创建实体类">创建实体类</h2>
-<pre><code class="language-java">import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import java.io.Serializable;
-
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-public class User implements Serializable {
-
-    private static final long serialVersionUID = 1L;
-
-    private int id;
-
-    private String name;
-
-    private String sex;
-
-    private int age;
-
-    private double height;
-
-}
-</code></pre>
-<h2 id="创建service">创建service</h2>
-<pre><code class="language-java">package com.ldx.springboot.service;
-
-import com.ldx.springboot.model.User;
-
-import java.util.List;
-
-/**
- * 用户管理
- * @author ludangxin
- */
-public interface UserService {
-
-    /**
-     * 查询所有用户信息
-     * @return
-     */
-    List&lt;User&gt; selectAll();
-
-    /**
-     * 根据名称模糊查询
-     * @param name
-     * @return
-     */
-    List&lt;User&gt; selectByNameLike(String name);
-
-    /**
-     * 根据id查询用户信息
-     * @param id
-     * @return
-     */
-    User getById(int id);
-
-    /**
-     * 新增用户信息
-     * @param user
-     * @return
-     */
-    List&lt;User&gt; add(User user);
-
-    /**
-     * 更新用户信息
-     * @param user
-     * @return
-     */
-    List&lt;User&gt; updateById(User user);
-
-    /**
-     * 根据id删除用户信息
-     * @return
-     */
-    List&lt;User&gt; deleteById(int id);
-
-    /**
-     * 删除全部用户信息
-     * @return
-     */
-    void deleteAll();
-
-}
-</code></pre>
-<h2 id="创建实现类">创建实现类</h2>
-<pre><code class="language-java">package com.ldx.springboot.service.impl;
-
-import com.ldx.springboot.constant.CacheConstant;
-import com.ldx.springboot.model.User;
-import com.ldx.springboot.service.UserService;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.cache.annotation.*;
-import org.springframework.stereotype.Service;
-
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.stream.Collectors;
-
-/**
- * 用户管理实现类
- * @author ludangxin
- */
-@Slf4j
-@CacheConfig(cacheNames = CacheConstant.USER_CACHE_NAME)
-@Service(value = &quot;userService&quot;)
-public class UserServiceImpl implements UserService {
-
-    //数据源
-    static List&lt;User&gt; users = new ArrayList&lt;&gt;();
-    static{
-        User user1 = new User(1,&quot;张三&quot;,&quot;男&quot;,18,178.5);
-        User user2 = new User(2,&quot;李四&quot;,&quot;男&quot;,16,172.3);
-        User user3 = new User(3,&quot;王五&quot;,&quot;男&quot;,22,180);
-        User user4 = new User(4,&quot;王麻子&quot;,&quot;男&quot;,33,185);
-        User user5 = new User(5,&quot;小红&quot;,&quot;女&quot;,18,160);
-        User user6 = new User(6,&quot;小绿&quot;,&quot;女&quot;,17,160);
-        User user7 = new User(7,&quot;小蓝&quot;,&quot;女&quot;,19,160);
-        users.add(user1);
-        users.add(user2);
-        users.add(user3);
-        users.add(user4);
-        users.add(user5);
-        users.add(user6);
-        users.add(user7);
-    }
-
-    @Cacheable(key = &quot;'&quot;+CacheConstant.USER_CACHE_KEY_PREFIX+&quot;all'&quot;)
-    @Override
-    public List&lt;User&gt; selectAll() {
-        return users;
-    }
-
-    @Cacheable(key = &quot;'&quot;+CacheConstant.USER_CACHE_KEY_PREFIX+&quot;'+#name&quot;)
-    @Override
-    public List&lt;User&gt; selectByNameLike(String name) {
-        List&lt;User&gt; listUser = users.stream().filter(obj -&gt; obj.getName().contains(name)).collect(Collectors.toList());
-        return listUser;
-    }
-
-    @Cacheable(key = &quot;'&quot;+CacheConstant.USER_CACHE_KEY_PREFIX+&quot;'+#id&quot;)
-    @Override
-    public User getById(int id) {
-        User user = users.stream().filter(obj -&gt; obj.getId() == id).findFirst().get();
-        return user;
-    }
-
-    @CachePut(key = &quot;'&quot;+CacheConstant.USER_CACHE_KEY_PREFIX+&quot;all'&quot;)
-    @Override
-    public List&lt;User&gt; add(User user) {
-        users.add(user);
-        return users;
-    }
-
-    @Caching(put = {@CachePut(key = &quot;'&quot;+CacheConstant.USER_CACHE_KEY_PREFIX+&quot;all'&quot;)},
-            evict = {@CacheEvict(key = &quot;'&quot;+CacheConstant.USER_CACHE_KEY_PREFIX+&quot;'+#user.id&quot;)}
-    )
-    @Override
-    public List&lt;User&gt; updateById(User user) {
-        for (int i = 0; i &lt; users.size(); i++) {
-            if(users.get(i).getId() == user.getId()){
-                users.set(i,user);
-            }
-        }
-        return users;
-    }
-
-    @Caching(put = {@CachePut(key = &quot;'&quot;+CacheConstant.USER_CACHE_KEY_PREFIX+&quot;all'&quot;)},
-            evict = {@CacheEvict(key= &quot;'&quot;+CacheConstant.USER_CACHE_KEY_PREFIX+&quot;'+#id&quot;)}
-    )
-    @Override
-    public List&lt;User&gt; deleteById(int id) {
-        Iterator&lt;User&gt; iterator = users.iterator();
-        while(iterator.hasNext()) {
-            User user = iterator.next();
-            if(user.getId() == id){
-                iterator.remove();
-            }
-        }
-        return users;
-    }
-
-    @CacheEvict(allEntries = true)
-    @Override
-    public void deleteAll() {
-        users = new ArrayList&lt;&gt;();
-    }
-
-}
-</code></pre>
-<h2 id="创建测试类">创建测试类</h2>
-<pre><code class="language-java">import com.ldx.springboot.model.User;
-import lombok.extern.slf4j.Slf4j;
-import org.junit.jupiter.api.Test;
-import org.junit.runner.RunWith;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
-import javax.annotation.Resource;
-import java.util.List;
-
-@Slf4j
-@RunWith(SpringRunner.class)
-@SpringBootTest
-class UserServiceTest  {
-
-    @Resource(name = &quot;userService&quot;)
-    UserService userService;
-
-    @Test
-    void selectAll() {
-        List&lt;User&gt; users = userService.selectAll();
-        users.forEach(System.out::println);
-    }
-
-    @Test
-    void selectByNameLike() {
-        String keywork = &quot;小&quot;;
-        List&lt;User&gt; users = userService.selectByNameLike(keywork);
-        users.forEach(System.out::println);
-    }
-
-    @Test
-    void getById() {
-        int id = 3;
-        User user = userService.getById(id);
-        log.info(user.toString());
-    }
-
-    @Test
-    void add() {
-        User user = new User(6,&quot;小粉&quot;,&quot;女&quot;,16,155);
-        userService.add(user);
-        selectAll();
-    }
-
-    @Test
-    void updateById() {
-        User user = new User(3,&quot;小粉&quot;,&quot;女&quot;,16,155);
-        userService.updateById(user);
-        selectAll();
-    }
-
-    @Test
-    void deleteById() {
-        userService.deleteById(5);
-    }
-
-    @Test
-    void deleteAll() {
-        userService.deleteAll();
-    }
-
-}
-</code></pre>
-<h1 id="redis-安装">redis 安装</h1>
-<h2 id="安装gcc">安装gcc</h2>
-<p>由于 redis 是用 C 语言开发，安装之前必先确认是否安装 gcc 环境（gcc -v），如果没有安装，执行以下命令进行安装</p>
-<pre><code class="language-bash">yum install -y gcc 
-</code></pre>
-<h2 id="下载并解压安装包">下载并解压安装包</h2>
-<pre><code class="language-bash">wget http://download.redis.io/releases/redis-5.0.3.tar.gz
-tar -zxvf redis-5.0.3.tar.gz
-</code></pre>
-<h2 id="执行编译">执行编译</h2>
-<pre><code class="language-bash">cd redis-5.0.3
-make
-</code></pre>
-<h2 id="安装并指定安装目录">安装并指定安装目录</h2>
-<pre><code class="language-bash">make install PREFIX=/usr/local/redis
-</code></pre>
-<h2 id="启动服务">启动服务</h2>
-<h3 id="前台启动">前台启动</h3>
-<pre><code class="language-bash">cd /usr/local/redis/bin/
-./redis-server
-</code></pre>
-<h3 id="后台启动">后台启动</h3>
-<ol>
-<li>从redis的源码目录中复制redis.conf到redis的安装目录</li>
-</ol>
-<pre><code class="language-bash">cp /usr/local/redis-5.0.3/redis.conf /usr/local/redis/bin/
-</code></pre>
-<ol start="2">
-<li>修改redis.conf 文件，把 daemonize no 改为 daemonize yes</li>
-</ol>
-<pre><code class="language-bash">vi redis.conf
-</code></pre>
-<pre><code class="language-bash">################################# GENERAL #####################################
-
-# By default Redis does not run as a daemon. Use 'yes' if you need it.
-# Note that Redis will write a pid file in /var/run/redis.pid when daemonized.
-daemonize yes
-</code></pre>
-<ol start="3">
-<li>后台启动</li>
-</ol>
-<pre><code class="language-bash">./redis-server redis.conf
-# 查看redis进程状态
-ps -ef | grep redis
-</code></pre>
-<h2 id="设置开机启动">设置开机启动</h2>
-<h3 id="添加开机启动服务">添加开机启动服务</h3>
-<pre><code class="language-bash">vi /etc/systemd/system/redis.service
-</code></pre>
-<p>添加以下内容</p>
-<pre><code class="language-bash">[Unit]
-Description=redis-server
-After=network.target
-
-[Service]
-Type=forking
-ExecStart=/usr/local/redis/bin/redis-server /usr/local/redis/bin/redis.conf
-PrivateTmp=true
-
-[Install]
-WantedBy=multi-user.target
-</code></pre>
-<p><strong>注意</strong> : ExecStart配置成自己的路径</p>
-<h3 id="设置开机启动-2">设置开机启动</h3>
-<pre><code class="language-bash">systemctl daemon-reload
-systemctl start redis.service
-systemctl enable redis.service
-</code></pre>
-<h3 id="创建redis命令软链接">创建redis命令软链接</h3>
-<pre><code class="language-bash"> ln -s /usr/local/redis/bin/redis-cli /usr/bin/redis
-</code></pre>
-<h3 id="测试">测试</h3>
-<p>直接输入<code>redis</code></p>
-<pre><code class="language-bash">[root@iZ2ze ~]# redis
-127.0.0.1:6379&gt; 
-</code></pre>
-<h3 id="服务操作命令">服务操作命令</h3>
-<pre><code class="language-bash">systemctl start redis.service   #启动redis服务
-
-systemctl stop redis.service   #停止redis服务
-
-systemctl restart redis.service   #重新启动服务
-
-systemctl status redis.service   #查看服务当前状态
-
-systemctl enable redis.service   #设置开机自启动
-
-systemctl disable redis.service   #停止开机自启动
-</code></pre>
-<h1 id="缓存雪崩">缓存雪崩</h1>
-<p>缓存雪崩是指在我们设置缓存时采用了相同的过期时间，导致缓存在某一时刻同时失效，请求全部转发到DB，DB瞬时压力过重雪崩。</p>
-<h2 id="解决方案">解决方案</h2>
-<p>缓存失效时的雪崩效应对底层系统的冲击非常可怕。大多数系统设计者考虑用加锁或者队列的方式保证缓存的单线 程（进程）写，从而避免失效时大量的并发请求落到底层存储系统上。这里分享一个简单方案就时讲缓存失效时间分散开，比如我们可以在原有的失效时间基础上增加一个随机值，比如1-5分钟随机，这样每一个缓存的过期时间的重复率就会降低，就很难引发集体失效的事件。<br>
-或者设置热点数据永远不过期，有更新操作就更新缓存就好了（比如运维更新了首页商品，那你刷下缓存就完事了，不要设置过期时间），电商首页的数据也可以用这个操作，保险。</p>
-<h1 id="缓存击穿">缓存击穿</h1>
-<p>对于一些设置了过期时间的key，如果这些key可能会在某些时间点被超高并发地访问，是一种非常“热点”的数据。这个时候，需要考虑一个问题：缓存被“击穿”的问题，这个和缓存雪崩的区别在于这里针对某一key缓存，前者则是很多key。<br>
-缓存在某个时间点过期的时候，恰好在这个时间点对这个Key有大量的并发请求过来，这些请求发现缓存过期一般都会从后端DB加载数据并回设到缓存，这个时候大并发的请求可能会瞬间把后端DB压垮。</p>
-<h2 id="解决方案-2">解决方案</h2>
-<p>设置热点数据永远不过期或使用互斥锁(mutex key)<br>
-业界比较常用的做法，是使用mutex。简单地来说，就是在缓存失效的时候（判断拿出来的值为空），不是立即去load db，而是先使用缓存工具的某些带成功操作返回值的操作（比如Redis的SETNX或者Memcache的ADD）去set一个mutex key，当操作返回成功时，再进行load db的操作并回设缓存；否则，就重试整个get缓存的方法。<br>
-SETNX，是「SET if Not eXists」的缩写，也就是只有不存在的时候才设置，可以利用它来实现锁的效果。</p>
-<h1 id="缓存穿透">缓存穿透</h1>
-<p>缓存穿透是指查询一个一定不存在的数据，由于缓存是不命中时被动写的，并且出于容错考虑，如果从存储层查不到数据则不写入缓存，这将导致这个不存在的数据每次请求都要到存储层去查询，失去了缓存的意义。在流量大时，可能DB就挂掉了，要是有人利用不存在的key频繁攻击我们的应用，这就是漏洞。</p>
-<h2 id="解决方案-3">解决方案</h2>
-<p>布隆过滤对所有的可能查询的参数以hash形式存储,在控制器层先进行校验,不符合则丢弃,从而避免了对底层存储系统的查询压力。bloomfilter就类似于一个hash set，用于快速判某个元素是否存在于集合中，其典型的应用场景就是快速判断一个key是否存在于某容器，不存在就直接返回。举例:将真实正确Id在添加完成之后便加入到过滤器当中，每次再进行查询时，先确认要查询的Id是否在过滤器中，如果不在，则说明Id为非法Id。<br>
-缓存空对象当从数据库查询不到值，就把参数和控制缓存起来，设置一个简短的过期时间(因为缓存是需要内存的，如果有过多空值key，占用内存多),在该时间段如果有携带此参数再次请求，就可以直接返回。可能导致该段时间缓存层和数据库数据不一致，对于需要保持一致性的业务有影响。</p>
-<h1 id="什么是多路io复用模型">什么是多路I/O复用模型?</h1>
-<h2 id="通俗易懂的例子">通俗易懂的例子:</h2>
-<p>假设你是一个老师，让30个学生解答一道题目，然后检查学生做的是否正确，你有下面几个选择：</p>
-<ol>
-<li>第一种选择：按顺序逐个检查，先检查A，然后是B，之后是C、D。。。这中间如果有一个学生卡主，全班都会被耽误。这种模式就好比，你用循环挨个处理socket，根本不具有并发能力。</li>
-<li>第二种选择：你创建30个分身，每个分身检查一个学生的答案是否正确。 这种类似于为每一个用户创建一个进程或者线程处理连接。</li>
-<li>第三种选择，你站在讲台上等，谁解答完谁举手。这时C、D举手，表示他们解答问题完毕，你下去依次检查C、D的答案，然后继续回到讲台上等。此时E、A又举手，然后去处理E和A。。。 这种就是IO复用模型，Linux下的select、poll和epoll就是干这个的。将用户socket对应的fd注册进epoll，然后epoll帮你监听哪些socket上有消息到达，这样就避免了大量的无用操作。此时的socket应该采用非阻塞模式。这样，整个过程只在调用select、poll、epoll这些调用的时候才会阻塞，收发客户消息是不会阻塞的，整个进程或者线程就被充分利用起来，这就是事件驱动，所谓的reactor模式。</li>
-</ol>
-<p><a href="https://www.zhihu.com/question/28594409/answer/52835876">转自柴小猫</a></p>
-<h2 id="再次加深理解">再次加深理解</h2>
-<p>首先，要从你常用的IO操作谈起，比如read和write，通常IO操作都是阻塞I/O的，也就是说当你调用read时，如果没有数据收到，那么线程或者进程就会被挂起，直到收到数据。<br>
-<img src="http://blog.ludangxin.club/post-images/1589980293659.jpg" alt="" loading="lazy"><br>
-这样，当服务器需要处理1000个连接的的时候，而且只有很少连接忙碌的，那么会需要1000个线程或进程来处理1000个连接，而1000个线程大部分是被阻塞起来的。由于CPU的核数或超线程数一般都不大，比如4,8,16,32,64,128，比如4个核要跑1000个线程，那么每个线程的时间槽非常短，而线程切换非常频繁。<br>
-这样是有问题的：</p>
-<ol>
-<li>线程是有内存开销的，1个线程可能需要512K（或2M）存放栈，那么1000个线程就要512M（或2G）内 存。</li>
-<li>线程的切换，或者说上下文切换是有CPU开销的，当大量时间花在上下文切换的时候，分配给真正的操作的CPU就要少很多。</li>
-</ol>
-<p>那么，我们就要引入非阻塞I/O的概念，非阻塞IO很简单，通过fcntl（POSIX）或ioctl（Unix）设为非阻塞模式，这时，当你调用read时，如果有数据收到，就返回数据，如果没有数据收到，就立刻返回一个错误，如EWOULDBLOCK。这样是不会阻塞线程了，但是你还是要不断的轮询来读取或写入。<br>
-<img src="http://blog.ludangxin.club/post-images/1589980387132.jpg" alt="" loading="lazy"><br>
-于是，我们需要引入IO多路复用的概念。多路复用是指使用一个线程来检查多个文件描述符（Socket）的就绪状态，比如调用select和poll函数，传入多个文件描述符，如果有一个文件描述符就绪，则返回，否则阻塞直到超时。得到就绪状态后进行真正的操作可以在同一个线程里执行，也可以启动线程执行（比如使用线程池）。<br>
-<img src="http://blog.ludangxin.club/post-images/1589980421324.jpg" alt="" loading="lazy"><br>
-这样在处理1000个连接时，只需要1个线程监控就绪状态，对就绪的每个连接开一个线程处理就可以了，这样需要的线程数大大减少，减少了内存开销和上下文切换的CPU开销。</p>
-<p><a href="https://www.zhihu.com/question/28594409/answer/74003996">转自用心阁</a></p>
 ]]></content>
     </entry>
 </feed>
